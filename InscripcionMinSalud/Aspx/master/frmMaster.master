@@ -1,0 +1,116 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="frmMaster.master.cs" Inherits="InscripcionMinSalud.Aspx.master.frmMaster" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Encuesta ciudadana Exclusiones</title>
+
+      <link rel="shortcut icon" href="../../img/EscudoNal.png" />
+
+
+    <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/bootstrap-theme.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" media="all" />
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css' />
+
+ <link rel="shortcut icon" href="../../img/EscudoNal.png" />
+    <link href="../../Scripts/fancy/source/fancyMins.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <script src="../../Scripts/jquery-1.9.1.js"></script>
+    <script src="../../Scripts/jquery.min.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <script src="../../Scripts/jquery-ui.js"></script>
+
+      <link rel="stylesheet" type="text/css" href="../../css/tooltipster.bundle.min.css" />
+    <link href="../../Scripts/fancy/source/jquery.fancybox.css?v=2.1.5" media="screen" rel="stylesheet" type="text/css">
+    <link href="../../Scripts/fancy/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" media="screen" rel="stylesheet" type="text/css">
+    <link href="../../Scripts/fancy/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" media="screen" rel="stylesheet" type="text/css">
+   <script type="text/javascript" src="../../Scripts/fancy/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script type="text/javascript" src="../../Scripts/fancy/source/jquery.fancybox.js?v=2.1.5"></script>
+    <script type="text/javascript" src="../../Scripts/fancy/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="../../Scripts/fancy/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+    <script type="text/javascript" src="../../Scripts/fancy/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+    <script type="text/javascript" src="../../Scripts/tooltipster.bundle.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156569301-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-156569301-1');
+        </script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true" ></asp:ScriptManager>
+    <div class="row">
+        <div class="lazul"></div>
+        <div class="container section">
+            <div class="col-md-6">
+                <img class="img-responsive" src="../../images/imagenes.jpg" /></div>
+            <div class="col-md-6">
+                <img class="img-responsive" src="../../images/logo-part.jpg" /></div>
+             
+        </div>
+
+        </div>
+        <asp:Panel runat="server" ID="pnlMenu" Visible="false">
+                   
+<div  class="row" >
+    <div class="container section">
+            <div class="col-md-6">
+                <asp:HyperLink runat="server" Text=" Salir del sistema" NavigateUrl="~/frm/logica/frmLogoout.aspx"></asp:HyperLink>
+    <asp:Label runat="server" ID="lblUsuario" forecolor="Black" Font-Bold="true" Font-Size="14px" Text="Carlos Alfonso Garzon"></asp:Label>
+            </div>
+        </div>      
+      </div>
+                       </asp:Panel>
+
+        <div class="nav">
+            <div class="container">
+                <ul>
+                    <li class='<%= classInicio %>'><asp:HyperLink runat="server" NavigateUrl="~/frm/logica/frmDefault.aspx">Inicio</asp:HyperLink></li>
+                    <li  class='<%= classRegistrese %>'><asp:HyperLink runat="server" id="lnkRegistrese" NavigateUrl="~/frm/logica/frmRegistrese.aspx">Regístrese</asp:HyperLink></li>
+                    <li  class='<%= classEncuesta %>'><asp:HyperLink runat="server" NavigateUrl="~/frm/encuestaestatica/frmEncuesta.aspx">Encuesta</asp:HyperLink></li>
+                    
+                    <li  class='<%= classContactenos %>'><asp:HyperLink runat="server" NavigateUrl="~/frm/logica/frmContactenos.aspx">Contáctenos</asp:HyperLink></li>
+                   
+                  </ul>
+            </div>
+                
+    </div>
+    <div class="row">
+        <div class="tagline">
+            <div class="container">
+                <h2 class="tag">
+                    <asp:Label runat="server" ID="lbltitulo"></asp:Label>
+                     </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+              </div>
+    </div>
+    <div class="footer"></div>
+    <div style="height: 50px;"></div>
+    </form>
+</body>
+</html>
+

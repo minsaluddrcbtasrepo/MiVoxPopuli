@@ -1,0 +1,87 @@
+﻿@charset "utf-8/*";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Duru+Sans');
+
+/*************************************/
+.agree_terms a{color:#000 !important;}
+.agree_terms a:hover{color:#666666 !important;}
+.agree_terms_form a{color:#666666}
+.agree_terms_form a:hover{color:#fff}
+#update, #deactive{float:right !important;}
+
+.agree_terms
+{
+	color:#333333;
+	width:370px;
+	font-size: 13px;
+	
+	margin:auto;
+	margin-bottom:20px;
+	text-align:left;
+}
+
+.agree_terms_form{clear:both; color:#B0B0B0; width:100%; text-align:left;}
+.agree_terms_form .button{
+	float:right;
+	background-color:#1a1a1a;
+	color:#B0B0B0;
+	padding:10px;
+	border:none;
+	border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-khtml-border-radius: 10px;
+		behavior:url(PIE/PIE.htc);
+		cursor:pointer;
+	}
+	
+
+ @media screen and (max-width: 1100px) {
+	
+ }
+ 
+  @media screen and (max-width: 970px) {
+
+  }
+/*Estilos para 480px*/
+ @media screen and (max-width: 767px) {
+	
+ .agree_terms {
+    color: #333333;
+    font-size: 9px;
+    margin: auto auto 20px;
+    text-align: left;
+    width: 320px;
+}
+
+
+/*.search-circle_select, .search-circle {height: 53px;}*/
+
+.special_class{ margin-right: -78px;
+    text-align: center;}
+
+.button{font-size: 14px;}
+.buttonmini{font-size: 10px;}
+
+ .last_t{border-bottom:none;}
+ .impar{border-right:none;}
+ }/* fin 320 */
+ .terminos{height:599px;background-color: #FFFFFF;margin-top: 0;overflow-x:hidden; overflow-y:scroll;border: 2px solid #4589C9;border-radius:8px 8px 8px 8px;}
+.terminos2 {
+    background-color: #FFFFFF;
+    margin-top: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: 2px solid #4589C9;
+    border-radius: 8px 8px 8px 8px;
+}
+ .text_terms{padding:97px 15px 15px;color: #000000;background-color: #FFFFFF;font-size: 13px;width: 465px !important;margin-top: -74px;text-align:justify;line-height: 13pt;}
+.text_terms2 {
+    padding: 97px 15px 15px;
+    margin-top: -74px;
+    text-align: justify;
+}
+ .title_terms{color:#000000;font-size: 13px;font-weight: bold;}*/
+ 
+ 

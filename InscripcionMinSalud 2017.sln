@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InscripcionMinSalud", "InscripcionMinSalud\InscripcionMinSalud.csproj", "{AE0A6A22-7882-453C-B59E-AB3FC047737D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NegocioInscripcionMinSalud", "NegocioInscripcionMinSalud\NegocioInscripcionMinSalud.csproj", "{ABC194D4-C949-4DF4-A73D-F6CCB2728556}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatosInscripcionMinSalud", "DatosInscripcionMinSalud\DatosInscripcionMinSalud.csproj", "{6748A57A-3D3B-45B7-8B71-B268F1457369}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE0A6A22-7882-453C-B59E-AB3FC047737D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE0A6A22-7882-453C-B59E-AB3FC047737D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE0A6A22-7882-453C-B59E-AB3FC047737D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE0A6A22-7882-453C-B59E-AB3FC047737D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC194D4-C949-4DF4-A73D-F6CCB2728556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC194D4-C949-4DF4-A73D-F6CCB2728556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC194D4-C949-4DF4-A73D-F6CCB2728556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC194D4-C949-4DF4-A73D-F6CCB2728556}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6748A57A-3D3B-45B7-8B71-B268F1457369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6748A57A-3D3B-45B7-8B71-B268F1457369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6748A57A-3D3B-45B7-8B71-B268F1457369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6748A57A-3D3B-45B7-8B71-B268F1457369}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BFFA8766-FF8A-49A1-9E77-7DA8F5AD898F}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/minsaludcol
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DatosInscripcionMinSalud\\DatosInscripcionMinSalud.csproj
+		SccProjectName1 = DatosInscripcionMinSalud
+		SccLocalPath1 = DatosInscripcionMinSalud
+		SccProjectUniqueName2 = InscripcionMinSalud\\InscripcionMinSalud.csproj
+		SccProjectName2 = InscripcionMinSalud
+		SccLocalPath2 = InscripcionMinSalud
+		SccProjectUniqueName3 = NegocioInscripcionMinSalud\\NegocioInscripcionMinSalud.csproj
+		SccProjectName3 = NegocioInscripcionMinSalud
+		SccLocalPath3 = NegocioInscripcionMinSalud
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

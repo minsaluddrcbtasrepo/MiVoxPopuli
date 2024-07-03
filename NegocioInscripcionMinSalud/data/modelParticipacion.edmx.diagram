@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f07b748cfbf040db9fe37437317feda1" Name="Diagram1" ZoomLevel="39">
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.ACTIVIDAD_APLICACION" Width="1.5" PointX="1.5" PointY="63.125" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.AMBITO_PROCEDIMIENTO" Width="1.5" PointX="6" PointY="27.5" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.AMBITO_UPC" Width="1.5" PointX="11" PointY="64.875" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.ARCHIVOXNOMINACION" Width="1.5" PointX="7.5" PointY="62.5" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.ARCHIVOXOBJECION" Width="1.5" PointX="17.75" PointY="41.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.ARCHIVOXPROCESO" Width="1.5" PointX="8.25" PointY="21.375" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.CIE10" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.CLASIFICACION_RIESGO" Width="1.5" PointX="11" PointY="35.25" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.CONFIGURACION_VALIDACION_PROCESO" Width="1.5" PointX="3" PointY="69" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.CONFIRMACION_EVENTO" Width="1.5" PointX="5.25" PointY="52.125" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.CUPS" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.Departamento" Width="1.5" PointX="1.5" PointY="77.125" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.DETALLE_OBJECION" Width="1.5" PointX="20.75" PointY="45.625" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.DETALLE_VALIDACION_PROCESO" Width="1.5" PointX="15.75" PointY="38" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.ESTADO_NOMINACION" Width="1.5" PointX="3" PointY="40.375" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.ESTADO_NOMINACION_RUPS" Width="1.5" PointX="6" PointY="30.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.ESTADO_NOMINACION_UPC" Width="1.5" PointX="11" PointY="37.875" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.ESTADO_REGISTRO" Width="1.5" PointX="0.75" PointY="71.5" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.EstadoUsuario" Width="1.5" PointX="5.25" PointY="93.5" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.EVENTO" Width="1.5" PointX="3" PointY="30.5" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.FORMATO_EVENTO" Width="1.5" PointX="8.25" PointY="65.25" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.FORMATO_EVENTOXEVENTO" Width="1.5" PointX="18.5" PointY="56.625" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.FORMATOEVENTOXCONFIRMACION" Width="1.5" PointX="10.5" PointY="56.125" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.GLOSARIO" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.GRUPO_PARAMETRO_VALIDACION" Width="1.5" PointX="11.25" PointY="29.375" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.HistoricoEliminacion" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.MEDICAMENTOS" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.MODULO_APLICACION" Width="1.5" PointX="1.5" PointY="66.25" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.Municipio" Width="1.5" PointX="0.75" PointY="73.875" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.NIVEL_FORMACION" Width="1.5" PointX="0.75" PointY="42.125" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.NOMINACION_PROCESO_UPC" Width="1.5" PointX="13.25" PointY="32.625" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.OBJECION_PROCESO" Width="1.5" PointX="15.5" PointY="43.625" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.PAIS" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.PARAMETRO_VALIDACION" Width="1.5" PointX="13.5" PointY="29" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.Participante" Width="1.5" PointX="7.5" PointY="93.25" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.PERFIL" Width="1.5" PointX="1.5" PointY="60.25" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.POBLACION_ESPECIAL" Width="1.5" PointX="0.75" PointY="52.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.PreguntaSecreta" Width="1.5" PointX="0.75" PointY="69" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.PROCEDIMIENTO" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.REGISTRO" Width="1.5" PointX="3" PointY="43.5" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.SEXO" Width="1.5" PointX="0.75" PointY="79.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.tblMigracionPrimeraVigencia" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.TECNOLOGIA" Width="1.5" PointX="8.25" PointY="68.125" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.TECNOLOGIASXEVENTO" Width="1.5" PointX="15.5" PointY="54.375" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.TECNOLOGIAXCONFIRMACION_EVENTO" Width="1.5" PointX="10.5" PointY="59.25" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.TEMATICA_EVENTO" Width="1.5" PointX="0.75" PointY="32.375" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.TIPO_DISPOSITIVO" Width="1.5" PointX="11" PointY="62.625" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.TIPO_IPS" Width="1.5" PointX="0.75" PointY="39.375" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.TIPO_JURIDICO" Width="1.5" PointX="0.75" PointY="49.125" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.TIPO_JURIDICOXEVENTO" Width="1.5" PointX="6" PointY="49.25" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.TIPO_NOMINACION_MEDICAMENTO" Width="1.5" PointX="16.25" PointY="51.375" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.TIPO_PROCEDIMIENTO" Width="1.5" PointX="6" PointY="33.125" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.TIPO_REPRESENTADO" Width="1.5" PointX="0.75" PointY="44.5" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.TIPO_ZONA" Width="1.5" PointX="0.75" PointY="37" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.TipoIdentificacion" Width="1.5" PointX="5.25" PointY="100.875" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.TipoUsuario" Width="1.5" PointX="5.25" PointY="96.375" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.UPC_FORMULARIO3" Width="1.5" PointX="18.5" PointY="44.625" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.USUARIO" Width="1.5" PointX="0.75" PointY="55.125" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.VALIDACION_PROCESO" Width="1.5" PointX="10.5" PointY="40.875" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.VALIDACION_PROCESO_RUPS" Width="1.5" PointX="10.5" PointY="45.875" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.VIGENCIA" Width="1.5" PointX="6" PointY="57" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_ACTIVIDAD_APLICACION_MODULO_APLICACION" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_UPC_AMBITO_UPC" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_ARCHIVOXOBJECION_OBJECION_PROCESO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_UPC_CLASIFICACION_RIESGO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_CONFIGURACION_VALIDACION_PROCESO_USUARIO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_CONFIRMACION_EVENTO_CONFIRMACION_EVENTO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_CONFIRMACION_EVENTO_EVENTO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_CONFIRMACION_EVENTO_REGISTRO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_FORMATOEVENTOXCONFIRMACION_CONFIRMACION_EVENTO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_TECNOLOGIAXCONFIRMACION_EVENTO_CONFIRMACION_EVENTO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_Municipio_Departamento" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_DETALLE_OBJECION_OBJECION_PROCESO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_DETALLE_OBJECION_PARAMETRO_VALIDACION" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_DETALLE_VALIDACION_PROCESO_PARAMETRO_VALIDACION" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_DETALLE_VALIDACION_PROCESO_VALIDACION_PROCESO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_UPC_ESTADO_NOMINACION_UPC" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_REGISTRO_ESTADO_REGISTRO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_ParticipacionCiudadana_EstadoUsuario" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_EVENTO_TEMATICA_EVENTO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_FORMATO_EVENTOXEVENTO_EVENTO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_TECNOLOGIASXEVENTO_EVENTO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_TIPO_JURIDICOXEVENTO_EVENTO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_FORMATO_EVENTOXEVENTO_FORMATO_EVENTO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_FORMATOEVENTOXCONFIRMACION_FORMATO_EVENTO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_PARAMETRO_VALIDACION_GRUPO_PARAMETRO_VALIDACION" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_ParticipacionCiudadana_Municipio" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_REGISTRO_Municipio" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_REGISTRO_NIVEL_FORMACION" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_UPC_REGISTRO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_UPC_TIPO_DISPOSITIVO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_UPC_TIPO_PROCEDIMIENTO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_UPC_USUARIO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_UPC_FORMULARIO3_NOMINACION_PROCESO_UPC" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_OBJECION_PROCESO_REGISTRO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_ParticipacionCiudadana_PreguntaSecreta" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_ParticipacionCiudadana_TipoIdentificacion" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_ParticipacionCiudadana_TipoIdentificacion1" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_ParticipacionCiudadana_TipoUsuario" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_USUARIO_PERFIL" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_REGISTRO_POBLACION_ESPECIAL" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_REGISTRO_PreguntaSecreta" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_REGISTRO_REGISTRO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_REGISTRO_SEXO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_REGISTRO_TIPO_IPS" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_REGISTRO_TIPO_JURIDICO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_REGISTRO_TIPO_REPRESENTADO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_REGISTRO_TIPO_ZONA" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_REGISTRO_USUARIO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_REGISTRO_USUARIO1" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_TECNOLOGIASXEVENTO_TECNOLOGIA" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_TECNOLOGIAXCONFIRMACION_EVENTO_TECNOLOGIA" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_TIPO_JURIDICOXEVENTO_TIPO_JURIDICO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_UPC_FORMULARIO3_TIPO_NOMINACION_MEDICAMENTO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_VALIDACION_PROCESO_RUPS_USUARIO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_VALIDACION_PROCESO_USUARIO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.PERFIL_ACTIVIDAD_MODULO_APLICACION" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.PERFIL_MODULO_APLICACION" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.TIPO_USUARIOXREGISTRO" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.OBJECION_HUERFANA" Width="1.5" PointX="5.375" PointY="9.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.ARCHIVOXNOMINACION_HUERFANA" Width="1.5" PointX="22.625" PointY="7" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.ARCHIVOXOBJECION_HUERFANA" Width="1.5" PointX="7.625" PointY="14.875" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_ARCHIVOXOBJECION_HUERFANA" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.REPOSITORIO_HUEFANAS" Width="1.5" PointX="7.375" PointY="11.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.DCI" Width="1.5" PointX="9.375" PointY="11.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.PRUEBA" Width="1.5" PointX="11.375" PointY="12.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.PROCESO" Width="1.5" PointX="0.75" PointY="41.875" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_ARCHIVOXPROCESO_PROCESO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_EVENTO_PROCESO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_UPC_PROCESO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_TECNOLOGIA_PROCESO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_VIGENCIA_PROCESO" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.ESPECIALIDAD" Width="1.5" PointX="7.375" PointY="6.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.LISTADO_HEF" Width="1.5" PointX="7.375" PointY="3.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.NOMINACION_HUERFANA" Width="2.25" PointX="11.625" PointY="0.75" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_ARCHIVOXNOMINACION_NOMINACION_HUERFANA" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.NOMINACION_PROCESO_RUPS" Width="1.5" PointX="8.25" PointY="27.875" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_RUPS_AMBITO_PROCEDIMIENTO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_RUPS_ESTADO_NOMINACION_RUPS" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_RUPS_PROCESO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_RUPS_REGISTRO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_RUPS_TIPO_JURIDICO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_RUPS_TIPO_PROCEDIMIENTO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_RUPS_VIGENCIA1" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_VALIDACION_PROCESO_RUPS_NOMINACION_PROCESO_RUPS" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.NOMINACION_PROCESO" Width="1.5" PointX="21.25" PointY="48.875" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_ARCHIVOXNOMINACION_NOMINACION_PROCESO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_ESTADO_NOMINACION" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_PROCESO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_REGISTRO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_USUARIO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_NOMINACION_PROCESO_VIGENCIA1" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_OBJECION_PROCESO_NOMINACION_PROCESO" />
+        <AssociationConnector Association="ParticipacionCiudadanaModel.FK_VALIDACION_PROCESO_NOMINACION_PROCESO" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.ANALISIS_TECNICO_CIENTIFICO_EHR" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.NOMINACION_CRITERIO_EXCLUYENTE" Width="1.5" PointX="14.375" PointY="7.75" />
+        <EntityTypeShape EntityType="ParticipacionCiudadanaModel.ARCHIVOXNOMINACIONXCRITERIO" Width="1.5" PointX="3.375" PointY="13.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

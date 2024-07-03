@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ABC194D4-C949-4DF4-A73D-F6CCB2728556}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NegocioInscripcionMinSalud</RootNamespace>
+    <AssemblyName>NegocioInscripcionMinSalud</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.3\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrador.cs" />
+    <Compile Include="clsWebUtils.cs" />
+    <Compile Include="data\ACTIVIDAD_APLICACION.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\AMBITO_PROCEDIMIENTO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\AMBITO_UPC.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ANALISIS_TECNICO_CIENTIFICO_EHR.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ARCHIVOXNOMINACION.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ARCHIVOXNOMINACIONXCRITERIO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ARCHIVOXNOMINACION_HUERFANA.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ARCHIVOXOBJECION.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ARCHIVOXOBJECION_HUERFANA.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ARCHIVOXPROCESO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\CIE10.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\CLASIFICACION_RIESGO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\clsNegocio.cs" />
+    <Compile Include="data\CONFIGURACION_VALIDACION_PROCESO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\CONFIRMACION_EVENTO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\CUPS.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\DCI.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\Departamento.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\DETALLE_OBJECION.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\DETALLE_VALIDACION_PROCESO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ESPECIALIDAD.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\EstadoUsuario.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ESTADO_NOMINACION.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ESTADO_NOMINACION_RUPS.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ESTADO_NOMINACION_UPC.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ESTADO_REGISTRO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\EVENTO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\FORMATOEVENTOXCONFIRMACION.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\FORMATO_EVENTO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\FORMATO_EVENTOXEVENTO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\GLOSARIO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\GRUPO_PARAMETRO_VALIDACION.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\HistoricoEliminacion.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\LISTADO_HEF.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\MEDICAMENTOS.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\modelParticipacion.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelParticipacion.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\modelParticipacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\modelParticipacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelParticipacion.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="data\MODULO_APLICACION.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\Municipio.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\NIVEL_FORMACION.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\NOMINACION_CRITERIO_EXCLUYENTE.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\NOMINACION_HUERFANA.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\NOMINACION_PROCESO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\NOMINACION_PROCESO_RUPS.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\NOMINACION_PROCESO_UPC.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\OBJECION_HUERFANA.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\OBJECION_PROCESO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\PAIS.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\PARAMETRO_VALIDACION.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\Participante.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\PERFIL.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\POBLACION_ESPECIAL.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\PreguntaSecreta.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\PROCEDIMIENTO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\PROCESO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\PRUEBA.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\REGISTRO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\REPOSITORIO_HUEFANAS.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\SEXO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tblMigracionPrimeraVigencia.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TECNOLOGIA.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TECNOLOGIASXEVENTO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TECNOLOGIAXCONFIRMACION_EVENTO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TEMATICA_EVENTO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TipoIdentificacion.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TipoUsuario.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TIPO_DISPOSITIVO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TIPO_IPS.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TIPO_JURIDICO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TIPO_JURIDICOXEVENTO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TIPO_NOMINACION_MEDICAMENTO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TIPO_PROCEDIMIENTO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TIPO_REPRESENTADO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TIPO_ZONA.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\UPC_FORMULARIO3.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\USUARIO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\VALIDACION_PROCESO.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\VALIDACION_PROCESO_RUPS.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\VIGENCIA.cs">
+      <DependentUpon>modelParticipacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Departamento.cs" />
+    <Compile Include="Participante.cs" />
+    <Compile Include="Encriptar.cs" />
+    <Compile Include="Municipio.cs" />
+    <Compile Include="PreguntaSecreta.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoDocumento.cs" />
+    <Compile Include="TipoUsuario.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatosInscripcionMinSalud\DatosInscripcionMinSalud.csproj">
+      <Project>{6748a57a-3d3b-45b7-8b71-b268f1457369}</Project>
+      <Name>DatosInscripcionMinSalud</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="data\modelParticipacion.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>modelParticipacion.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="data\modelParticipacion.edmx.diagram">
+      <DependentUpon>modelParticipacion.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\modelParticipacion.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>modelParticipacion.edmx</DependentUpon>
+      <LastGenOutput>modelParticipacion.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="data\modelParticipacion.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>modelParticipacion.edmx</DependentUpon>
+      <LastGenOutput>modelParticipacion.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="2017\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

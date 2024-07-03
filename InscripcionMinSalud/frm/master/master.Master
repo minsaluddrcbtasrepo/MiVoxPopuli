@@ -1,0 +1,260 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="InscripcionMinSalud.frm.master.master" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mi vox pópuli</title>
+	<meta charset="utf8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+	<link rel="stylesheet" type="text/css" href="../../css/mainv2.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+     <script type="text/javascript">
+         var qc = 0;
+         function clickOnce(btn) {
+             //este no funciona si esta dentro de un update panel
+             qc = qc + 1;
+             if (qc > 3) {
+                 //alert('Su petición se está procesando. Por favor espere un momento.');
+                 btn.value= "Espere un momento.";
+                 return false;
+             } else if (qc > 1) {
+                 btn.value = "Procesando...";
+                 return false;
+             } else {
+                 return true;
+             }
+         }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156569301-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-156569301-1');
+    </script>
+
+</head>
+
+<body style="">
+
+
+      <form id="form1" runat="server" novalidate="novalidate">
+<div class="ptc">
+		<section class="encabezado">
+			<header>
+				<div class="bar-user">
+					<p class="accesos">
+                      
+
+					</p>
+				</div>
+				<div class="container">
+					<div class="logos col-lg-7">
+						<img class="img-responsive"src="../../images/logo-mivoxpopuli.png">
+					</div>
+					<nav class="menup col-lg-5">
+						<ul>
+							<li><asp:HyperLink runat="server" class="active" NavigateUrl="~/default.aspx">Inicio</asp:HyperLink></li>
+							<li><a href="#">Participe</a> </li>
+							<li><a href="#">Resultados</a></li>
+							<li><a href="#">Contacto</a></li>
+						</ul>
+
+					</nav>
+				</div>
+			</header>
+              <asp:ContentPlaceHolder ID="ContentPlaceBanner" runat="server">
+        
+    </asp:ContentPlaceHolder>
+		</section>
+  <ajaxToolkit:ToolkitScriptManager EnableScriptGlobalization="true" EnableScriptLocalization="true" ID="ScriptManager1" runat="server"></ajaxToolkit:ToolkitScriptManager>
+ 
+
+
+  <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+  </asp:ContentPlaceHolder>
+ </div>
+
+          	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="logos2">
+					<div class="col-lg-4">
+						<img class="img-responsive"src="../../images/minsalud-f.png">
+					</div>
+				</div>
+				<div class="ministerios">
+					<div class="col-lg-8 col-xs-12">
+						<div class="col-lg-4 col-xs-6">
+							<ul>
+								<li>
+									<a target="_blank" href="http://www.vicepresidencia.gov.co/">
+										<span class="vicep">
+										</span>
+										Vicepresidencia
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="http://www.minjusticia.gov.co/">
+										<span class="justicia">
+										</span>
+										MinJusticia
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://www.mindefensa.gov.co/">
+										<span class="defensa">
+										</span>
+										MinDefensa
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="http://www.mininterior.gov.co/">
+										<span class="interior">
+										</span>
+										MinInterior
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="http://www.cancilleria.gov.co/">
+										<span class="relaciones">
+										</span>
+										MinRelaciones
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="http://www.minhacienda.gov.co/">
+										<span class="hacienda"></span>
+									MinHacienda</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-4  col-xs-6">
+							<ul>
+								<li>
+									<a target="_blank" href="http://www.minminas.gov.co/">
+										<span class="minas">
+										</span>
+										MinMinas
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="http://www.mincit.gov.co/">
+										<span class="cit">
+										</span>
+										MinComercio
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="http://www.mintic.gov.co/portal/604/w3-channel.html">
+										<span class="tic">
+										</span>
+										MinTIC
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="http://www.mincultura.gov.co/Paginas/default.aspx">
+										<span class="cultura">
+										</span>
+										MinCultura
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://www.minagricultura.gov.co/">
+										<span class="agricultura"></span>
+										MinAgricultura
+									</li>
+									<li>
+										<a target="_blank" href="http://www.minambiente.gov.co/">
+											<span class="ambiente"></span>
+										MinAmbiente</a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-lg-4">
+								<ul>
+									<li>
+										<a target="_blank" href="https://www.mintransporte.gov.co/">
+											<span class="transporte">
+											</span>
+											MinTransporte
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="http://www.minvivienda.gov.co/">
+											<span class="vivienda">
+											</span>
+											MinVivienda
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="http://www.mineducacion.gov.co/portal/">
+											<span class="educacion">
+											</span>
+											MinEducación
+										</a>
+									</li>
+									<li>
+										<atarget="_blank" href="http://www.mintrabajo.gov.co/web/guest/inicio">
+										<span class="trabajo">
+										</span>
+										MinTrabajo
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://www.minsalud.gov.co/Paginas/default.aspx">
+										<span class="salud">
+										</span>
+										MinSalud
+									</a>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-8">
+
+			</div>
+		</div>
+
+		<div class="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<p><strong>Conmutador:</strong>(57-1) 330 5000 - Central de fax: (57-1) 330 5050</br>
+							<stron>Punto de atención presencial: </strong>Carrera 13 No. 32-76 piso 1, Bogotá, código postal 110311 - Lunes a viernes de 8:00 a.m. a 4:00 p.m. en jornada continua.</br>
+								<strong>Línea de atención de desastres: </strong>(57-1) 330 5071 - 24 horas
+								<strong>Notificaciones judiciales:</strong> notificacionesjudiciales@minsalud.gov.co
+							Términos y Condiciones de uso. ©Ministerio de Salud y Protección Social.</p>
+						</div>
+						<div class="col-lg-6">
+							<p><strong>Atención telefónica a través del Centro de Contacto: </strong>
+							En Bogotá: (57-1) 589 3750 Resto del pais: 018000960020</br>
+							<strong>Horario de atención: </strong>lunes a viernes de 7:00 a.m. a 6:00 p.m. y sábados de 8:00 a.m. a 1:00 p.m. en jornada continua.</br>
+							Chat campañas Minsalud 
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+  </form>
+</body>
+</html>
+

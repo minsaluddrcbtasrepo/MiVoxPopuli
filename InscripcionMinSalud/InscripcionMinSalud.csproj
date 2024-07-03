@@ -1,0 +1,1182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE0A6A22-7882-453C-B59E-AB3FC047737D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InscripcionMinSalud</RootNamespace>
+    <AssemblyName>InscripcionMinSalud</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=16.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referencias\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>Referencias\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Report.4">
+      <HintPath>Referencias\C1.C1Report.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Report.CustomFields.4">
+      <HintPath>Referencias\C1.C1Report.CustomFields.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Desktop, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v17.2.Core, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Images.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v17.2.Core, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v17.2.Export, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v17.2.Core, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Web.Resources.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Web.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v17.2.Web, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.SqlClient">
+      <HintPath>C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common">
+      <HintPath>..\..\..\..\Users\ing_d\OneDrive\Desktop\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WebForms.v12.12.0.0.0\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Users\ing_d\OneDrive\Desktop\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.3\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.DomainServices.EntityFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Aspx\evento\frmConfirmacionEvento.aspx" />
+    <Content Include="Aspx\Registro\Confirmar.aspx" />
+    <Content Include="Aspx\Registro\frmOpcionesUsuario.aspx" />
+    <Content Include="Aspx\Registro\frmParticipante.aspx" />
+    <Content Include="Aspx\Registro\frmUpdatePerfil.aspx" />
+    <Content Include="Aspx\Registro\temp.aspx" />
+    <Content Include="Aspx\Registro\verificar.aspx" />
+    <Content Include="Aspx\Reportes\frmReporteDetalleDepartamento.aspx" />
+    <Content Include="Aspx\Reportes\frmReporteDetalleInscritos.aspx" />
+    <Content Include="Aspx\Reportes\frmReporteInscritos.aspx" />
+    <Content Include="Aspx\Seguridad\frmContactenos.aspx" />
+    <Content Include="Aspx\Seguridad\frmLogin.aspx" />
+    <Content Include="Aspx\Seguridad\frmLogoOut.aspx" />
+    <Content Include="Aspx\Seguridad\frmOlvidoContrasena.aspx" />
+    <Content Include="Aspx\Seguridad\session.txt" />
+    <Content Include="blueimp\custom.js" />
+    <Content Include="blueimp\font-awesome.css" />
+    <Content Include="blueimp\fontawesome-webfont.svg" />
+    <Content Include="blueimp\header-pattern-150.png" />
+    <Content Include="blueimp\jquery-1.11.1.js" />
+    <Content Include="blueimp\jquery.fileupload.js" />
+    <Content Include="blueimp\jquery.iframe-transport.js" />
+    <Content Include="blueimp\jquery.ui.widget.js" />
+    <Content Include="blueimp\menu.css" />
+    <Content Include="blueimp\upload.js" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\flechalista.jpg" />
+    <Content Include="css\main.css" />
+    <Content Include="css\mainv2.css" />
+    <Content Include="css\StyleSheetEditarDonante.css" />
+    <Content Include="css\tooltipster.bundle.css" />
+    <Content Include="css\tooltipster.bundle.min.css" />
+    <Content Include="css\tooltipster.core.css" />
+    <Content Include="css\tooltipster.core.min.css" />
+    <Content Include="css\Untitled-4.css" />
+    <Content Include="css\viñeta-titulo.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="files\5566912.jpg" />
+    <Content Include="frm\cg\cg.aspx" />
+    <Content Include="frm\controles\controlLogin.ascx" />
+    <Content Include="frm\informes\frmReportViewer.aspx" />
+    <Content Include="frm\informes\frmReportViewerHuerfanas.aspx" />
+    <Content Include="frm\logica\frmCambiarPassword.aspx" />
+    <Content Include="frm\logica\frmContactenos.aspx" />
+    <Content Include="frm\logica\frmDefault.aspx" />
+    <Content Include="frm\logica\frmMensaje.aspx" />
+    <Content Include="frm\logica\frmMensajeIframe.aspx" />
+    <Content Include="frm\logica\WebForm1.aspx" />
+    <Content Include="frm\master\sessionImportante.txt" />
+    <Content Include="frm\procesos\frmDecisionSeguimientoCUPS.aspx" />
+    <Content Include="frm\procesos\frmEventosFinal.aspx" />
+    <Content Include="frm\procesos\frmEventosTematica.aspx" />
+    <Content Include="frm\procesos\frmEventosTematicas.aspx" />
+    <Content Include="frm\procesos\frmHomeAdopcion.aspx" />
+    <Content Include="frm\procesos\frmHomeAdopcionHuerfanas.aspx" />
+    <Content Include="frm\procesos\frmhomeproceso.aspx" />
+    <Content Include="frm\procesos\frmHomeProcesoAnalisis.aspx" />
+    <Content Include="frm\procesos\frmHomeProcesoAnalisisCUPS.aspx" />
+    <Content Include="frm\procesos\frmHomeProcesoAnalisisHuerfanas.aspx" />
+    <Content Include="frm\procesos\frmhomeProcesoConsultas.aspx" />
+    <Content Include="frm\procesos\frmHomeProcesoConsultasHuerfanas.aspx" />
+    <Content Include="frm\procesos\frmHomeProcesoCups.aspx" />
+    <Content Include="frm\procesos\frmHomeProcesoEvaluacion.aspx" />
+    <Content Include="frm\procesos\frmHomeProcesoFormalizacion.aspx" />
+    <Content Include="frm\procesos\frmHomeProcesoImplementacion.aspx" />
+    <Content Include="frm\procesos\frmHomeProcesoNegociacion.aspx" />
+    <Content Include="frm\procesos\frmHomeProcesoNominacionAAA.aspx" />
+    <Content Include="frm\procesos\frmHomeProcesoNominacionCups.aspx" />
+    <Content Include="frm\procesos\frmHomeProcesoNominacionHuerfanas.aspx" />
+    <Content Include="frm\procesos\frmHomeProcesoNominacionUPC.aspx" />
+    <Content Include="frm\procesos\frmHomeProcesoRups.aspx" />
+    <Content Include="frm\procesos\frmInscripcionHuerfanas.aspx" />
+    <Content Include="frm\procesos\frmInscripcionProceso.aspx" />
+    <Content Include="frm\procesos\frmInscripcionProcesoAAA.aspx" />
+    <Content Include="frm\procesos\frmInscripcionProcesoRups.aspx" />
+    <Content Include="frm\procesos\frmInscripcionProcesoUPC.aspx" />
+    <Content Include="frm\procesos\frmLineaTiempo.aspx" />
+    <Content Include="frm\procesos\frmMisNominaciones.aspx" />
+    <Content Include="frm\procesos\frmNominaciones.aspx" />
+    <Content Include="frm\procesos\frmObjetar.aspx" />
+    <Content Include="frm\procesos\frmObjetarHuerfanas.aspx" />
+    <Content Include="frm\procesos\frmTematicasActivas.aspx" />
+    <Content Include="frm\procesos\frmTematicasActivas2.aspx" />
+    <Content Include="frm\procesos\RevisionExclusionesNoAplicacion.aspx" />
+    <Content Include="frm\procesos\frmSolicitarRevision.aspx" />
+    <Content Include="frm\registro\frmConozca.aspx" />
+    <Content Include="frm\registro\frmEditarPerfil.aspx" />
+    <Content Include="frm\registro\frmMigrarCuenta.aspx" />
+    <Content Include="frm\registro\frmPostRegistro.aspx" />
+    <Content Include="frm\registro\frmRegistro.aspx" />
+    <Content Include="frm\registro\verificar.aspx" />
+    <Content Include="frm\seguridad\frmLogin.aspx" />
+    <Content Include="frm\seguridad\frmLogout.aspx" />
+    <Content Include="frm\seguridad\frmOlvidoContrasena.aspx" />
+    <Content Include="frm\seguridad\frmrecuperarusuario.aspx" />
+    <Content Include="frm\ws\ws.asmx" />
+    <Content Include="html\CorreoHuerfanas.html" />
+    <Content Include="html\multimedia-en-que-vamos-ptc.html" />
+    <Content Include="images\100ppi\Asset 8%40100x.png" />
+    <Content Include="images\100ppi\calendario.png" />
+    <Content Include="images\100ppi\gobiernoColombia.png" />
+    <Content Include="images\100ppi\logo-mivoxpopuli%40100x.png" />
+    <Content Include="images\3.png" />
+    <Content Include="images\appStoreLogo.png" />
+    <Content Include="images\arrow-menu.svg" />
+    <Content Include="images\arrowc.png" />
+    <Content Include="images\arrowdown.png" />
+    <Content Include="images\arrowDown1.png" />
+    <Content Include="images\arrowDown2.png" />
+    <Content Include="images\arrowtit2.png" />
+    <Content Include="images\askBubbleIcon.png" />
+    <Content Include="images\backSection1.png" />
+    <Content Include="images\backSection12.png" />
+    <Content Include="images\backSelect.png" />
+    <Content Include="images\bg-general.jpg" />
+    <Content Include="images\bg-h2.png" />
+    <Content Include="images\bg-header.png" />
+    <Content Include="images\bg-header.svg" />
+    <Content Include="images\bg-logos.png" />
+    <Content Include="images\bg-logos.svg" />
+    <Content Include="images\bg-proces.svg" />
+    <Content Include="images\bg.png" />
+    <Content Include="images\bgsectiond.svg" />
+    <Content Include="images\bulletPencilIcon.png" />
+    <Content Include="images\calendario.png" />
+    <Content Include="images\calendario.svg" />
+    <Content Include="images\calendario1.svg" />
+    <Content Include="images\contacto-back.png" />
+    <Content Include="images\DE03_11.png" />
+    <Content Include="images\estrategiaLogo.png" />
+    <Content Include="images\facebookLogoShare.png" />
+    <Content Include="images\generalBackground.jpg" />
+    <Content Include="images\generalBackground_02.jpg" />
+    <Content Include="images\gobiernoColombia.png" />
+    <Content Include="images\googlePlayLogo.png" />
+    <Content Include="images\handIcon.png" />
+    <Content Include="images\icon01.png" />
+    <Content Include="images\icon02.png" />
+    <Content Include="images\icon03.png" />
+    <Content Include="images\ie.jpg" />
+    <Content Include="images\imagenes.jpg" />
+    <Content Include="images\infoBubble.png" />
+    <Content Include="images\iniciarSesionIcon.png" />
+    <Content Include="images\iniciarSesionIcon2.png" />
+    <Content Include="images\iniciarSesionIconV2.png" />
+    <Content Include="images\InicioLogo.png" />
+    <Content Include="images\inscribirse.jpg" />
+    <Content Include="images\itemIcon1.png" />
+    <Content Include="images\lab.png" />
+    <Content Include="images\learn.svg" />
+    <Content Include="images\learn2.png" />
+    <Content Include="images\learn2.svg" />
+    <Content Include="images\linem.png" />
+    <Content Include="images\list.jpg" />
+    <Content Include="images\llave.jpg" />
+    <Content Include="images\locationMap.png" />
+    <Content Include="images\logo-gobierno-1.png" />
+    <Content Include="images\logo-mivoxpopuli.png" />
+    <Content Include="images\logo-mivoxpopuli.svg" />
+    <Content Include="images\logo-part.jpg" />
+    <Content Include="images\mailIcon.png" />
+    <Content Include="images\mailIconShare.png" />
+    <Content Include="images\manos.png" />
+    <Content Include="images\md.jpg" />
+    <Content Include="images\MEDIC.png" />
+    <Content Include="images\medicamentos.png" />
+    <Content Include="images\menuIcon.png" />
+    <Content Include="images\minsalud-f.png" />
+    <Content Include="images\minSaludLogo.png" />
+    <Content Include="images\modificar.jpg" />
+    <Content Include="images\moleclula.png" />
+    <Content Include="images\moneyBubbleIcon.png" />
+    <Content Include="images\part.jpg" />
+    <Content Include="images\participa.svg" />
+    <Content Include="images\pdfFile.jpg" />
+    <Content Include="images\pill.png" />
+    <Content Include="images\planeBubbleIcon.png" />
+    <Content Include="images\posPopuli.png" />
+    <Content Include="images\posPopuliLogo.png" />
+    <Content Include="images\printIcon.png" />
+    <Content Include="images\procedimiento.png" />
+    <Content Include="images\radomBubble.png" />
+    <Content Include="images\Recurso 1.png" />
+    <Content Include="images\Recurso 8.svg" />
+    <Content Include="images\redes.png" />
+    <Content Include="images\regis.jpg" />
+    <Content Include="images\s.jpg" />
+    <Content Include="images\salir.jpg" />
+    <Content Include="images\searchBubble.png" />
+    <Content Include="images\searchIcon.png" />
+    <Content Include="images\searchMenuIcon.png" />
+    <Content Include="images\SVG\Asset 1.svg" />
+    <Content Include="images\todosPorUnNuevoPais.png" />
+    <Content Include="images\tooltipq.png" />
+    <Content Include="images\topMiniBannerBusquedaAvanzada.png" />
+    <Content Include="images\topMiniBannerSearchSection.png" />
+    <Content Include="images\twitterLogo.png" />
+    <Content Include="images\videoBack.png" />
+    <Content Include="images\yodecido.png" />
+    <Content Include="img\adver_roj.gif" />
+    <Content Include="img\Calendar_scheduleHS.png" />
+    <Content Include="img\calidad.png" />
+    <Content Include="img\Carnet1.png" />
+    <Content Include="img\Carnet2.png" />
+    <Content Include="img\Desarrollo.jpg" />
+    <Content Include="img\encabezado-section.jpg" />
+    <Content Include="img\EscudoNal.png" />
+    <Content Include="img\file.png" />
+    <Content Include="img\Lema de gobierno.tif" />
+    <Content Include="img\LOGO EHR HORIZONTAL.PNG" />
+    <Content Include="img\logo-minsalud.png" />
+    <Content Include="img\logo-mivoxpopuli.png" />
+    <Content Include="img\LogoAplicativo.png" />
+    <Content Include="img\LogoINs.png" />
+    <Content Include="img\LogoProperidad.png" />
+    <Content Include="img\web\aprueba.jpg" />
+    <Content Include="img\web\clic.png" />
+    <Content Include="img\web\clic31.png" />
+    <Content Include="img\web\delete.png" />
+    <Content Include="img\web\help.gif" />
+    <Content Include="img\web\inscritos.gif" />
+    <Content Include="img\web\logo_INS.png" />
+    <Content Include="img\web\noaprueba.jpg" />
+    <Content Include="img\web\noticia-participaicion2.png" />
+    <Content Include="img\web\tb_edit.png" />
+    <Content Include="img\web\ver.png" />
+    <Content Include="js\app.js" />
+    <Content Include="Lib\Desktop.dll" />
+    <Content Include="main.css" />
+    <Content Include="packages.config" />
+    <Content Include="documentos\Plantilla Donantes.xlsx" />
+    <Content Include="Aspx\master\frmMaster.master" />
+    <Content Include="frm\master\master.Master" />
+    <Content Include="frm\master\basicMaster.Master" />
+    <Content Include="frm\master\masterb.Master" />
+    <Content Include="Participacion2017DataSet.xsc">
+      <DependentUpon>Participacion2017DataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="frm\master\masterc.Master" />
+    <Content Include="docs\metodo-fase-nominacion-priorizacion-ptc.pdf" />
+    <Content Include="blueimp\fontawesome-webfont.eot" />
+    <Content Include="blueimp\fontawesome-webfont.ttf" />
+    <Content Include="blueimp\fontawesome-webfont.woff" />
+    <Content Include="blueimp\FontAwesome.otf" />
+    <Content Include="blueimp\jquery-1.11.1.min.map" />
+    <Content Include="frm\ws\FileUploadHandler.ashx" />
+    <Content Include="files\0026193 certifiacion INS 2016.pdf" />
+    <Content Include="files\0707377 ASESOFTWARE SAS 2015.pdf" />
+    <Content Include="files\0708757 ASESOFTWARE SAS 2015.pdf" />
+    <Content Include="files\1165032 Certficacion ministerio salud 2016.pdf" />
+    <Content Include="files\1250313 certifiacion INS 2016.pdf" />
+    <Content Include="files\1498248 certifiacion CG con Objetos.pdf" />
+    <Content Include="files\2105698 certifiacion CG con Objetos.pdf" />
+    <Content Include="files\325684propuesta adjunta - mantenimiento spx annar 2.pdf" />
+    <Content Include="files\3574148 certifiacion CG con Objetos.pdf" />
+    <Content Include="files\3663198 certifiacion CG con Objetos.pdf" />
+    <Content Include="files\4265368 certifiacion CG con Objetos.pdf" />
+    <Content Include="files\4303216 spring 2015.pdf" />
+    <Content Include="files\4373608 certifiacion CG con Objetos.pdf" />
+    <Content Include="files\4411936 spring 2015.pdf" />
+    <Content Include="files\4917917 ASESOFTWARE SAS 2015.pdf" />
+    <Content Include="files\5623765 certificacion INS 2013-2014.pdf" />
+    <Content Include="files\5722146 spring 2015.pdf" />
+    <Content Include="files\5972607 ASESOFTWARE SAS 2015.pdf" />
+    <Content Include="files\6157736 spring 2015.pdf" />
+    <Content Include="files\6366877 ASESOFTWARE SAS 2015.pdf" />
+    <Content Include="files\7417377 ASESOFTWARE SAS 2015.pdf" />
+    <Content Include="files\7540648 certifiacion CG con Objetos.pdf" />
+    <Content Include="files\7599106 spring 2015.pdf" />
+    <Content Include="files\7662557 ASESOFTWARE SAS 2015.pdf" />
+    <Content Include="files\7666804 Certificscion INS 2015_1.pdf" />
+    <Content Include="files\7733781 certificacion ministerio salud 2017.pdf" />
+    <Content Include="files\7834416 spring 2015.pdf" />
+    <Content Include="files\7960497 ASESOFTWARE SAS 2015.pdf" />
+    <Content Include="files\8031192 Certficacion ministerio salud 2016.pdf" />
+    <Content Include="files\8107616 spring 2015.pdf" />
+    <Content Include="files\8463457 ASESOFTWARE SAS 2015.pdf" />
+    <Content Include="files\9377568 certifiacion CG con Objetos.pdf" />
+    <Content Include="files\9505837 ASESOFTWARE SAS 2015.pdf" />
+    <Content Include="files\9510248 certifiacion CG con Objetos.pdf" />
+    <Content Include="files\9756718 certifiacion CG con Objetos.pdf" />
+    <Content Include="files\9947818 certifiacion CG con Objetos.pdf" />
+    <Content Include="files\metodologia-nominacion-plan-de-beneficios.pdf" />
+    <Content Include="documentos\Formato 3  Aspectos Relevantes de la TSN.xlsx" />
+    <Content Include="documentos\Formato 4 Formato para la presentación de reportes.pdf" />
+    <Content Include="documentos\Formato 5 Criterios verificación calidad.pdf" />
+    <Content Include="frm\master\site2019.Master" />
+    <Content Include="images\Adobe Zii 2.2.1  for Adobe CC15 CC17.dmg" />
+    <EmbeddedResource Include="frm\informes\rptNominacionHuerfana6.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\informes\rptNominacionHuerfana5.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\informes\rptNominacionHuerfana4.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\informes\rptNominacionHuerfana3.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\informes\rptNominacionHuerfana2.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\informes\rptNominacionHuerfana1.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="frm\informes\rptNominacionRupsNuevo.rdlc" />
+    <None Include="Participacion2017DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Participacion2017DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Participacion2017DataSet.xss">
+      <DependentUpon>Participacion2017DataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="Participacion2017DataSetHuerfanas.xsc">
+      <DependentUpon>Participacion2017DataSetHuerfanas.xsd</DependentUpon>
+    </Content>
+    <None Include="Participacion2017DataSetHuerfanas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Participacion2017DataSetHuerfanas.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Participacion2017DataSetHuerfanas.xss">
+      <DependentUpon>Participacion2017DataSetHuerfanas.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\carnetluis.pubxml" />
+    <None Include="Properties\PublishProfiles\Diego.pubxml" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Lib\AjaxControlToolkit.dll" />
+    <Content Include="Lib\AjaxMin.dll" />
+    <Content Include="Lib\C1.C1Report.4.dll" />
+    <Content Include="Lib\C1.C1Report.CustomFields.4.dll" />
+    <Content Include="Reporte\CarnetDonante.xml" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\fancy\lib\jquery-1.10.1.min.js" />
+    <Content Include="Scripts\fancy\lib\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\fancy\lib\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="Scripts\fancy\source\blank.gif" />
+    <Content Include="Scripts\fancy\source\fancybox_loading%402x.gif" />
+    <Content Include="Scripts\fancy\source\fancybox_loading.gif" />
+    <Content Include="Scripts\fancy\source\fancybox_overlay.png" />
+    <Content Include="Scripts\fancy\source\fancybox_sprite%402x.png" />
+    <Content Include="Scripts\fancy\source\fancybox_sprite.png" />
+    <Content Include="Scripts\fancy\source\fancyMins.css" />
+    <Content Include="Scripts\fancy\source\helpers\fancybox_buttons.png" />
+    <Content Include="Scripts\fancy\source\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="Scripts\fancy\source\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="Scripts\fancy\source\helpers\jquery.fancybox-media.js" />
+    <Content Include="Scripts\fancy\source\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="Scripts\fancy\source\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="Scripts\fancy\source\jquery.fancybox.css" />
+    <Content Include="Scripts\fancy\source\jquery.fancybox.js" />
+    <Content Include="Scripts\fancy\source\jquery.fancybox.pack.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\tooltipster.bundle.js" />
+    <Content Include="Scripts\tooltipster.bundle.min.js" />
+    <Content Include="Scripts\tooltipster.core.js" />
+    <Content Include="Scripts\tooltipster.core.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aspx\evento\frmConfirmacionEvento.aspx.cs">
+      <DependentUpon>frmConfirmacionEvento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aspx\evento\frmConfirmacionEvento.aspx.designer.cs">
+      <DependentUpon>frmConfirmacionEvento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aspx\master\frmMaster.master.cs">
+      <DependentUpon>frmMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aspx\master\frmMaster.master.designer.cs">
+      <DependentUpon>frmMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Aspx\Registro\Confirmar.aspx.cs">
+      <DependentUpon>Confirmar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aspx\Registro\Confirmar.aspx.designer.cs">
+      <DependentUpon>Confirmar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aspx\Registro\frmOpcionesUsuario.aspx.cs">
+      <DependentUpon>frmOpcionesUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aspx\Registro\frmOpcionesUsuario.aspx.designer.cs">
+      <DependentUpon>frmOpcionesUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aspx\Registro\frmUpdatePerfil.aspx.cs">
+      <DependentUpon>frmUpdatePerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aspx\Registro\frmUpdatePerfil.aspx.designer.cs">
+      <DependentUpon>frmUpdatePerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aspx\Registro\ResponseHelper.cs" />
+    <Compile Include="Aspx\Registro\frmParticipante.aspx.cs">
+      <DependentUpon>frmParticipante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aspx\Registro\frmParticipante.aspx.designer.cs">
+      <DependentUpon>frmParticipante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aspx\Registro\temp.aspx.cs">
+      <DependentUpon>temp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aspx\Registro\temp.aspx.designer.cs">
+      <DependentUpon>temp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aspx\Registro\verificar.aspx.cs">
+      <DependentUpon>verificar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aspx\Registro\verificar.aspx.designer.cs">
+      <DependentUpon>verificar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aspx\Reportes\frmReporteDetalleDepartamento.aspx.cs">
+      <DependentUpon>frmReporteDetalleDepartamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aspx\Reportes\frmReporteDetalleDepartamento.aspx.designer.cs">
+      <DependentUpon>frmReporteDetalleDepartamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aspx\Reportes\frmReporteDetalleInscritos.aspx.cs">
+      <DependentUpon>frmReporteDetalleInscritos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aspx\Reportes\frmReporteDetalleInscritos.aspx.designer.cs">
+      <DependentUpon>frmReporteDetalleInscritos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aspx\Reportes\frmReporteInscritos.aspx.cs">
+      <DependentUpon>frmReporteInscritos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aspx\Reportes\frmReporteInscritos.aspx.designer.cs">
+      <DependentUpon>frmReporteInscritos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aspx\Seguridad\frmContactenos.aspx.cs">
+      <DependentUpon>frmContactenos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aspx\Seguridad\frmContactenos.aspx.designer.cs">
+      <DependentUpon>frmContactenos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aspx\Seguridad\frmLogin.aspx.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aspx\Seguridad\frmLogin.aspx.designer.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aspx\Seguridad\frmLogoOut.aspx.cs">
+      <DependentUpon>frmLogoOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aspx\Seguridad\frmLogoOut.aspx.designer.cs">
+      <DependentUpon>frmLogoOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aspx\Seguridad\frmOlvidoContrasena.aspx.cs">
+      <DependentUpon>frmOlvidoContrasena.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aspx\Seguridad\frmOlvidoContrasena.aspx.designer.cs">
+      <DependentUpon>frmOlvidoContrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\cg\cg.aspx.cs">
+      <DependentUpon>cg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\cg\cg.aspx.designer.cs">
+      <DependentUpon>cg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\controles\controlLogin.ascx.cs">
+      <DependentUpon>controlLogin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\controles\controlLogin.ascx.designer.cs">
+      <DependentUpon>controlLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\informes\frmReportViewer.aspx.cs">
+      <DependentUpon>frmReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\informes\frmReportViewer.aspx.designer.cs">
+      <DependentUpon>frmReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\informes\frmReportViewerHuerfanas.aspx.cs">
+      <DependentUpon>frmReportViewerHuerfanas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\informes\frmReportViewerHuerfanas.aspx.designer.cs">
+      <DependentUpon>frmReportViewerHuerfanas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\logica\frmCambiarPassword.aspx.cs">
+      <DependentUpon>frmCambiarPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\logica\frmCambiarPassword.aspx.designer.cs">
+      <DependentUpon>frmCambiarPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\logica\frmContactenos.aspx.cs">
+      <DependentUpon>frmContactenos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\logica\frmContactenos.aspx.designer.cs">
+      <DependentUpon>frmContactenos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\logica\frmDefault.aspx.cs">
+      <DependentUpon>frmDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\logica\frmDefault.aspx.designer.cs">
+      <DependentUpon>frmDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\logica\frmMensaje.aspx.cs">
+      <DependentUpon>frmMensaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\logica\frmMensaje.aspx.designer.cs">
+      <DependentUpon>frmMensaje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\logica\frmMensajeIframe.aspx.cs">
+      <DependentUpon>frmMensajeIframe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\logica\frmMensajeIframe.aspx.designer.cs">
+      <DependentUpon>frmMensajeIframe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\logica\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\logica\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\master\basicMaster.Master.cs">
+      <DependentUpon>basicMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\master\basicMaster.Master.designer.cs">
+      <DependentUpon>basicMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="frm\master\master.Master.cs">
+      <DependentUpon>master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\master\master.Master.designer.cs">
+      <DependentUpon>master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="frm\master\masterb.Master.cs">
+      <DependentUpon>masterb.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\master\masterb.Master.designer.cs">
+      <DependentUpon>masterb.Master</DependentUpon>
+    </Compile>
+    <Compile Include="frm\master\masterc.Master.cs">
+      <DependentUpon>masterc.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\master\masterc.Master.designer.cs">
+      <DependentUpon>masterc.Master</DependentUpon>
+    </Compile>
+    <Compile Include="frm\master\site2019.Master.cs">
+      <DependentUpon>site2019.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\master\site2019.Master.designer.cs">
+      <DependentUpon>site2019.Master</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmDecisionSeguimientoCUPS.aspx.cs">
+      <DependentUpon>frmDecisionSeguimientoCUPS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmDecisionSeguimientoCUPS.aspx.designer.cs">
+      <DependentUpon>frmDecisionSeguimientoCUPS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmEventosFinal.aspx.cs">
+      <DependentUpon>frmEventosFinal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmEventosFinal.aspx.designer.cs">
+      <DependentUpon>frmEventosFinal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmEventosTematica.aspx.cs">
+      <DependentUpon>frmEventosTematica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmEventosTematica.aspx.designer.cs">
+      <DependentUpon>frmEventosTematica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmEventosTematicas.aspx.cs">
+      <DependentUpon>frmEventosTematicas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmEventosTematicas.aspx.designer.cs">
+      <DependentUpon>frmEventosTematicas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeAdopcion.aspx.cs">
+      <DependentUpon>frmHomeAdopcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeAdopcion.aspx.designer.cs">
+      <DependentUpon>frmHomeAdopcion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeAdopcionHuerfanas.aspx.cs">
+      <DependentUpon>frmHomeAdopcionHuerfanas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeAdopcionHuerfanas.aspx.designer.cs">
+      <DependentUpon>frmHomeAdopcionHuerfanas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmhomeproceso.aspx.cs">
+      <DependentUpon>frmhomeproceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmhomeproceso.aspx.designer.cs">
+      <DependentUpon>frmhomeproceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoAnalisis.aspx.cs">
+      <DependentUpon>frmHomeProcesoAnalisis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoAnalisis.aspx.designer.cs">
+      <DependentUpon>frmHomeProcesoAnalisis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoAnalisisCUPS.aspx.cs">
+      <DependentUpon>frmHomeProcesoAnalisisCUPS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoAnalisisCUPS.aspx.designer.cs">
+      <DependentUpon>frmHomeProcesoAnalisisCUPS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoAnalisisHuerfanas.aspx.cs">
+      <DependentUpon>frmHomeProcesoAnalisisHuerfanas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoAnalisisHuerfanas.aspx.designer.cs">
+      <DependentUpon>frmHomeProcesoAnalisisHuerfanas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmhomeProcesoConsultas.aspx.cs">
+      <DependentUpon>frmhomeProcesoConsultas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmhomeProcesoConsultas.aspx.designer.cs">
+      <DependentUpon>frmhomeProcesoConsultas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoConsultasHuerfanas.aspx.cs">
+      <DependentUpon>frmHomeProcesoConsultasHuerfanas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoConsultasHuerfanas.aspx.designer.cs">
+      <DependentUpon>frmHomeProcesoConsultasHuerfanas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoCups.aspx.cs">
+      <DependentUpon>frmHomeProcesoCups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoCups.aspx.designer.cs">
+      <DependentUpon>frmHomeProcesoCups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoEvaluacion.aspx.cs">
+      <DependentUpon>frmHomeProcesoEvaluacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoEvaluacion.aspx.designer.cs">
+      <DependentUpon>frmHomeProcesoEvaluacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoFormalizacion.aspx.cs">
+      <DependentUpon>frmHomeProcesoFormalizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoFormalizacion.aspx.designer.cs">
+      <DependentUpon>frmHomeProcesoFormalizacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoImplementacion.aspx.cs">
+      <DependentUpon>frmHomeProcesoImplementacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoImplementacion.aspx.designer.cs">
+      <DependentUpon>frmHomeProcesoImplementacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoNegociacion.aspx.cs">
+      <DependentUpon>frmHomeProcesoNegociacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoNegociacion.aspx.designer.cs">
+      <DependentUpon>frmHomeProcesoNegociacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoNominacionAAA.aspx.cs">
+      <DependentUpon>frmHomeProcesoNominacionAAA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoNominacionAAA.aspx.designer.cs">
+      <DependentUpon>frmHomeProcesoNominacionAAA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoNominacionCups.aspx.cs">
+      <DependentUpon>frmHomeProcesoNominacionCups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoNominacionCups.aspx.designer.cs">
+      <DependentUpon>frmHomeProcesoNominacionCups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoNominacionHuerfanas.aspx.cs">
+      <DependentUpon>frmHomeProcesoNominacionHuerfanas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoNominacionHuerfanas.aspx.designer.cs">
+      <DependentUpon>frmHomeProcesoNominacionHuerfanas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoNominacionUPC.aspx.cs">
+      <DependentUpon>frmHomeProcesoNominacionUPC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoNominacionUPC.aspx.designer.cs">
+      <DependentUpon>frmHomeProcesoNominacionUPC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoRups.aspx.cs">
+      <DependentUpon>frmHomeProcesoRups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeProcesoRups.aspx.designer.cs">
+      <DependentUpon>frmHomeProcesoRups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmInscripcionHuerfanas.aspx.cs">
+      <DependentUpon>frmInscripcionHuerfanas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmInscripcionHuerfanas.aspx.designer.cs">
+      <DependentUpon>frmInscripcionHuerfanas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmInscripcionProceso.aspx.cs">
+      <DependentUpon>frmInscripcionProceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmInscripcionProceso.aspx.designer.cs">
+      <DependentUpon>frmInscripcionProceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmInscripcionProcesoAAA.aspx.cs">
+      <DependentUpon>frmInscripcionProcesoAAA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmInscripcionProcesoAAA.aspx.designer.cs">
+      <DependentUpon>frmInscripcionProcesoAAA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmInscripcionProcesoRups.aspx.cs">
+      <DependentUpon>frmInscripcionProcesoRups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmInscripcionProcesoRups.aspx.designer.cs">
+      <DependentUpon>frmInscripcionProcesoRups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmInscripcionProcesoUPC.aspx.cs">
+      <DependentUpon>frmInscripcionProcesoUPC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmInscripcionProcesoUPC.aspx.designer.cs">
+      <DependentUpon>frmInscripcionProcesoUPC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmLineaTiempo.aspx.cs">
+      <DependentUpon>frmLineaTiempo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmLineaTiempo.aspx.designer.cs">
+      <DependentUpon>frmLineaTiempo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmMisNominaciones.aspx.cs">
+      <DependentUpon>frmMisNominaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmMisNominaciones.aspx.designer.cs">
+      <DependentUpon>frmMisNominaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmNominaciones.aspx.cs">
+      <DependentUpon>frmNominaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmNominaciones.aspx.designer.cs">
+      <DependentUpon>frmNominaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmObjetar.aspx.cs">
+      <DependentUpon>frmObjetar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmObjetar.aspx.designer.cs">
+      <DependentUpon>frmObjetar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmObjetarHuerfanas.aspx.cs">
+      <DependentUpon>frmObjetarHuerfanas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmObjetarHuerfanas.aspx.designer.cs">
+      <DependentUpon>frmObjetarHuerfanas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmTematicasActivas.aspx.cs">
+      <DependentUpon>frmTematicasActivas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmTematicasActivas.aspx.designer.cs">
+      <DependentUpon>frmTematicasActivas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmTematicasActivas2.aspx.cs">
+      <DependentUpon>frmTematicasActivas2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmTematicasActivas2.aspx.designer.cs">
+      <DependentUpon>frmTematicasActivas2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\RevisionExclusionesNoAplicacion.aspx.cs">
+      <DependentUpon>RevisionExclusionesNoAplicacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\RevisionExclusionesNoAplicacion.aspx.designer.cs">
+      <DependentUpon>RevisionExclusionesNoAplicacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmSolicitarRevision.aspx.cs">
+      <DependentUpon>frmSolicitarRevision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmSolicitarRevision.aspx.designer.cs">
+      <DependentUpon>frmSolicitarRevision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\registro\frmConozca.aspx.cs">
+      <DependentUpon>frmConozca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\registro\frmConozca.aspx.designer.cs">
+      <DependentUpon>frmConozca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\registro\frmEditarPerfil.aspx.cs">
+      <DependentUpon>frmEditarPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\registro\frmEditarPerfil.aspx.designer.cs">
+      <DependentUpon>frmEditarPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\registro\frmMigrarCuenta.aspx.cs">
+      <DependentUpon>frmMigrarCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\registro\frmMigrarCuenta.aspx.designer.cs">
+      <DependentUpon>frmMigrarCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\registro\frmPostRegistro.aspx.cs">
+      <DependentUpon>frmPostRegistro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\registro\frmPostRegistro.aspx.designer.cs">
+      <DependentUpon>frmPostRegistro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\registro\frmRegistro.aspx.cs">
+      <DependentUpon>frmRegistro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\registro\frmRegistro.aspx.designer.cs">
+      <DependentUpon>frmRegistro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\registro\verificar.aspx.cs">
+      <DependentUpon>verificar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\registro\verificar.aspx.designer.cs">
+      <DependentUpon>verificar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\seguridad\frmLogin.aspx.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\seguridad\frmLogin.aspx.designer.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\seguridad\frmLogout.aspx.cs">
+      <DependentUpon>frmLogout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\seguridad\frmLogout.aspx.designer.cs">
+      <DependentUpon>frmLogout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\seguridad\frmOlvidoContrasena.aspx.cs">
+      <DependentUpon>frmOlvidoContrasena.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\seguridad\frmOlvidoContrasena.aspx.designer.cs">
+      <DependentUpon>frmOlvidoContrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\seguridad\frmrecuperarusuario.aspx.cs">
+      <DependentUpon>frmrecuperarusuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\seguridad\frmrecuperarusuario.aspx.designer.cs">
+      <DependentUpon>frmrecuperarusuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\ws\FileUploadHandler.ashx.cs">
+      <DependentUpon>FileUploadHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\ws\ws.asmx.cs">
+      <DependentUpon>ws.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lib\clsValidarTipo.cs" />
+    <Compile Include="Participacion2017DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Participacion2017DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Participacion2017DataSetHuerfanas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Participacion2017DataSetHuerfanas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Skin1\Skin1.skin" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="datosExel\" />
+    <Folder Include="fonts\" />
+    <Folder Include="frm\reporte\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frm\informes\rptNominacionRups.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="frm\informes\rptNominacionRupsAjuste.rdlc" />
+    <EmbeddedResource Include="frm\informes\rptObjecion.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\informes\rptNominacion.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\informes\rptObjecionHuerfana.rdlc" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatosInscripcionMinSalud\DatosInscripcionMinSalud.csproj">
+      <Project>{6748a57a-3d3b-45b7-8b71-b268f1457369}</Project>
+      <Name>DatosInscripcionMinSalud</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NegocioInscripcionMinSalud\NegocioInscripcionMinSalud.csproj">
+      <Project>{abc194d4-c949-4df4-a73d-f6ccb2728556}</Project>
+      <Name>NegocioInscripcionMinSalud</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50290</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8081/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

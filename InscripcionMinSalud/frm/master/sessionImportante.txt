@@ -1,0 +1,5 @@
+﻿ 
+ 
+ 
+ Session["SS_COD_REGISTRO"] = usuario.COD_REGISTRO;
+Session["SS_NOMBRE_USUARIO"] = usuario.NOMBRE_USUARIO;

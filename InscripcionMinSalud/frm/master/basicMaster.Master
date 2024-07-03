@@ -1,0 +1,176 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="basicMaster.master.cs" Inherits="InscripcionMinSalud.frm.master.basicMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="css/mainIE.css" />
+	<![endif]-->
+<title>Participación Ciudadana</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script type="text/javascript" src="../../js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="../../js/general.js"></script>
+
+
+
+     <link href="../../Scripts/fancy/source/fancyMins.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <script src="../../Scripts/jquery-1.9.1.js"></script>
+    <script src="../../Scripts/jquery.min.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <script src="../../Scripts/jquery-ui.js"></script>
+
+          <link rel="stylesheet" type="text/css" href="../../css/tooltipster.bundle.min.css" />
+    <link href="../../Scripts/fancy/source/jquery.fancybox.css?v=2.1.5" media="screen" rel="stylesheet" type="text/css">
+    <link href="../../Scripts/fancy/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" media="screen" rel="stylesheet" type="text/css">
+    <link href="../../Scripts/fancy/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" media="screen" rel="stylesheet" type="text/css">
+   <script type="text/javascript" src="../../Scripts/fancy/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script type="text/javascript" src="../../Scripts/fancy/source/jquery.fancybox.js?v=2.1.5"></script>
+    <script type="text/javascript" src="../../Scripts/fancy/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="../../Scripts/fancy/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+    <script type="text/javascript" src="../../Scripts/fancy/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+    <script type="text/javascript" src="../../Scripts/tooltipster.bundle.min.js"></script>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156569301-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-156569301-1');
+    </script>
+
+</head>
+
+<body>
+<header>
+  <div class="headerWrapper">
+    <div class="contenedor">
+      <div class="first"> <a href="https://www.minsalud.gov.co/Paginas/default.aspx">
+          <img src="../../images/minSaludLogo.png" alt="ir al sitio principal del ministerio de salud" > </a> 
+         <img alt="Logo yo decido" src="../../images/yodecido.png">
+            <img alt="Logo todos por un nuevo país" src="../../images/todosPorUnNuevoPais.png"> </div>
+      <div class="second"> 
+          <a href ="../../Aspx/Registro/temp.aspx" >
+              <img id="home" src="../../images/InicioLogo.png" />
+          </a>
+          <a  runat="server" ID="pnlIniciarSesion" href="../../Aspx/Seguridad/frmLogin.aspx">
+           <img id="login" src="../../images/iniciarSesionIcon.png" />
+              </a>
+     
+        
+      </div>
+    </div>
+  </div>
+  <div class="menup">
+    <ul class="nav-menu" >
+      
+      <li class="item"> <a href="../../Aspx/Registro/frmOpcionesUsuario.aspx">Inicio </a> </li>
+      <li class="item" runat="server" id="menuRegistrese"> <a href="../../Aspx/Registro/frmParticipante.aspx">Regístrese </a> </li>
+      <li class="item" runat="server" id="menuUpdate"> <a href="../../Aspx/Seguridad/frmLogin.aspx">Actualización datos</a> </li>
+      <li class="item"> <a href="../../Aspx/Reportes/frmReporteInscritos.aspx">Conozca</a> </li>
+      <li class="item"> <a href="../../Aspx/Seguridad/frmContactenos.aspx">Contáctenos</a> </li>
+           
+
+    </ul>
+  </div>
+</header>
+<section class="participacion posPopuli">
+  <div class="mainWrapper">
+      <form id="form1" runat="server" novalidate="novalidate">
+          
+                        <ajaxToolkit:ToolkitScriptManager ID="ScriptManager1" runat="server"></ajaxToolkit:ToolkitScriptManager>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+      </form>
+  </div>
+</section>
+<footer>
+  
+  <section class="ministerios">
+    <div class="contenedor">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="col-md-6"><img src="../../images/logo-gobierno-1.png"></div>
+          <div class="col-md-6"><img src="../../images/todosPorUnNuevoPais.png"></div>
+        </div>
+        <div class="col-md-6">
+          <div class="col-md-4">
+            <ul class="lministerio">
+              <li> <a href="http://www.vicepresidencia.gov.co/">Vicepresidencia </a> </li>
+              <li> <a href="https://www.minminas.gov.co/">MinMinas </a> </li>
+              <li> <a href="http://www.mintransporte.gov.co/ ">MinTransporte </a> </li>
+              <li> <a href="http://www.minjusticia.gov.co/">MinJusticia </a> </li>
+              <li> <a href="http://www.mincomercio.gov.co/">MinComercio </a> </li>
+              <li> <a href="http://www.minvivienda.gov.co/">MinVivienda </a> </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="lministerio">
+              <li> <a href="http://www.mindefensa.gov.co/">MinDefensa </a> </li>
+              <li> <a href="http://www.mintic.gov.co/">MinTIC </a> </li>
+              <li> <a href="http://www.mineducacion.gov.co/">MinEducación </a> </li>
+              <li> <a href="http://www.mininterior.gov.co/">MinInterior </a> </li>
+              <li> <a href="http://www.mincultura.gov.co/">MinCultura </a> </li>
+              <li> <a href="http://www.mintrabajo.gov.co/">MinTrabajo </a> </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="lministerio">
+              <li> <a href="http://www.cancilleria.gov.co/">MinRelaciones </a> </li>
+              <li> <a href="http://www.minagricultura.gov.co/">MinAgricultura </a> </li>
+              <li> <a href="http://www.minsalud.gov.co/">MinSalud </a> </li>
+              <li> <a href="http://www.minhacienda.gov.co/">MinHacienda </a> </li>
+              <li> <a href="http://www.minambiente.gov.co/">MinAmbiente </a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="piedp">
+    <div class="row">
+      <div class="contenedor">
+        <div class="col-md-6">
+          <p> <strong>Conmutador:</strong> (57-1) 330 5000 - Central de fax: (57-1) 330 5050<br>
+            <strong>Punto de atención presencial:</strong> Carrera 13 No. 32-76 piso 1, Bogotá, código postal 110311<br>
+            Lunes a viernes de 8:00 a.m. a 4:00 p.m. en jornada continua<br>
+            <strong>Línea de atención de desastres:</strong> (57-1) 330 5071 - 24 horas<br>
+            <strong>Notificaciones judiciales:</strong> <a href="mailto:notificacionesjudiciales@minsalud.gov.co" title="Correo judicial">notificacionesjudiciales@minsalud.gov.co</a><br>
+                  
+          <div class="fechaUltima">Última actualización: lunes, 27 de marzo de 2017</div>
+          <br>
+          © 2017 Ministerio de Salud y Protección Social.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="contentfooterder left"> <strong>Atención telefónica a través del Centro de Contacto:</strong><br>
+            En Bogotá: (57-1) 589 3750 Resto del pais: 018000960020<br>
+            <strong>Horario de atención:</strong> lunes a viernes de 7:00 a.m. a 6:00 p.m. y <br>
+            sábados de 8:00 a.m. a 1:00 p.m. en jornada continua.<br>
+         
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+<script type="text/javascript">
+		$('.item2 h4').click(function(){
+			$(this).parent().find("p").slideToggle();
+			$(this).parent().siblings().find("p").slideUp();
+		});
+		
+	</script>
+</body>
+</html>

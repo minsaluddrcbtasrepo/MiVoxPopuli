@@ -1,0 +1,446 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="site2019.master.cs" Inherits="InscripcionMinSalud.frm.master.site2019" %>
+
+<%@ Register Assembly="DevExpress.Web.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Mi vox pópuli</title>
+    <meta charset="utf8">
+    <meta http-equiv="content-language" content="es">
+    <meta name="google-site-verification" content="VqWrZGYt9ipecwMpY93poxOhyVtZmI79ivpreeZcsrg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="El portal de participación ciudadana del Ministerio de Salud y Protección Social, esta herramienta le permite participar en los procesos vigentes para tomar las mejores decisiones." />
+
+    <meta name="robots" content="index" />
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript">
+        var qc = 0;
+        function clickOnce(btn) {
+            //este no funciona si esta dentro de un update panel
+            qc = qc + 1;
+            if (qc > 3) {
+                //alert('Su petición se está procesando. Por favor espere un momento.');
+                btn.value = "Espere un momento.";
+                return false;
+            } else if (qc > 1) {
+                btn.value = "Procesando...";
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function clickVigencia() {
+           
+            var str = this.location.href; 
+            if (str.includes('v=')) {
+                if ($('#cmbVigencia').val() != -1) {
+                    
+                    var res = str.replace(str.split('&')[1], "v=" + $('#cmbVigencia').val());
+                    window.location.replace(res);
+                }
+            } 
+
+        }
+
+        $(document).ready(function () {
+            var str = this.location.href; 
+            if (str.includes('v=')) {
+                document.getElementById("cmbVigencia").style.display = "block";
+                
+            } else {
+                document.getElementById("cmbVigencia").style.display = "none";
+                
+            }
+        });
+      
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">    
+    </asp:ContentPlaceHolder>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156569301-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-156569301-1');
+    </script>
+
+</head>
+<body>     
+    <form id="form1" runat="server">
+        <asp:HiddenField ID="hdnItem"  runat="server"></asp:HiddenField>
+        <section class="encabezado">
+            <header>
+                <nav class="navbar navbar-default">
+                    <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav right">
+                            <asp:PlaceHolder runat="server" ID="pnlIngreso">
+                                <li><a class="register" data-toggle="modal" data-target="#myModal" href="#">Registrarme</a>
+                                    <span class="line">|</span></li>
+                                <li>
+                                    <a data-toggle="modal" data-target="#myModal2" href="#">Ingresar</a>
+                                </li>
+                            </asp:PlaceHolder>
+                            <asp:PlaceHolder runat="server" ID="pnlCerrar" Visible="false">
+                                <li class="dropdown open">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Usuario:
+                                        <asp:Label runat="server" ID="lblNombreusuario"></asp:Label>
+                                        <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+
+                                            <asp:HyperLink runat="server" ID="lnkCambiarPass" NavigateUrl="~/frm/logica/frmCambiarPassword.aspx">Cambiar contraseña</asp:HyperLink>
+
+                                        </li>
+                                        <li><a href="../../frm/registro/frmEditarPerfil.aspx">Editar Perfil</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li>
+                                            <asp:LinkButton runat="server" ID="lnkCerrar"
+                                                OnClick="lnkCerrar_Click" Text="Cerrar sesión">
+                                            </asp:LinkButton>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </asp:PlaceHolder>
+                        </ul>
+
+                    </div>
+                </nav>
+
+                <div class="container">
+                    <div class="logos col-lg-6">
+
+                        <div class="first">
+                            <a href="https://www.minsalud.gov.co">
+                                <img class="img-responsive mivox" src="../../images/logo-mivoxpopuli.svg"></a>
+                            <a href="https://www.minsalud.gov.co">
+                                <img class="img-responsive mivox hider" alt="Ministerio de Salud y Protección Social - República de Colombia" src="https://www.minsalud.gov.co/LogosInstitucionales/Escudo-Ministerio-de-salud.png"></a>
+
+
+                        </div>
+
+                    </div>
+                    <nav class="menup col-lg-6">
+                        <ul>
+                            <li>
+                                <asp:HyperLink runat="server" class="active" NavigateUrl="~/default.aspx" id="lnkInicioMaster">Inicio</asp:HyperLink></li>
+                            <li><a href="#sparticipa">Participe</a> </li>
+                            <li><a href="../../html/multimedia-en-que-vamos-ptc.html" target="_blank">Resultados</a></li>
+                            <li><a target="_blank" href="https://mivoxpopuli.minsalud.gov.co/Suficiencia/Home">SIREPS</a></li>
+                            <li>
+                                <asp:Panel runat="server" ID="pnlValidacionNombreTecnologia">
+                           
+                            <asp:DropDownList AppendDataBoundItems="true" 
+                                Style="border-color: #DB0050 !important; border-style: solid; border-width: 1px;"
+                                runat="server" CssClass="form-control" ID="cmbVigencia" DataSourceID="SqlDataSource1" DataTextField="DESCRIPCION" DataValueField="COD_VIGENCIA" onchange="javascript:clickVigencia()">
+                                <asp:ListItem Text="Vigencias" Value="-1"></asp:ListItem>
+                            </asp:DropDownList>
+
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TRANSPLANTESConnectionString %>" SelectCommand="SELECT [COD_VIGENCIA], [DESCRIPCION] FROM [VIGENCIA] WHERE ([COD_PROCESO] = @codProceso)">
+                                <SelectParameters>
+                                    <asp:QueryStringParameter Name="codProceso" QueryStringField="cod" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+
+                            <asp:SqlDataSource ID="SqlDataSourceGrupoTecnologia" runat="server" ConnectionString="<%$ ConnectionStrings:TRANSPLANTESConnectionString %>" SelectCommand="SELECT [COD_VIGENCIA], [DESCRIPCION] FROM [VIGENCIA] WHERE ([COD_PROCESO] = 1) UNION ALL SELECT 88, '[DESCRIPCION]'">
+                                <SelectParameters>
+                                    <asp:QueryStringParameter Name="codProceso" QueryStringField="cod" />
+                                    <asp:ControlParameter ControlID="hdnItem" PropertyName="Value" Name="Item" Type="Int32" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                        </asp:Panel>
+
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                </div>
+
+            </header>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderBienvenido" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceBanner" runat="server">
+            </asp:ContentPlaceHolder>
+        </section>
+        <ajaxToolkit:ToolkitScriptManager EnableScriptGlobalization="true" EnableScriptLocalization="true" ID="ScriptManager1" runat="server"></ajaxToolkit:ToolkitScriptManager>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+
+
+
+
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="logos2">
+                        <div class="col-lg-4">
+                            <div class="first">
+
+
+                                <a href="https://www.minsalud.gov.co" title="Ministerio de Salud y Protección Social - República de Colombia" accesskey="m">
+
+                                    <img alt="Ministerio de Salud y Protección Social - República de Colombia" src="https://www.minsalud.gov.co/LogosInstitucionales/Escudo-Ministerio-de-salud.png">
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="ministerios">
+                        <div class="col-lg-8 col-xs-12">
+                            <div class="col-lg-4 col-xs-6">
+                                <ul>
+                                    <li>
+                                        <a target="_blank" href="http://www.vicepresidencia.gov.co/">
+                                            <span class="vicep"></span>
+                                            Vicepresidencia
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="http://www.minjusticia.gov.co/">
+                                            <span class="justicia"></span>
+                                            MinJusticia
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://www.mindefensa.gov.co/">
+                                            <span class="defensa"></span>
+                                            MinDefensa
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="http://www.mininterior.gov.co/">
+                                            <span class="interior"></span>
+                                            MinInterior
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="http://www.cancilleria.gov.co/">
+                                            <span class="relaciones"></span>
+                                            MinRelaciones
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="http://www.minhacienda.gov.co/">
+                                            <span class="hacienda"></span>
+                                            MinHacienda</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4  col-xs-6">
+                                <ul>
+                                    <li>
+                                        <a target="_blank" href="http://www.minminas.gov.co/">
+                                            <span class="minas"></span>
+                                            MinMinas
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="http://www.mincit.gov.co/">
+                                            <span class="cit"></span>
+                                            MinComercio
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="http://www.mintic.gov.co/portal/604/w3-channel.html">
+                                            <span class="tic"></span>
+                                            MinTIC
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="http://www.mincultura.gov.co/Paginas/default.aspx">
+                                            <span class="cultura"></span>
+                                            MinCultura
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://www.minagricultura.gov.co/">
+                                            <span class="agricultura"></span>MinAgricultura
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="http://www.minambiente.gov.co/">
+                                            <span class="ambiente"></span>
+                                            MinAmbiente</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <ul>
+                                    <li>
+                                        <a target="_blank" href="https://www.mintransporte.gov.co/">
+                                            <span class="transporte"></span>
+                                            MinTransporte
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="http://www.minvivienda.gov.co/">
+                                            <span class="vivienda"></span>
+                                            MinVivienda
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="http://www.mineducacion.gov.co/portal/">
+                                            <span class="educacion"></span>
+                                            MinEducación
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="http://www.mintrabajo.gov.co/web/guest/inicio">
+                                            <span class="trabajo"></span>
+                                            MinTrabajo
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://www.minsalud.gov.co/Paginas/default.aspx">
+                                            <span class="salud"></span>
+                                            MinSalud
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                </div>
+            </div>
+
+            <div class="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>
+                                <strong>Conmutador:</strong>(57-1) 330 5000 - Central de fax: (57-1) 330 5050<br/>
+								<strong>Punto de atención presencial: </strong>Carrera 13 No. 32-76 piso 1, Bogotá, código postal 110311 - Lunes a viernes de 8:00 a.m. a 4:00 p.m. en jornada continua.<br/>
+									<strong>Línea de atención de desastres: </strong>(57-1) 330 5071 - 24 horas
+									<strong>Notificaciones judiciales:</strong>
+                                notificacionesjudiciales@minsalud.gov.co
+								Términos y Condiciones de uso. ©Ministerio de Salud y Protección Social.
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>
+                                <strong>Atención telefónica a través del Centro de Contacto: </strong>
+                                En Bogotá: (57-1) 589 3750 Resto del pais: 018000960020</br>
+								<strong>Horario de atención: </strong>lunes a viernes de 7:00 a.m. a 6:00 p.m. y sábados de 8:00 a.m. a 1:00 p.m. en jornada continua.</br>
+								Chat campañas Minsalud 
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <script src="../../js/app.js"></script>
+
+        <!-- Modal regístro -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Formulario de registro</h3>
+                            <p class="mdescription">Los campos marcados con (*) son obligatorios. Advertencia: Esta aplicativo no es compatible con Internet Explorer 11. Por favor utilizar Internet Explorer 10, Internet Explorer EDGE, Google Chrome o Firefox</p>
+                        <iframe src="../registro/frmRegistro.aspx"
+                                style="width: 100%; min-height: 400px; border-width: 0px;"></iframe>
+                    </div>
+                    <div class="modal-body row">
+                        <div class="col-md-8 col-md-offset-2">
+                            
+
+                            
+
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Modal login -->
+        <div class="modal fade" id="myModal2" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal login content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h3>Iniciar sesión</h3>
+                            <p class="mdescription">Ingresa los datos de tu usuario y contraseña.</p>
+
+                            <asp:Label runat="server" ID="lblPaginaAnterior" Visible="false"></asp:Label>
+                            <fieldset class="form-group">
+                                <asp:UpdatePanel runat="server" ID="upnlLogin">
+                                    <ContentTemplate>
+
+
+                                        <p>Usuario<span> (*)</span> </p>
+                                        <asp:TextBox ID="txtUsuario" runat="server" MaxLength="80" CssClass="form-control" /><br />
+                                        <ajaxToolkit:FilteredTextBoxExtender ID="ftCedula" runat="server" FilterType="Custom" ValidChars="._,@*&#1234567890abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ- " TargetControlID="txtUsuario" />
+                                        <div style="margin-top: 10px; margin-bottom: 10px;"></div>
+                                        <p>Contraseña<span> (*)</span> </p>
+                                        <asp:TextBox ID="txtContrasena" runat="server" TextMode="Password" MaxLength="150" CssClass="form-control" />
+
+                                        <div style="margin-top: 10px; margin-bottom: 10px;"></div>
+                                        <asp:Button ID="btnBuscar" Text="Ingresar " runat="server"
+                                            OnClick="btnBuscar_Click" class="btn btn-default" />
+                                        <br />
+                                        <asp:Label ID="lblMensaje" Text="" runat="server" ForeColor="#a94442" />
+                                        <div style="margin-top: 10px; margin-bottom: 10px;"></div>
+                                        <div class="form-group">
+                                            <asp:LinkButton ID="lnkOlvidoContrasena" Text="¿Olvidó su contraseña?" runat="server" OnClick="lnkOlvidoContrasena_Click" CausesValidation="false" CssClass="alert-info centerimagemin" />
+                                        </div>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </fieldset>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
+</body>
+</html>

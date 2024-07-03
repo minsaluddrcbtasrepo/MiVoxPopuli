@@ -1,0 +1,357 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td, 
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+	vertical-align: baseline;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	
+	outline: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;    
+	}
+
+body {
+background:#fff;
+font-size: 1em;
+font-family: arial;
+}
+
+.content-header{
+	width:400px;
+	margin:auto;
+	}
+	
+.centerp {
+    text-align: center;
+}
+
+strong {
+    color: #5C9BAD;
+}
+
+hr{
+color: #999;
+background-color: #999;
+height: 1px;
+width: 100%;
+border: 0;
+margin: 0px 0 20px 0;
+text-align: center;
+}
+	
+label{
+width: 400px !important;
+display: block;
+padding-bottom: 5px;
+margin-top: 20px !important;
+color: black;
+font-family: georgia;
+font-size: 12px;
+}
+
+#page{
+	width: 400px;
+	margin: auto;
+	color:#000;
+	font-size:80%;
+	text-decoration:none;
+	}
+	
+#page{color:#ff0000;
+text-decoration:none;
+}
+h1 {
+	font-family: Georgia;
+font-size: 16px !important;
+font-weight: bold;
+color: #555;
+margin-top: 10px;
+margin-bottom: 20px;
+background-image:url(vi%C3%B1eta-titulo.png);
+background-repeat: no-repeat;
+background-position: 0% 50%;
+padding-left: 20px;
+}
+
+h2{
+	color:#333333;
+	font-family:Georgia;
+	font-size: 100%;
+	font-weight:bold;
+	padding: 4px 0 10px 0;
+	margin-top:10px;
+	
+	}
+	
+	ul{
+	list-style-image:url(flechalista.jpg);
+}
+
+li{	
+	font-family:arial;
+	font-size:13px;
+	margin-left:50px;
+	margin-top:15px;
+    list-style-image:url("http://www.ins.gov.co:81/dona-un-minuto/images/bullet-heart.jpg");
+	}
+
+p{
+display:block;
+background:#fff;
+border:#fafafa;
+color:#333;
+font-size:13px;
+line-height:18px;
+
+}
+
+.imageAspx{    
+}
+
+.imageAspx image{
+    margin: 50px 0px 0px 0px !important;
+    background-color:white !important;
+}
+
+.checkList{
+    
+}
+
+.checkList label{
+   /* margin: -25px 0px 0px 30px !important;    */
+   float:left;
+}
+
+.checkList input[type=checkbox]{
+    /*margin: 0px 0px 0px -150px !important;   */
+    background-color:white !important; 
+    float:left;
+    width:auto;
+}
+
+.obligatorio{
+	color:#F00;}
+	
+.no-solicitud{
+	background-color:#900;
+	font-size:16px;
+	font-weight:bold;
+	color:#fff;}
+
+
+
+/* CSS  CONTACT form */
+fieldset{
+	border: 1px solid #E7E7E7;
+	margin: 40px 0 24px 0;
+	padding:20px;
+	}
+	
+fieldset a p{
+	margin: 50px 10px 0px 0px;
+	float:left;
+	text-decoration:underline;
+	color:#777;}
+	
+ A:hover p{
+	text-decoration:underline;
+	color:#900;}
+	
+legend{
+	padding:12px 9px 19px;
+	margin:-10px 0 0 30px;
+	background:#efefef;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	background: url('gradient_white.png') repeat-x top left #fafafa;
+	}
+	
+legend span{
+	font-size:130%;
+	font-weight:bold;
+	color:#fff;
+	background: url('gradient.png') repeat-x top left #094B59;
+	-moz-border-radius-topleft:10px;
+	-webkit-border-top-left-radius:10px;
+	-moz-border-radius-topright:10px;
+	-webkit-border-top-right-radius:10px;padding:5px 11px 0;
+	}
+
+
+
+
+form#contact{
+	font-family:arial;
+	font-size:100%;
+	color:#666;
+	}
+	
+label{
+	float:none;
+	display:block;
+	clear:both;
+	width: 400px !important;
+   	padding-bottom: 5px;
+    margin-top: 20px !important;
+	color: black;
+	font-family: verdana;
+	font-size: 12px;
+	}
+	
+input {
+	color:#666;
+	margin:0 20px 7px 0;
+	border:1px solid #d8d8d8;
+	width:80%;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	background: #efefef url('gradient_white.png') repeat-x left top;
+	padding:4px 10px;    
+	}
+.design {
+
+}
+.design input {
+	color:#666;
+	margin:0 0 7px 0;
+	border:1px solid #d8d8d8;
+	width:80%;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	background: url('gradient_white.png') repeat-x top left #efefef;
+	padding:4px 10px;
+	}
+
+
+ select{
+	color:#666;
+	margin:0 0 7px 0;
+	border:1px solid #d8d8d8;
+	width:240px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	background: url('gradient_white.png') repeat-x top left #efefef;padding:3px 5px 3px 10px;    
+	}
+	
+#number{
+	  width:80%;
+	  }
+	  
+#adress{
+	  width:60%;
+	  }
+	  
+#phone {
+	width:35%;
+	}
+	
+#movil{
+	width:35%;
+	}
+#email{
+	width:60%;}
+form#contact option{
+	display:block;
+	color:#666;
+	}
+
+form#contact input[type="checkbox"] {
+	background:none;
+	border:0px;
+	width:14px;
+	height:14px;
+	margin:5px 15px;
+	padding:0px;
+	}
+form#contact input[type="radio"]    {
+	
+	background:none;
+	border:0px;
+	width:14px;
+	height:14px;
+	margin:5px 15px;
+	padding:0px;
+	}
+
+
+input[type="text"]:disabled  {
+	
+	opacity: .5;
+	border:1px solid #eee !important;
+	filter: alpha(opacity=50);
+	}
+
+textarea {
+	color:#666;
+	font-size:110%;
+	font-family:arial;
+	height:80px;
+	border:1px solid #d8d8d8;
+	width:500px;
+	clear: both;
+	display: block;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	background: url('gradient_white.png') repeat-x top left #efefef;padding:2px 10px;margin-bottom:10px;
+	}
+#send{
+	background: url('gradient_black.png') repeat-x top left #15A8C7;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	-moz-box-shadow: 5px 5px 8px #999;
+	-webkit-box-shadow: 5px 5px 8px #999;
+	border:0;
+	cursor:pointer;
+	color:#fff;
+	margin-top:15px;
+	float:left;
+	font-weight:bold;
+	font-size:110%;
+	padding:5px 15px;
+	}
+
+.boton{
+	background: url('gradient_black.png') repeat-x top left #15A8C7;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	-moz-box-shadow: 5px 5px 8px #999;
+	-webkit-box-shadow: 5px 5px 8px #999;
+	border:0;
+	cursor:pointer;
+	color:#fff;
+	margin-top:15px;
+	float:left;
+	font-weight:bold;
+	font-size:110%;
+	padding:5px 15px;
+	}
+	
+.faulty_fiel{
+	
+	background:#fff4f4 !important;
+	color:#ff0000;
+	border:1px solid #ff0000 !important;
+}
+
+label span{
+	color:#ff0000;
+	font-size:85%;
+	}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: #EEE !important;
+    background-image: none;
+    color: rgb(0, 0, 0);
+}
+
+.ocultar
+{
+    visibility:hidden;
+    display:none;     
+}

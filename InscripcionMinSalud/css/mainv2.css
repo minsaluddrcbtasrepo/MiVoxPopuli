@@ -1,0 +1,656 @@
+.bar-user {
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 30px;
+}
+span.callpart {
+    margin: 20px 5px 10px 0px !important;
+    display: inline-block;
+}
+.panel-heading {
+color: #fff !important;
+background-color: #336f79 !important;
+font-size: 18px !important;
+}
+
+thead tr {
+background-color: #336f79d6;
+color: #ffffff;
+text-align: center;
+}
+
+thead tr th {
+border: 1px solid #ffa933;
+}
+
+.panel-default {
+border-color: #c6d5d8;
+text-align: left;
+}
+
+img.img-responsive.col-md-3 {
+padding-left: 20px;
+}
+
+.logos a img {
+padding: 0;
+}
+
+.tema-cont h3 strong{
+    color:#ffa933;
+}
+
+span.callparti a {
+    background-color: #b1b1b1;
+    padding: 10px 30px;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 19px;
+}
+th {
+    text-align: inherit !important;
+}
+
+.vigencias li a {
+    color: #336f79;
+}
+
+.modal-body {
+    position: relative;
+    padding: 30px !important;
+}
+
+
+ul{
+    padding: 0;
+}
+
+.desForm{
+    margin-bottom: 4    0px !important;
+}
+
+@media (max-width: 600px) {
+  .encabezado   {
+    height: auto !important;
+  }
+
+  section{
+    padding: 0 !important;
+  }
+
+  .stemas{
+    padding: 0 !important;
+  }
+
+  .tema-cont {
+    padding: 30px !important;
+}
+
+span.callpart {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.ministerios ul{
+    padding: 0 !important;
+}
+}
+.accesos a{
+	color:#004b58;
+}
+
+span.line{
+	color: #ffa933;
+}
+
+
+
+
+.accesos{
+	text-align: right;
+    margin: 0;
+    font-size: 1.3rem;
+
+}
+
+.logos {
+background-image: url(../../images/bg-logos.png);
+background-repeat: no-repeat;
+background-size: cover;
+padding: 22px 50px;
+text-align: center;
+}
+.encabezado{
+	    height: 100vh;
+	background-image: url(../../images/bg-header.svg);
+	background-repeat: no-repeat;
+	    background-size: cover;
+}
+
+.menup li{
+	display: inline-block;
+	margin-top: 40px;
+}
+
+.menup li a{
+	color: #004b58;
+    font-weight: bold;
+    padding: 15px;
+    display: block;
+    position: relative;
+
+}
+
+.menup li a:hover{
+	text-decoration: none !important;
+
+}
+
+
+a.active:after, .menup li a:hover:after{
+	      content: "";
+    display: block;
+    position: absolute;
+    background-image: url(../../images/arrow-menu.svg);
+    bottom: 0px;
+    width: 25px;
+    height: 13px;
+    right: 25px;
+    
+    
+
+}
+
+.titularb{
+	padding: 6%;
+    margin-top: 70px;
+}
+
+.banner{
+	padding: 2% 0%;
+}
+
+.banner-img{
+
+	vertical-align: middle;
+
+}
+
+.titularb h2{
+	color: #fff;
+    background-color: #0095b0;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 3.5rem;
+    position: relative;
+    z-index: 222;
+}
+
+.titularb h2:before{
+	    position: absolute;
+    content: "";
+    background-image: url(../../images/bg-h2.png);
+    width: 84px;
+    height: 80px;
+    z-index: -2;
+    left: 0;
+    bottom: 0;
+   
+}
+
+.tagline {
+    background-color: #0095b0;
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 10px;
+}
+
+p.call2action a {
+    background-color: #ffa933;
+    padding: 15px 60px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: 500;
+}
+
+p.call2action a:after {
+    position: absolute;
+    content: "";
+    background-image: url(../../images/arrowc.png);
+    bottom: -33px;
+    width: 42px;
+    height: 22px;
+    left: 50%;
+}
+
+p.call2action {
+    float: right;
+    margin-top: 30px;
+    position: relative;
+}
+
+h2.sub {
+    text-align: center;
+    color: #336f79;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    z-index: 222;
+}
+
+p.desc-title {
+    text-align: center;
+    color: #336f79;
+    font-weight: normal;
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2.sub:before {
+position: absolute;
+content: "";
+background-image: url(../../images/arrowtit2.png);
+width: 59px;
+height: 52px;
+z-index: -1;
+}
+
+.ptc h2.sub:before {
+left: auto;
+}
+
+
+
+section.temas-par {
+    padding: 40px;
+    background-color: #fbf9f3;
+    background-image: url(../../images/learn.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom; 
+    background-size: 20% 70%;
+}
+
+
+
+.stemas{
+    padding: 50px;
+}
+
+.tema{
+    border: 1px solid #0095b0;
+    margin-bottom:30px;
+}
+
+.date {
+       background: #336f79;
+    padding: 10px;
+    color: #fff;
+}
+
+.date p strong {
+    color: #ffb24b;
+}
+
+.date p{
+    margin: 0;
+}
+
+.tema-cont {
+    padding: 30px 60px;
+    text-align: center;
+    background-color: #ecf3ef;
+    max-height: 400px;
+    height: 350px;
+}
+
+.tema h3{
+    color: #336f79; 
+    font-weight:bold;
+}
+
+.tema-cont p{
+    color:#336f79;
+}
+.call {
+    margin: 30px auto;
+}
+
+span.callres a {
+    background-color: #336f79;
+    padding: 10px 30px;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 19px;
+}
+
+span.callpart a {
+    background-color: #ffa933;
+    padding: 10px 30px;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 19px;
+}
+
+span.callres a:visited{
+
+    color: #ffffff;
+
+}
+
+footer{
+    padding: 60px 0px 0px 0px;
+}
+
+.contact {
+    margin-top: 30px;
+    background-color: #336f79;
+    padding: 40px 0px;
+    color: #fff;
+}
+
+.ministerios ul li{
+    list-style: none;
+}
+
+.ministerios ul li span{
+    width: 10px;
+    height: 10px;
+    display: block;
+    margin: 6px 7px 0px 0px;
+    float: left;
+    background-color: #333;
+}
+
+.ministerios ul li span a{
+    text-decoration: none;
+    color:#336f79;
+}
+
+.ministerios ul li a:visited{
+    text-decoration: none;
+    color:#336f79;
+}
+.vicep{
+    background-color: #ea1819 !important;
+}
+
+
+.defensa{
+    background-color: #0c83c2 !important;
+}
+.justicia{
+    background-color: #1d4da1 !important;
+}
+.defensa{
+    background-color: #0a81c1 !important;
+}
+.interior{
+    background-color: #63002d !important;
+}
+.relaciones{
+    background-color: #41388d !important;
+}
+.hacienda{
+    background-color: #8a1f02 !important;
+}
+
+.minas{
+    background-color: #b6aa2e !important;
+}
+.cit{
+    background-color: #3a8e3e!important;
+}
+.tic{
+    background-color: #882d85!important;
+}
+.cultura{
+    background-color: #69046a!important;
+}
+.agricultura{
+    background-color: #7DBB58!important;
+}
+
+.ambiente{
+    background-color: #84BE70!important;
+}
+.transporte{
+    background-color: #b65b10!important;
+}
+.vivienda{
+    background-color: #c32565!important;
+}
+.educacion{
+    background-color: #6f1100!important;
+}
+.trabajo{
+    background-color: #353486!important;
+}
+.salud{
+    background-color: #14a7c7!important;
+}
+.contact strong{
+    color: #ffa933;
+}
+
+/*section*/
+
+.ptc .encabezado{
+    height:auto;
+}
+
+.ptc .titular{
+    padding: 60px 0px;
+
+}
+.proces{
+    background-color:#fbf9f3;
+    padding: 40px 0px;
+    background-image: url(../../images/learn2.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom; 
+    background-size: 20% 50%;
+}
+
+
+.menu-cont ul{
+    list-style: none;
+    padding: 0;
+
+}
+
+.menu-cont ul li{
+    border: 1px solid #dcdcdc;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+
+.menu-cont ul li a{
+    background-color: #fbf9f3;
+    display: block;
+    color: #336f79;
+    padding: 10px 10px;
+}
+
+a.activoip:after {
+        content: "Activo ";
+    color: #ffb24b;
+    background-color: #346f78;
+    padding: 3px;
+    font-weight: 500;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: right;
+}
+
+.menu-cont ul li.active{
+    border-top: 4px solid #fbb03b;
+    border-right: none;
+    background-color: #fff;
+}
+
+.menu-cont ul li.active a{
+
+    background-color: #fff;
+}
+
+.mtabs{
+    padding: 0px;
+
+}
+
+.amp-proces{
+    background-color: #fff;
+    padding: 40px 30px 40px 30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px #ececec;
+}
+
+.amp-proces h3{
+    color:#336f79;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.amp-proces p{
+
+    width: 80%; 
+    margin: 0 auto;
+    color:#336f79;  
+    font-size: 18px;
+}
+
+
+.amp-proces hr{
+   border-top:4px solid #ffa933;  
+   width: 80%;
+
+}
+
+
+
+
+.tabs{
+    max-width: 700px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+
+
+}
+
+.tab-link{
+   
+     background-color: #336f79;
+     color: #fff;
+    float: left;
+    padding: 20px;
+    width: 30%;
+    margin-right: 3%;
+    margin-bottom: 60px;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+
+.tabs .current{
+    background-color: #ffa933;
+}
+
+.tab-content{
+    clear: both;
+    margin-top: 40px;
+    display: none;
+}
+
+.current{
+    display: block;
+}
+
+/*¨forms*/
+legend span {
+    color: #17a9c7;
+    font-weight: 700;
+}
+
+fieldset{
+    text-align: left;
+}
+
+label {
+    color: #266373 !important;
+    margin: 20px 0px 5px 0px !important;
+}
+
+fieldset p{
+    width: auto !important;
+    margin: auto !important;
+    color: #336f79;
+    font-size: inherit !important;
+}
+
+input, select{
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #bde7ef !important;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+
+}
+
+ul.docsarchivos {
+text-align: left;
+width: 600px;
+margin: 0 auto;
+font-size: 18px;
+color: #ffa933;
+}
+
+.docsarchivos.li {
+padding: 10px 0px;
+}
+
+.docsarchivos li a {
+text-decoration: underline;
+color: #336f79;
+}
+
+legend {
+    border-bottom: 1px solid #f3a740 !important;
+}
+
+.modal-content h3  {
+    color: #336f79;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+p.mdescription{
+    text-align: center;
+    margin: 20px 0px 50px 0px;
+}
+
+.form-group button {
+    background-color: #ffa933;
+    margin: 30px 0;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+}
