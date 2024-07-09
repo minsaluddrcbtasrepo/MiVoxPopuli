@@ -7,54 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InscripcionMinSalud.Aspx.Reportes {
-    
-    
-    public partial class frmReporteInscritos {
-        
-        /// <summary>
-        /// dtInscritos control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView dtInscritos;
-        
-        /// <summary>
-        /// sqlConsolidado control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlConsolidado;
-        
-        /// <summary>
-        /// ctReporte control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.XtraCharts.Web.WebChartControl ctReporte;
-        
-        /// <summary>
-        /// grdDepartamento control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView grdDepartamento;
-        
-        /// <summary>
-        /// SqlDepartamento control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDepartamento;
+namespace InscripcionMinSalud.Aspx.Reportes
+{
+
+
+    public partial class frmReporteInscritos
+    {
     }
 }

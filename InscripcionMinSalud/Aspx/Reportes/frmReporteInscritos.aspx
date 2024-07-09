@@ -14,7 +14,8 @@
     <link href="../../css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" media="all">
 
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"> 
+
+<%--<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"> 
     <div class="row">
         <div class="tagline">
             <div class="container">
@@ -89,7 +90,7 @@ group by Departamento.Id order by count(*) desc"
             </div>
         </div>
     </div>    
-    <div style="height: 50px;"></div>
+    <div style="height: 50px;"></div>--%>
 </asp:Content>
 
 
