@@ -4,8 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DevExpress.XtraCharts.Web;
 using DevExpress.XtraCharts;
 using NegocioInscripcionMinSalud;
+
 
 namespace InscripcionMinSalud.Aspx.Reportes
 {
@@ -18,38 +20,38 @@ namespace InscripcionMinSalud.Aspx.Reportes
         /// <param name="e">Los argumentos del evento.</param>
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!IsPostBack)
-            //{
-            //    ctReporte.DataSourceID = "sqlConsolidado";
-            //    ctReporte.SeriesDataMember = "TipoUsuario";
-            //    ctReporte.SeriesTemplate.ArgumentDataMember = "TipoUsuario";
-            //    ctReporte.SeriesTemplate.ValueDataMembers.AddRange(new string[] { "Numero" });
-            //    ctReporte.SeriesTemplate.View = new SideBySideBarSeriesView();
+            if (!IsPostBack)
+            {
+                ctReporte.DataSourceID = "sqlConsolidado";
+                ctReporte.SeriesDataMember = "TipoUsuario";
+                ctReporte.SeriesTemplate.ArgumentDataMember = "TipoUsuario";
+                ctReporte.SeriesTemplate.ValueDataMembers.AddRange(new string[] { "Numero" });
+                ctReporte.SeriesTemplate.View = new SideBySideBarSeriesView();
 
-            //    ((SideBySideBarSeriesView)ctReporte.SeriesTemplate.View).BarWidth = 10.15;
-            //    ctReporte.SeriesTemplate.PointOptions.ValueNumericOptions.Format = NumericFormat.Number;
-            //    ctReporte.SeriesTemplate.PointOptions.ValueNumericOptions.Precision = 0;
-            //    ctReporte.SeriesTemplate.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+                ((SideBySideBarSeriesView)ctReporte.SeriesTemplate.View).BarWidth = 10.15;
+                ctReporte.SeriesTemplate.PointOptions.ValueNumericOptions.Format = NumericFormat.Number;
+                ctReporte.SeriesTemplate.PointOptions.ValueNumericOptions.Precision = 0;
+                ctReporte.SeriesTemplate.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
 
-            //    ((BarSeriesLabel)ctReporte.SeriesTemplate.Label).Position = BarSeriesLabelPosition.TopInside;
+                ((BarSeriesLabel)ctReporte.SeriesTemplate.Label).Position = BarSeriesLabelPosition.TopInside;
 
-            //    AxisX axisX = ((XYDiagram)ctReporte.Diagram).AxisX;
-            //    axisX.Label.Visible = false;
+                AxisX axisX = ((XYDiagram)ctReporte.Diagram).AxisX;
+                axisX.Label.Visible = false;
 
-            //    AxisY axisY = ((XYDiagram)ctReporte.Diagram).AxisY;
-            //    axisY.Logarithmic = false;
-            //    axisY.Range.AlwaysShowZeroLevel = false;
-            //    int maximo = Administrador.ObtenerMayorRango();
-            //    axisY.WholeRange.SetMinMaxValues(0, maximo);
+                AxisY axisY = ((XYDiagram)ctReporte.Diagram).AxisY;
+                axisY.Logarithmic = false;
+                axisY.Range.AlwaysShowZeroLevel = false;
+                int maximo = Administrador.ObtenerMayorRango();
+                axisY.WholeRange.SetMinMaxValues(0, maximo);
 
-            //    ctReporte.DataBind();
+                ctReporte.DataBind();
 
-            //    foreach (Series serie in ctReporte.Series)
-            //    {
-            //        serie.Label.LineVisible = true;
-            //        ((BarSeriesLabel)serie.Label).Position = BarSeriesLabelPosition.Top;
-            //    }
-            //}
+                foreach (Series serie in ctReporte.Series)
+                {
+                    serie.Label.LineVisible = true;
+                    ((BarSeriesLabel)serie.Label).Position = BarSeriesLabelPosition.Top;
+                }
+            }
         }
 
 

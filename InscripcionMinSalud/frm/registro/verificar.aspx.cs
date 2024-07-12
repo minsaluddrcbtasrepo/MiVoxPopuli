@@ -1,4 +1,5 @@
-﻿using NegocioInscripcionMinSalud;
+﻿using NegocioInscripcionMinSalud.Helper;
+using NegocioInscripcionMinSalud;
 using NegocioInscripcionMinSalud.data;
 using System;
 using System.Collections.Generic;
@@ -23,46 +24,41 @@ namespace InscripcionMinSalud.frm.registro
             {
                 if (Request.QueryString["token"] != null)
                 {
-                    string correo = Request.QueryString["token"];
-                    var c = correo.ToCharArray();
-                    correo = "";
-                    for (int k = 0; k < c.Length; k++)
-                    {
-                        c[k] = (char)(c[k] - 4);
-                        correo = correo + c[k];
-                    }
+                    string correoToken = Request.QueryString["token"];
+                    string correoKey = EncryptHelper.Deecrypt(correoToken);
+                    string correo = "";
+                    Int32 idRegistro = 0;
 
-                    int idRegistro = 0;
-                    if (correo.Contains("|"))
+                    if (correoKey.Contains("|"))
                     {
-                        string[] datos = correo.Split('|');
+                        string[] datos = correoKey.Split('|');
                         correo = datos[0];
                         idRegistro = Convert.ToInt32(datos[1]);
                     }
 
                     clsNegocio obj = new clsNegocio();
-                    var r = obj.obtenerRegistroxCorreo(correo, idRegistro);
-                    if (r == null)
+                    var respuestaRegistro = obj.obtenerRegistroxCorreo(correo, idRegistro);
+                    if (respuestaRegistro == null)
                     {
                         lnkNovalido.Visible = true;
                     }
-                    else if (r.COD_ESTADO_REGISTRO == 1)
+                    else if (respuestaRegistro.COD_ESTADO_REGISTRO == 1)
                     {
                         //lo validamos
                         lnkValido.Visible = true;
                         bool send = false;
-                        obj.validarCorreoElectronico(r, null, out send);
+                        obj.validarCorreoElectronico(respuestaRegistro, null, out send);
                         if (send)
                         {//enviamos el correo de creacion de cuenta en los casos de validacion automatica
                             clsWebUtils email = new clsWebUtils();
                             string asunto = "Respuesta solicitud registro Mi VOX Pópuli del Ministerio de Salud y Protección Social";
                             string password = Guid.NewGuid().ToString();
                             password = password.Substring(2, 8);
-                            obj.actualizarContrasena(r.COD_REGISTRO, password);
+                            obj.actualizarContrasena(respuestaRegistro.COD_REGISTRO, password);
 
                             string cuerpo = @"Muchas gracias por su interés en la inscripción en Mi VOX Pópuli del Ministerio de Salud y Protección Social. Queremos informarle que su solicitud ha sido <b>ACEPTADA.</b>
                     <br>Los datos de ingreso al sistema son<br>
-                    <br>Usuario: <b>" + r.NOMBRE_USUARIO + @"</b>
+                    <br>Usuario: <b>" + respuestaRegistro.NOMBRE_USUARIO + @"</b>
                     <br>Contraseña :<b>" + password + @"</b>
                     <br><br>Le pedimos esté atento de los correos que recibirá de parte del Ministerio de Salud y Protección Social.<br> ";
                             email.enviarEmail(asunto, cuerpo, correo);

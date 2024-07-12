@@ -302,6 +302,8 @@
       <DependentUpon>modelParticipacion.tt</DependentUpon>
     </Compile>
     <Compile Include="Departamento.cs" />
+    <Compile Include="Helper\Class1.cs" />
+    <Compile Include="Helper\EncryptHelper.cs" />
     <Compile Include="Participante.cs" />
     <Compile Include="Encriptar.cs" />
     <Compile Include="Municipio.cs" />

@@ -10,6 +10,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Drawing;
 using NegocioInscripcionMinSalud.data;
+using NegocioInscripcionMinSalud.Helper;
 
 namespace InscripcionMinSalud.frm.registro
 {
@@ -1501,17 +1502,13 @@ namespace InscripcionMinSalud.frm.registro
             string url = ar.GetValue("urllocal", typeof(string)).ToString();
             string asunto = "Verificación de registro a Mi VOX Pópuli del Ministerio de Salud y Protección Social";
             //enmascaramos el correo
-            var c = (correo + "|" + codigoRegistro.ToString()).ToCharArray();
-            string cr = "";
-            for (int k = 0; k < c.Length; k++)
-            {
-                c[k] = (char)(c[k] + 4);
-                cr = cr + c[k];
-            }
+            var textKey = $"{correo}|{codigoRegistro}";
+            string emailToken = EncryptHelper.Encrypt(textKey);
+           
 
             string cuerpo = @"Muchas gracias por inscribirse a Mi Vox-Populi del Ministerio de Salud y Protección Social.<br>
-        Para continuar con el proceso de registro, haga clic en el siguiente enlace.<a href='" + url + "/frm/registro/verificar.aspx?token=" + cr + "' >Continuar</a>,  " +
-                "</br>Si no funciona, cópielo y péguelo directamente en la barra de direcciones del navegador de Internet. enlace: " + url + "/frm/registro/verificar.aspx?token=" + cr + " ";
+        Para continuar con el proceso de registro, haga clic en el siguiente enlace.<a href='" + url + "/frm/registro/verificar.aspx?token=" + emailToken + "' >Continuar</a>,  " +
+                "</br>Si no funciona, cópielo y péguelo directamente en la barra de direcciones del navegador de Internet. enlace: " + url + "/frm/registro/verificar.aspx?token=" + emailToken + " ";
 
             email.enviarEmail(asunto, cuerpo, correo);
         }
