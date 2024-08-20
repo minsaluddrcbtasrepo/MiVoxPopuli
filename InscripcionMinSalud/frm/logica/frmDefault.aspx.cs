@@ -1,6 +1,7 @@
 ﻿using NegocioInscripcionMinSalud.data;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -77,8 +78,15 @@ namespace InscripcionMinSalud.frm.logica
         public List<vigencias> verVigencia(int vigencias, int codProceso, bool es_rups, bool es_upc, bool es_huerfana, bool es_aaa)
         {
             List<vigencias> listadoVigencias = new List<vigencias>();
+            NegocioInscripcionMinSalud.data.clsNegocio negocio = new clsNegocio();
+            PROCESO proceso = negocio.obtenerProceso(codProceso);
+
             string pagina = "frmhomeproceso.aspx";
-            if (es_rups)
+            if (proceso.COD_PROCESO == 22)
+            {
+                pagina = "frmHomeRevisionExclusiones.aspx";
+            }
+            else if (es_rups)
             {
                 pagina = "frmhomeprocesoRups.aspx";
             }
@@ -95,8 +103,8 @@ namespace InscripcionMinSalud.frm.logica
                 pagina = "frmHomeProcesoNominacionAAA.aspx";
             }
 
-            NegocioInscripcionMinSalud.data.clsNegocio negocio = new clsNegocio();
-            PROCESO proceso = negocio.obtenerProceso(codProceso);
+
+
 
             foreach (VIGENCIA vigenciaBD in proceso.VIGENCIA)
             {

@@ -59,6 +59,9 @@
 
                                             <asp:HyperLink ID="hlAvisoActualizarHuerfanas" data-toggle="modal" data-target="#modalAvisoInformativoActualizarHuerfanas" NavigateUrl="#" runat="server" ForeColor="Black" Visible='<%# Eval("COD_PROCESO").ToString() == "21" || Eval("COD_PROCESO").ToString() == "18" %>' Text="AVISO INFORMATIVO">
                                             </asp:HyperLink>
+
+                                            <asp:HyperLink ID="HyperLink1" data-toggle="modal" data-target="#modalAvisoInformativoRevisionesExcluyentes" NavigateUrl="#" runat="server" ForeColor="Black" Visible='<%# Eval("COD_PROCESO").ToString() == "22" || Eval("COD_PROCESO").ToString() == "18" %>' Text="AVISO INFORMATIVO">
+                                            </asp:HyperLink>
                                         </h3>
 
                                         <div class="call" style="display: none;">
@@ -106,7 +109,7 @@
                                                     </HeaderTemplate>
                                                     <ItemTemplate>
                                                         <li>
-                                                            <asp:HyperLink runat="server" NavigateUrl='<%# Eval("url") %>' Text='<%# Eval("vigencia") %>' Font-Bold="true" style="font-size: 24px;"></asp:HyperLink>
+                                                            <asp:HyperLink runat="server" NavigateUrl='<%# Eval("url") %>' Text='<%# Eval("vigencia") %>' Font-Bold="true" Style="font-size: 24px;"></asp:HyperLink>
                                                         </li>
                                                     </ItemTemplate>
 
@@ -164,7 +167,7 @@
         </div>
     </div>
 
-     <div class="modal fade" id='modalAvisoInformativoActualizarHuerfanas' role="dialog" style="display: none;">
+    <div class="modal fade" id='modalAvisoInformativoActualizarHuerfanas' role="dialog" style="display: none;">
         <div class="modal-dialog">
             <!-- Modal login content-->
             <div class="modal-content">
@@ -175,6 +178,28 @@
                 <div class="modal-body row">
                     <img src="/img/LOGO EHR HORIZONTAL.PNG" />
                     <p>Acorde a la Ley 1392 del 2010 parágrafo del artículo 2, el Ministerio de Salud y Protección Social con el propósito de mantener unificada la lista de denominación de las enfermedades huérfanas, realiza el proceso periódico de actualización del listado oficial de enfermedades huérfanas/raras EHR.  Para el presente 2024 mediante la plataforma “Mi Vox Populi” se realiza las nominaciones de EHR.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id='modalAvisoInformativoRevisionesExcluyentes' role="dialog" style="display: none;">
+        <div class="modal-dialog">
+            <!-- Modal login content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">x</button>
+                    <h4 class="modal-title">AVISO INFORMATIVO</h4>
+                </div>
+                <div class="modal-body row">
+                    <p>
+                        Se informa que, desde el 1 de enero de 2024 hasta el 31 de marzo de 2024, se encuentra habilitada la plataforma para presentar solicitudes de actualización de procedimientos en salud dentro de la Clasificación Única de Procedimientos en Salud.
+
+                        Los actores del sistema pueden presentar nominaciones de procedimientos para ser actualizados (incluso, eliminados, reubicados, declarados obsoletos, desagregados o agrupados) a través de las sociedades científicas o agremiaciones de profesionales de la salud.
+
+                        Para ello, deben diligenciar el formulario de Registro Único de Procedimientos en Salud (RUPS), disponible en esta página web, según lo establecido en los artículos 5, 6, 7 y 8 de la Resolución 3804 de 2016.
+                    </p>
                 </div>
             </div>
         </div>

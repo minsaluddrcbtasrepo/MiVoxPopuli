@@ -7,47 +7,65 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InscripcionMinSalud.frm.logica
+namespace InscripcionMinSalud.frm.procesos
 {
 
 
-    public partial class frmDefault
+    public partial class frmHomeRevisionExclusiones
     {
 
         /// <summary>
-        /// lblClase control.
+        /// lblNombreProceso control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblClase;
+        protected global::System.Web.UI.WebControls.Label lblNombreProceso;
 
         /// <summary>
-        /// grdProcesos control.
+        /// lnkNominacion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater grdProcesos;
+        protected global::System.Web.UI.WebControls.HyperLink lnkNominacion;
 
         /// <summary>
-        /// pnlOnline control.
+        /// lnkAnalisis control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlOnline;
+        protected global::System.Web.UI.WebControls.HyperLink lnkAnalisis;
 
         /// <summary>
-        /// SqlDataSourceProcesos control.
+        /// lnkDesicion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceProcesos;
+        protected global::System.Web.UI.WebControls.HyperLink lnkDesicion;
+
+        /// <summary>
+        /// btnRegistro control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRegistro;
+
+        /// <summary>
+        /// btnIngreso control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnIngreso;
     }
 }

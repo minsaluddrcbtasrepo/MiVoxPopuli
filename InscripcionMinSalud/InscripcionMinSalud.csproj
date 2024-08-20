@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -14,7 +14,7 @@
     <RootNamespace>InscripcionMinSalud</RootNamespace>
     <AssemblyName>InscripcionMinSalud</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -240,6 +240,7 @@
     <Content Include="frm\procesos\frmHomeProcesoNominacionHuerfanas.aspx" />
     <Content Include="frm\procesos\frmHomeProcesoNominacionUPC.aspx" />
     <Content Include="frm\procesos\frmHomeProcesoRups.aspx" />
+    <Content Include="frm\procesos\frmHomeRevisionExclusiones.aspx" />
     <Content Include="frm\procesos\frmInscripcionHuerfanas.aspx" />
     <Content Include="frm\procesos\frmInscripcionProceso.aspx" />
     <Content Include="frm\procesos\frmInscripcionProcesoAAA.aspx" />
@@ -933,6 +934,13 @@
     </Compile>
     <Compile Include="frm\procesos\frmHomeProcesoRups.aspx.designer.cs">
       <DependentUpon>frmHomeProcesoRups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeRevisionExclusiones.aspx.cs">
+      <DependentUpon>frmHomeRevisionExclusiones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmHomeRevisionExclusiones.aspx.designer.cs">
+      <DependentUpon>frmHomeRevisionExclusiones.aspx</DependentUpon>
     </Compile>
     <Compile Include="frm\procesos\frmInscripcionHuerfanas.aspx.cs">
       <DependentUpon>frmInscripcionHuerfanas.aspx</DependentUpon>
