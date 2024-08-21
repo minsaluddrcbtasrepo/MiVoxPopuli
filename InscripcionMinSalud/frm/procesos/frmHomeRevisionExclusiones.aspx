@@ -28,13 +28,13 @@
                     <div class="menu-cont">
                         <ul>
                             <li>
-                                <asp:HyperLink runat="server" ID="lnkIntroduccion" NavigateUrl="../../frm/procesos/frmHomeProcesoRups.aspx">Introducción</asp:HyperLink></li>
+                                <asp:HyperLink runat="server" ID="lnkIntroduccion" NavigateUrl="#">Introducción</asp:HyperLink></li>
 
-                            <li class="active"><a id="lnkNominacion">Nominación</a></li>
+                            <li class="active"><a id="lnkNominacion">Solicitud de revisión de la decisión de una tecnología previamente excluida:</a></li>
                             <li>
-                                <asp:HyperLink runat="server" ID="lnkAnalisis" NavigateUrl="../../frm/procesos/frmHomeProcesoAnalisisCUPS.aspx">Análisis técnico - científico</asp:HyperLink></li>
+                                <asp:HyperLink runat="server" ID="lnkAnalisis" NavigateUrl="#">Análisis técnico - científico</asp:HyperLink></li>
                             <li>
-                                <asp:HyperLink runat="server" ID="lnkDesicion" NavigateUrl="../../frm/procesos/frmDecisionSeguimientoCUPS.aspx">Decisión y seguimiento</asp:HyperLink></li>
+                                <asp:HyperLink runat="server" ID="lnkDesicion" NavigateUrl="#">Decisión y seguimiento</asp:HyperLink></li>
                         </ul>
                     </div>
                 </div>
@@ -64,10 +64,10 @@
                         <ul class="tabs">
                             <asp:Panel runat="server">
                                 <li class='<%= clsAgremiacion %>' data-tab="tab-1">Soy agremiación o asociación de profesionales de la salud</li>
-                                <li class='<%= clsAgremiacion %>' data-tab="tab-1">Soy MSPS</li>
+                               <%-- <li class='<%= clsAgremiacion %>' data-tab="tab-1">Soy MSPS</li>
                                 <li class='<%= clsParticipe %>' data-tab="tab-1b">Soy otro actor</li>
                                 <li class='<%= clsMetodologia %>' data-tab="tab-3">Metodología</li>
-                                <li class='<%= clsResultados %>' data-tab="tab-2">Resultados</li>
+                                <li class='<%= clsResultados %>' data-tab="tab-2">Resultados</li>--%>
 
                             </asp:Panel>
 
