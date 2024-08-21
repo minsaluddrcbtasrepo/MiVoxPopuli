@@ -140,6 +140,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Users\ing_d\OneDrive\Desktop\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Linq.Dynamic">
       <HintPath>..\packages\System.Linq.Dynamic.1.0.3\lib\net40\System.Linq.Dynamic.dll</HintPath>
@@ -222,6 +225,7 @@
     <Content Include="frm\procesos\frmEventosFinal.aspx" />
     <Content Include="frm\procesos\frmEventosTematica.aspx" />
     <Content Include="frm\procesos\frmEventosTematicas.aspx" />
+    <Content Include="frm\procesos\frmExclusiones_EtapaI_Solicitud.aspx" />
     <Content Include="frm\procesos\frmHomeAdopcion.aspx" />
     <Content Include="frm\procesos\frmHomeAdopcionHuerfanas.aspx" />
     <Content Include="frm\procesos\frmhomeproceso.aspx" />
@@ -397,6 +401,7 @@
     <Content Include="img\web\tb_edit.png" />
     <Content Include="img\web\ver.png" />
     <Content Include="js\app.js" />
+    <Content Include="js\ExclusionesFormulario.js" />
     <Content Include="Lib\Desktop.dll" />
     <Content Include="main.css" />
     <Content Include="packages.config" />
@@ -808,6 +813,13 @@
     </Compile>
     <Compile Include="frm\procesos\frmEventosTematicas.aspx.designer.cs">
       <DependentUpon>frmEventosTematicas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\procesos\frmExclusiones_EtapaI_Solicitud.aspx.cs">
+      <DependentUpon>frmExclusiones_EtapaI_Solicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\procesos\frmExclusiones_EtapaI_Solicitud.aspx.designer.cs">
+      <DependentUpon>frmExclusiones_EtapaI_Solicitud.aspx</DependentUpon>
     </Compile>
     <Compile Include="frm\procesos\frmHomeAdopcion.aspx.cs">
       <DependentUpon>frmHomeAdopcion.aspx</DependentUpon>

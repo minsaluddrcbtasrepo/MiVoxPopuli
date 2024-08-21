@@ -55,6 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataTableExtensions.cs" />
+    <Compile Include="TecnologiaExcluidaSQLHelper.cs" />
     <Compile Include="DatosInscripcion.cs" />
     <Compile Include="SQLServerHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

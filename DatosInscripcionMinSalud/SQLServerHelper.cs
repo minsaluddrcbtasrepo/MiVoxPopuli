@@ -50,14 +50,46 @@ namespace DatosInscripcionMinSalud
             return false;
         }
 
-        public DataTable EjecutarQueryDevolver(string sqlConsulta)
+        public DataTable EjecutarQueryDevolver(string sqlConsulta, List<SqlParameter> parametros = null)
         {
-            SqlDataAdapter adaptador = new SqlDataAdapter(sqlConsulta, conexionSQL);
-            DataTable respuesta = new DataTable();
+            using (SqlCommand comando = new SqlCommand(sqlConsulta, conexionSQL))
+            {
+                // Agregar los parámetros al comando si se proporcionan
+                if (parametros != null)
+                {
+                    comando.Parameters.AddRange(parametros.ToArray());
+                }
 
-            adaptador.Fill(respuesta);
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable respuesta = new DataTable();
 
-            return respuesta;
+                try
+                {
+                    // Abrir la conexión si no está abierta
+                    if (conexionSQL.State != ConnectionState.Open)
+                    {
+                        conexionSQL.Open();
+                    }
+
+                    // Llenar el DataTable con los resultados de la consulta
+                    adaptador.Fill(respuesta);
+                }
+                catch (Exception ex)
+                {
+                    // Manejar excepciones (logging, rethrow, etc.)
+                    throw new Exception("Error al ejecutar la consulta.", ex);
+                }
+                finally
+                {
+                    // Cerrar la conexión si está abierta
+                    if (conexionSQL.State == ConnectionState.Open)
+                    {
+                        conexionSQL.Close();
+                    }
+                }
+
+                return respuesta;
+            }
         }
 
         public void EjecutarQuerySinDevolver(SqlCommand sqlConsulta)

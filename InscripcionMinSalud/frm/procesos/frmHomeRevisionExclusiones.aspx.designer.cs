@@ -24,13 +24,13 @@ namespace InscripcionMinSalud.frm.procesos
         protected global::System.Web.UI.WebControls.Label lblNombreProceso;
 
         /// <summary>
-        /// lnkNominacion control.
+        /// lnkIntroduccion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkNominacion;
+        protected global::System.Web.UI.WebControls.HyperLink lnkIntroduccion;
 
         /// <summary>
         /// lnkAnalisis control.
@@ -51,21 +51,75 @@ namespace InscripcionMinSalud.frm.procesos
         protected global::System.Web.UI.WebControls.HyperLink lnkDesicion;
 
         /// <summary>
-        /// btnRegistro control.
+        /// divAnuncioAnterior control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegistro;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divAnuncioAnterior;
 
         /// <summary>
-        /// btnIngreso control.
+        /// pnl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnIngreso;
+        protected global::System.Web.UI.WebControls.Panel pnl;
+
+        /// <summary>
+        /// pnlRegistrese control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlRegistrese;
+
+        /// <summary>
+        /// controlLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::InscripcionMinSalud.frm.controles.controlLogin controlLogin;
+
+        /// <summary>
+        /// pnlNoRegistrese control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlNoRegistrese;
+
+        /// <summary>
+        /// pnlVigenciaNominacion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlVigenciaNominacion;
+
+        /// <summary>
+        /// iframeNominar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlIframe iframeNominar;
+
+        /// <summary>
+        /// pnlNoVigenciaNominacion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlNoVigenciaNominacion;
     }
 }
