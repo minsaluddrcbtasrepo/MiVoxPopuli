@@ -1,6 +1,9 @@
+
+
+
 -- Auto-generated SQL script #202408192057
 INSERT INTO participacion2017.dbo.PROCESO (COD_PROCESO,NOMBRE_PROCESO,FECHA_INICIO_NOMINACION,FECHA_FIN_NOMINACION,OBSERVACIONES_PROCESO,FECHA_INICIO_NOMINACION2,FECHA_FIN_NOMINACION2,ACTIVO,ACTIVO_PARTICIPAR,ACTIVO_RESULTADOS,FECHA_INICIO_PRIMERA_VIGENCIA,FECHA_FIN_PRIMERA_VIGENCIA,ES_RUPS,URL_ACTIVO_PARTICIPAR,VIGENCIAS,ES_UPC,ES_HUERFANA,ES_AAA)
-	VALUES (22,N'Revisión de Exclusiónes por no aplicación de criterio(s) excluyente(s)','2024-01-01 00:00:00','2024-03-31 23:59:59',N'Conozca la revision de exclusiones por no aplicacion de criterios excluyentes','2024-01-01 00:00:00','2024-03-31 23:59:59',1,1,1,'2024-01-01 00:00:00','2024-03-31 23:59:59',1,N'../procesos/frmHomeRevisionExclusiones.aspx?cod=22&V=1',15,0,0,0);
+	VALUES (22,N'RevisiÃ³n de ExclusiÃ³nes por no aplicaciÃ³n de criterio(s) excluyente(s)','2024-01-01 00:00:00','2024-03-31 23:59:59',N'Conozca la revision de exclusiones por no aplicacion de criterios excluyentes','2024-01-01 00:00:00','2024-03-31 23:59:59',1,1,1,'2024-01-01 00:00:00','2024-03-31 23:59:59',1,N'../procesos/frmHomeRevisionExclusiones.aspx?cod=22&V=1',15,0,0,0);
 
 
 INSERT INTO VIGENCIA (COD_VIGENCIA, COD_PROCESO, DESCRIPCION, FECHA_INICIO, FECHA_FIN, ABIERTO) VALUES(20, 22, N'2024', '2024-01-01 00:00:00.000', '2024-10-31 00:00:00.000', 0);
@@ -15,3 +18,12 @@ INSERT INTO VIGENCIA (COD_VIGENCIA, COD_PROCESO, DESCRIPCION, FECHA_INICIO, FECH
 --delete VIGENCIA where COD_PROCESO=22
 
 
+go
+create table ordenTabProcesos (
+id int primary key identity,
+codProceso int not null,
+orderMenu int not null,
+CONSTRAINT FK_idProceso FOREIGN KEY (codProceso) REFERENCES proceso(Cod_proceso)
+)
+
+insert ordenTabProcesos values (1,1),(22,2),(6,3),(21,4)

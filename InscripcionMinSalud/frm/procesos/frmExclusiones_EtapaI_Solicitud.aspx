@@ -108,7 +108,7 @@
 
 
                 <hr />
-                <table class="table table-striped" id="tabla-tecnologias">
+                <table class="table table-striped text-center" id="tabla-tecnologias">
                     <thead>
                         <tr>
                             <th>Tecnología</th>
@@ -263,14 +263,64 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <input type="file" class="form-control" id="archivoCargar" />
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="btnCargar">Cargar</button>
+                        <!-- Formulario para cargar archivos -->
+                        <form id="formCargarArchivos">
+                            <!-- Título: Revisión de -->
+                            <div class="mb-3">
+                                <label for="tituloRevision" class="form-label">Revisión del criterio </label>                                
+                                <h4 id="CriterioNombre"></h4>
+                            </div>
+
+                           <%-- <!-- Descripción del criterio -->
+                            <div class="mb-3">
+                                <label for="descripcionCriterio" class="form-label">Descripción del criterio:</label>                                
+                            </div>--%>
+
+                            <!-- Justificación solicitud revisión -->
+                            <div class="mb-3">
+                                <label for="justificacionRevision" class="form-label">Justificación solicitud revisión:</label>
+                                <textarea class="form-control" id="justificacionRevision" rows="3" placeholder="Escribe la justificación" required></textarea>
+                            </div>
+
+                            <!-- Cargar archivo -->
+                            <div class="mb-3">
+                                <label for="archivoCargar" class="form-label">Cargar archivo:</label>
+                                <input type="file" class="form-control" id="archivoCargar" required>
+                            </div>
+
+                            <!-- Descripción del archivo -->
+                            <div class="mb-3">
+                                <label for="descripcionArchivo" class="form-label">Descripción del archivo:</label>
+                                <textarea class="form-control" id="descripcionArchivo" rows="2" placeholder="Describe el archivo" required></textarea>
+                            </div>
+
+                            <!-- Botón Anexar -->
+                            <button type="button" class="btn btn-secondary" id="btnAnexar">Anexar</button>
+
+                            <!-- Tabla de archivos anexados -->
+                            <div class="mt-4">
+                                <table class="table" id="tablaArchivosAnexados">
+                                    <thead>
+                                        <tr>
+                                            <th>Archivo</th>
+                                            <th>Descripción</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Aquí se añadirán dinámicamente las filas de los archivos anexados -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Botón Finalizar y Postular -->
+                            <button type="button" class="btn btn-primary mt-3" id="btnFinalizarPostular">Finalizar y Postular</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+
 
 
 

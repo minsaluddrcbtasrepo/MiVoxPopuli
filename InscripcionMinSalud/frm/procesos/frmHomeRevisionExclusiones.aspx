@@ -39,20 +39,19 @@
                     </div>
                 </div>
                 <div class="col-lg-10 amp-proces">
-                    <h3>Fase de nominación</h3>
-                    <div style="color: red; font-size: 20px;">Esta fase está activa desde el 1 de enero hasta el 31 de marzo de 2024.</div>
+                    <%-- <h3>Fase de nominación</h3>
+                    <div style="color: red; font-size: 20px;">Esta fase está activa desde el 1 de enero hasta el 31 de marzo de 2024.</div>--%>
                     <br />
                     <p id="divAnuncioAnterior" runat="server" visible="false" style="text-align: justify;">
-                         Los diferentes actores del Sistema General de Seguridad Social en Salud, a través de las
+                        <%--Los diferentes actores del Sistema General de Seguridad Social en Salud, a través de las
                         sociedades cientificas o agremiaciones de profesionales de la Salud, pueden presentar la
                         nominación de un procedimiento en salud para que sea actualizado (incluido, eliminado,
                         reubicado, declarado obsoleto, desagregado o agrupado), dentro de la Clasificación Única
                         de Procedimientos en Salud, diligenciando el formulario de Registro Unico de
                         Procedimientos en Salud -RUPS- disponible en la presente página web, según Io establecido
-                        en los articulos 5, 6, 7 y 8 de la Resolución 3804 de 2016.
-                        
+                        en los articulos 5, 6, 7 y 8 de la Resolución 3804 de 2016.--%>
                     </p>
-                   
+
                     <br />
                     <br />
                     <strong>A continuación verá las diferentes formas de participación. 
@@ -61,13 +60,13 @@
 
                     <hr>
                     <div class="uitabs" style="border-style: ridge;">
-                        <ul class="tabs">
+                        <ul class="tabs row">
                             <asp:Panel runat="server">
-                                <li class='<%= clsAgremiacion %>' data-tab="tab-1">Soy agremiación o asociación de profesionales de la salud</li>
-                               <%-- <li class='<%= clsAgremiacion %>' data-tab="tab-1">Soy MSPS</li>
-                                <li class='<%= clsParticipe %>' data-tab="tab-1b">Soy otro actor</li>
-                                <li class='<%= clsMetodologia %>' data-tab="tab-3">Metodología</li>
-                                <li class='<%= clsResultados %>' data-tab="tab-2">Resultados</li>--%>
+                                <li class='<%= clsAgremiacion %> col-md-4' data-tab="tab-1">Soy agremiación o asociación de profesionales de la salud</li>
+                                <%-- <li class='<%= clsAgremiacion %>' data-tab="tab-1">Soy MSPS</li>
+                                <li class='<%= clsParticipe %>' data-tab="tab-1b">Soy otro actor</li>--%>
+                                <li class='<%= clsMetodologia %>  col-md-4' data-tab="tab-3">Metodología</li>
+                                <li class='<%= clsResultados %>  col-md-4' data-tab="tab-2">Resultados</li>
 
                             </asp:Panel>
 
@@ -103,23 +102,21 @@
 
                             <div id="tab-1b" class='<%= clsTabParticipe %>'>
                                 <p>
-                                   
                                 </p>
 
                             </div>
                         </asp:Panel>
                         <div id="tab-2" class='<%= clsTabResultados %>'>
-                                                   
+
 
 
                             <h3></h3>
-                           
+
 
                         </div>
                         <div id="tab-3" class='<%=clsTabMetodologia %>'>
 
                             <div id="tab3Existe">
-                              
                             </div>
 
                         </div>

@@ -52,10 +52,60 @@
     $('#tabla-criterios').on('click', '.btn-revision', function () {
         event.preventDefault(); // Evita el refresco de la página
         var criterioId = $(this).data('criterioid');
+        var criterioNombre = $(this).data('criterio-nombre');
+        $('#CriterioNombre').text(criterioNombre);
         $('#modalCargarArchivos').modal('show');
     });
 
 
+
+    $('#btnAnexar').on('click', function () {
+        event.preventDefault(); // Evita el refresco de la página
+        // Obtener los valores del formulario
+        const archivoInput = document.getElementById('archivoCargar');
+        const descripcionArchivo = document.getElementById('descripcionArchivo').value;
+
+        // Verificar si se ha seleccionado un archivo y si hay una descripción
+        if (archivoInput.files.length > 0 && descripcionArchivo) {
+            const archivo = archivoInput.files[0];
+            const tabla = document.getElementById('tablaArchivosAnexados').getElementsByTagName('tbody')[0];
+
+            // Crear nueva fila para la tabla
+            const nuevaFila = tabla.insertRow();
+            const celdaArchivo = nuevaFila.insertCell(0);
+            const celdaDescripcion = nuevaFila.insertCell(1);
+            const celdaAcciones = nuevaFila.insertCell(2);
+
+            // Añadir información del archivo
+            celdaArchivo.textContent = archivo.name;
+            celdaDescripcion.textContent = descripcionArchivo;
+
+            // Añadir botones de acciones
+            const btnBorrar = document.createElement('button');
+            btnBorrar.className = 'btn btn-danger btn-sm';
+            btnBorrar.textContent = 'Borrar';
+            btnBorrar.onclick = function () {
+                tabla.deleteRow(nuevaFila.rowIndex - 1);
+            };
+
+            const btnVer = document.createElement('button');
+            btnVer.className = 'btn btn-info btn-sm ms-2';
+            btnVer.textContent = 'Ver';
+            btnVer.onclick = function () {
+                // Implementar lógica para ver archivo, por ejemplo, abrir en una nueva ventana
+                window.open(URL.createObjectURL(archivo), '_blank');
+            };
+
+            celdaAcciones.appendChild(btnBorrar);
+            celdaAcciones.appendChild(btnVer);
+
+            // Limpiar campos de entrada
+            archivoInput.value = '';
+            document.getElementById('descripcionArchivo').value = '';
+        } else {
+            alert('Por favor, seleccione un archivo y añada una descripción.');
+        }
+    });
 
 
     //---------------------------------AJAX-----------------------------------------//
@@ -157,7 +207,7 @@
                         <td class="${revisadoClass}">${criterio.Nombre}</td>
                         <td class="${revisadoClass}">
                             ${criterio.Revisado == false
-                            ? `<button class="btn btn-warning btn-revision" data-criterioid="${criterio.Id}">Subir Archivos</button>`
+                        ? `<button class="btn btn-warning btn-revision" data-criterioid="${criterio.Id}" data-criterio-nombre="${criterio.Nombre}">Revisión</button>`
                             : 'Revisado'
                         }
                         </td>

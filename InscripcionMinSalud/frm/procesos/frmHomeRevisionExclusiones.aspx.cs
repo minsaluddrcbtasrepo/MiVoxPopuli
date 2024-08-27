@@ -35,23 +35,23 @@ namespace InscripcionMinSalud.frm.procesos
                 if (Request.QueryString["r"] != null && Request.QueryString["r"] != string.Empty)
                 {
                     clsParticipe = "tab-link";
-                    clsAgremiacion = "tab-link";
-                    clsResultados = "tab-link active current";
+                    clsAgremiacion = "tab-link active current";
+                    clsResultados = "tab-link ";
                     clsMetodologia = "tab-link";
 
-                    clsTabAgremiacion = "tab-content";
+                    clsTabAgremiacion = "tab-content active current";
                     clsTabParticipe = "tab-content";
-                    clsTabResultados = "tab-content current";
+                    clsTabResultados = "tab-content ";
                     clsTabMetodologia = "tab-content";
                 }
                 else
                 {
-                    clsAgremiacion = "tab-link current";
+                    clsAgremiacion = "tab-link active current";
                     clsParticipe = "tab-link";
                     clsResultados = "tab-link";
                     clsMetodologia = "tab-link";
 
-                    clsTabAgremiacion = "tab-content current";
+                    clsTabAgremiacion = "tab-content active current";
                     clsTabParticipe = "tab-content";
                     clsTabResultados = "tab-content";
                     clsTabMetodologia = "tab-content";
