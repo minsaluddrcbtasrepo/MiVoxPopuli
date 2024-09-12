@@ -24,15 +24,6 @@ namespace InscripcionMinSalud.frm.procesos
         protected global::System.Web.UI.WebControls.Label lblNombreProceso;
 
         /// <summary>
-        /// lnkIntroduccion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkIntroduccion;
-
-        /// <summary>
         /// lnkAnalisis control.
         /// </summary>
         /// <remarks>
@@ -40,15 +31,6 @@ namespace InscripcionMinSalud.frm.procesos
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink lnkAnalisis;
-
-        /// <summary>
-        /// lnkDesicion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkDesicion;
 
         /// <summary>
         /// divAnuncioAnterior control.

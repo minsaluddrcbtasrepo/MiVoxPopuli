@@ -54,7 +54,7 @@ namespace InscripcionMinSalud.frm.procesos
                 lnkAdopcion.NavigateUrl = lnkAdopcion.NavigateUrl + "?cod=" +Request.QueryString["cod"]+ "&v=" +Request.QueryString["v"]+ "&r=" +Request.QueryString["r"] +"";
                 lnkAnalisis.NavigateUrl = lnkAnalisis.NavigateUrl + "?cod=" + Request.QueryString["cod"] + "&v=" + Request.QueryString["v"] + "&r=" + Request.QueryString["r"] + "";
                 lnkConsultas.NavigateUrl = lnkConsultas.NavigateUrl + "?cod=" + Request.QueryString["cod"] + "&v=" + Request.QueryString["v"] + "&r=" + Request.QueryString["r"] + "";
-                lnkRevision.NavigateUrl = lnkRevision.NavigateUrl + "?cod=" + Request.QueryString["cod"] + "&v=" + Request.QueryString["v"] + "&r=" + Request.QueryString["r"] + "";
+                //lnkRevision.NavigateUrl = lnkRevision.NavigateUrl + "?cod=" + Request.QueryString["cod"] + "&v=" + Request.QueryString["v"] + "&r=" + Request.QueryString["r"] + "";
 
                 VIGENCIA vigencia = proceso.VIGENCIA.FirstOrDefault(vig => vig.COD_VIGENCIA == Convert.ToInt32(Request.QueryString["v"]));
 
