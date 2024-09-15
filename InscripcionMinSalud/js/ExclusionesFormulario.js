@@ -152,6 +152,9 @@
             limpiarFormularioRevision();
             btnGuardarCriterio.disabled = false;
 
+            
+
+
         } else {
             alert('Por favor, seleccione un archivo y añada una Justificación y una descripción.');
         }
@@ -199,40 +202,42 @@
 
 
     function validateCriterios() {
-        let allValid = true;
+        setTimeout(function () {
+            let allValid = true;
 
-        // Ejemplo de validaciones 
-        var indicaciones = obtenerCheckboxesSeleccionados();
-        if (indicaciones.length === 0) {
-            $('#errorIndicacion .validation-message').eq(0).show();
-            allValid = false;
-        } else {
-            $('#errorIndicacion .validation-message').eq(0).hide();
-        }
-
-        var criteriosFaltantes = postulacionModel.criterios.filter(criterio => criterio.Revisado === false);
-
-        if (criteriosFaltantes.length > 0) {
-            $('#errorCriterio .validation-message').eq(1).show();
-            allValid = false;
-        } else {
-            $('#errorCriterio .validation-message').eq(1).hide();
-        }
-
-        $('#errorConflicto .validation-message').eq(1).hide();
-        if (postulacionModel.conflictoInteres == true) {
-
-            if (postulacionModel.conflictoInteresModel.conflictoInteres === '') {
-                $('#errorConflicto .validation-message').eq(1).show();
+            // Ejemplo de validaciones 
+            var indicaciones = obtenerCheckboxesSeleccionados();
+            if (indicaciones.length === 0) {
+                $('#errorIndicacion').show();
                 allValid = false;
+            } else {
+                $('#errorIndicacion').hide();
             }
-        }
+
+            var criteriosFaltantes = postulacionModel.criterios.filter(criterio => criterio.Revisado === false);
+
+            if (criteriosFaltantes.length > 0) {
+                $('#errorCriterio').show();
+                allValid = false;
+            } else {
+                $('#errorCriterio').hide();
+            }
+
+            $('#errorConflicto').hide();
+            if (postulacionModel.conflictoInteres == true) {
+
+                if (postulacionModel.conflictoInteresModel.conflictoInteres === '') {
+                    $('#errorConflicto').show();
+                    allValid = false;
+                }
+            }
 
 
 
 
-        // Habilitar o deshabilitar el botón
-        $('#btnFinalizar').prop('disabled', !allValid);
+            // Habilitar o deshabilitar el botón
+            $('#btnFinalizar').prop('disabled', !allValid);
+        }, 100); 
     }
 
 
@@ -408,6 +413,7 @@
 
                             $('#modalCargarArchivos').modal('hide');
                             cargarTablaCriterios(postulacionModel.criterios);
+                            validateCriterios();
 
                         } else {
                             // Si hubo algún error
@@ -477,7 +483,7 @@
     $('#btnFinalizar').on('click', function () {
 
 
-
+        event.preventDefault(); // Evita el refresco de la página
         postulacionModel.indicadores = obtenerCheckboxesSeleccionados();
         // Enviar el objeto al WebMethod usando $.ajax
         $.ajax({
@@ -488,8 +494,10 @@
             dataType: "json", // Esperar una respuesta JSON
             success: function (response) {
                 // Manejar la respuesta del WebMethod
-                debugger;
                 alert('Datos enviados exitosamente.');
+                setTimeout(function () {
+                    location.reload();
+                }, 1000); // 1000 milisegundos = 1 segundo
             },
             error: function (xhr, status, error) {
                 // Manejar errores

@@ -265,7 +265,7 @@
                     <div class="error-validacion" >
                         <p id="errorIndicacion" class="validation-message">Debe seleccionar por lo menos una indicación.</p>
                         <p id="errorCriterio" class="validation-message">Debe revisar todos los criterios.</p>
-                        <%--<p id="errorConflicto" class="validation-message">Debe seleccionar si presenta conflicto de interés. </p>--%>
+                        <p id="errorConflicto" class="validation-message">Debe seleccionar si presenta conflicto de interés. </p>
                     </div>
                     <div class="form-group text-right">
                         <button  class="btn btn-success" id="btnFinalizar" disabled>Finalizar y Postular</button>
