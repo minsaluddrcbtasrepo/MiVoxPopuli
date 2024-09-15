@@ -39,11 +39,11 @@ namespace DatosInscripcionMinSalud
             string sqlConsulta = string.Format("SELECT digitoVerificacion,digitoVerificacionRepresentante,Nombres, Apellidos, NumeroIdentificacion, IdEstadoUsuario FROM Participante WHERE NumeroIdentificacion = '{0}' AND Contrasena = '{1}'", usuario, contrasena);
 
             DataTable resultado = helper.EjecutarQueryDevolver(sqlConsulta);
-                       
-         
+
+
             if (resultado.Rows.Count > 0)
             {
-                return resultado.Rows[0];                
+                return resultado.Rows[0];
             }
             else
             {
@@ -58,7 +58,7 @@ namespace DatosInscripcionMinSalud
             string sqlConsulta = string.Format("DELETE FROM Participante WHERE NumeroIdentificacion = '{0}' ",
                 numeroIdentificacion.Trim());
 
-            helper.EjecutarQuerySinDevolver(sqlConsulta);            
+            helper.EjecutarSentenciaDB(sqlConsulta);
         }
 
         public DataRow BuscarParticipantePorNumeroIdentificacion(string numeroIdentificacion)
@@ -66,8 +66,8 @@ namespace DatosInscripcionMinSalud
             SQLServerHelper helper = new SQLServerHelper();
 
             string sqlConsulta = string.Format("SELECT digitoVerificacion,digitoVerificacionRepresentante,NumeroIdentificacion,IdTipoUsuario,Nombres,Apellidos,NombreRepresentanteLegal,IdTipoIdentificacion,IdTipoIdentificacionRepresentante, " +
-            "NumeroIdentificacionRepresentante,PathNumeroIdentificacion,PathConstitucionGrupo,PatologiaAsociacion,PathCertificacionPatologia,Email,Telefono, " + 
-            "Celular,NumeroAsociados,Direccion,Genero,Certifico,Autorizo,Contrasena,FechaRetiro,IdPreguntaSecreta,RespuestaPregunta,IdEstadoUsuario,IdMunicipio, " + 
+            "NumeroIdentificacionRepresentante,PathNumeroIdentificacion,PathConstitucionGrupo,PatologiaAsociacion,PathCertificacionPatologia,Email,Telefono, " +
+            "Celular,NumeroAsociados,Direccion,Genero,Certifico,Autorizo,Contrasena,FechaRetiro,IdPreguntaSecreta,RespuestaPregunta,IdEstadoUsuario,IdMunicipio, " +
             "FechaRegistro,FechaActualizacion, IdDepartamento, " +
             "AutorizoEmail, ValorContrasena FROM Participante INNER JOIN Municipio ON Participante.IdMunicipio = Municipio.Id WHERE NumeroIdentificacion = '{0}' ", numeroIdentificacion.Trim());
 
@@ -108,7 +108,7 @@ namespace DatosInscripcionMinSalud
         }
 
 
-        public void InsertarParticipanteBD(string numeroIdentificacion,Int16 idTipoUsuario, string nombres, string apellidos, string nombreRepresentanteLegal,
+        public void InsertarParticipanteBD(string numeroIdentificacion, Int16 idTipoUsuario, string nombres, string apellidos, string nombreRepresentanteLegal,
             Int16 idTipoIdentificacion, Int16 idTipoIdentificacionRepresentante, string numeroIdentificacionRepresentante, string pathNumeroIdentificacion,
             string pathConstitucionGrupo, string email, string telefono, string celular,
             int numeroAsociados, string direccion, char genero, bool certifico, bool autorizo, string contrasena, Int16 idPreguntaSecreta,
@@ -172,7 +172,7 @@ namespace DatosInscripcionMinSalud
 
             SqlParameter parametroPathConstitucionGrupo = new SqlParameter("pathConstitucionGrupo", SqlDbType.VarChar);
             parametroPathConstitucionGrupo.Value = pathConstitucionGrupo;
-            comandoInsercion.Parameters.Add(parametroPathConstitucionGrupo);          
+            comandoInsercion.Parameters.Add(parametroPathConstitucionGrupo);
 
             SqlParameter parametroEmail = new SqlParameter("email", SqlDbType.VarChar);
             parametroEmail.Value = email;
@@ -212,7 +212,7 @@ namespace DatosInscripcionMinSalud
 
             SqlParameter parametroIdPreguntaSecreta = new SqlParameter("idpreguntasecreta", SqlDbType.Int);
             parametroIdPreguntaSecreta.Value = idPreguntaSecreta;
-            comandoInsercion.Parameters.Add(parametroIdPreguntaSecreta);                  
+            comandoInsercion.Parameters.Add(parametroIdPreguntaSecreta);
 
             SqlParameter parametroRespuestaPregunta = new SqlParameter("respuestapregunta", SqlDbType.VarChar);
             parametroRespuestaPregunta.Value = respuestaPregunta;
@@ -221,7 +221,7 @@ namespace DatosInscripcionMinSalud
             SqlParameter parametroIdEstadoUsuario = new SqlParameter("idestadousuario", SqlDbType.Int);
             parametroIdEstadoUsuario.Value = idEstadoUsuario;
             comandoInsercion.Parameters.Add(parametroIdEstadoUsuario);
-            
+
             SqlParameter parametroIdMunicipio = new SqlParameter("idmunicipio", SqlDbType.Int);
             parametroIdMunicipio.Value = idMunicipio;
             comandoInsercion.Parameters.Add(parametroIdMunicipio);
@@ -236,7 +236,7 @@ namespace DatosInscripcionMinSalud
 
             SqlParameter parametroContrasenaValor = new SqlParameter("valorContrasena", SqlDbType.VarChar);
             parametroContrasenaValor.Value = valorContrasena;
-            comandoInsercion.Parameters.Add(parametroContrasenaValor);     
+            comandoInsercion.Parameters.Add(parametroContrasenaValor);
 
             helper.EjecutarQuerySinDevolver(comandoInsercion);
         }
@@ -247,9 +247,9 @@ namespace DatosInscripcionMinSalud
             SQLServerHelper helper = new SQLServerHelper();
 
             string sql = null;
-            
-                sql = "UPDATE Participante set IdEstadoUsuario= 1 WHERE NumeroIdentificacion= @numeroIdentificador and IdEstadoUsuario=0";
-            
+
+            sql = "UPDATE Participante set IdEstadoUsuario= 1 WHERE NumeroIdentificacion= @numeroIdentificador and IdEstadoUsuario=0";
+
 
 
             SqlCommand comandoUpdate = new SqlCommand(sql);
@@ -260,14 +260,14 @@ namespace DatosInscripcionMinSalud
             parametroNumeroIdentificacion.Value = numeroIdentificacion;
             comandoUpdate.Parameters.Add(parametroNumeroIdentificacion);
 
-           
+
             helper.EjecutarQuerySinDevolver(comandoUpdate);
         }
 
 
         public void ActualizarDatosClaveCorreo(string numeroIdentificacion, string email, string contrasena, string valorContrasena)
         {
-            
+
             SQLServerHelper helper = new SQLServerHelper();
 
             string sql = null;
@@ -279,19 +279,19 @@ namespace DatosInscripcionMinSalud
             {
                 sql = "UPDATE Participante set NumeroIdentificacion= @numeroIdentificador, email =@email, contrasena =@contrasena, ValorContrasena = @valorContrasena WHERE NumeroIdentificacion= @numeroIdentificador ";
             }
-                       
+
 
             SqlCommand comandoUpdate = new SqlCommand(sql);
-            
-            
+
+
 
             SqlParameter parametroNumeroIdentificacion = new SqlParameter("@numeroIdentificador", SqlDbType.VarChar);
             parametroNumeroIdentificacion.Value = numeroIdentificacion;
-            comandoUpdate.Parameters.Add(parametroNumeroIdentificacion);           
+            comandoUpdate.Parameters.Add(parametroNumeroIdentificacion);
 
             SqlParameter parametroEmail = new SqlParameter("@email", SqlDbType.VarChar);
             parametroEmail.Value = email;
-            comandoUpdate.Parameters.Add(parametroEmail);           
+            comandoUpdate.Parameters.Add(parametroEmail);
 
             if (contrasena != null)
             {
@@ -301,9 +301,9 @@ namespace DatosInscripcionMinSalud
 
                 SqlParameter parametroContrasenaValor = new SqlParameter("@valorContrasena", SqlDbType.VarChar);
                 parametroContrasenaValor.Value = valorContrasena;
-                comandoUpdate.Parameters.Add(parametroContrasenaValor);     
-            }    
-           
+                comandoUpdate.Parameters.Add(parametroContrasenaValor);
+            }
+
             helper.EjecutarQuerySinDevolver(comandoUpdate);
         }
 
@@ -311,9 +311,9 @@ namespace DatosInscripcionMinSalud
             Int16 idTipoIdentificacion, Int16 idTipoIdentificacionRepresentante, string numeroIdentificacionRepresentante, string pathNumeroIdentificacion,
             string pathConstitucionGrupo, string email, string telefono, string celular,
             int numeroAsociados, string direccion, char genero, bool certifico, bool autorizo, string contrasena, Int16 idPreguntaSecreta,
-            string respuestaPregunta, Int16 idMunicipio, bool autorizoEmail, string valorContrasena,string digitoVerificacion, string digitoVerificacionRepresentante)
+            string respuestaPregunta, Int16 idMunicipio, bool autorizoEmail, string valorContrasena, string digitoVerificacion, string digitoVerificacionRepresentante)
         {
-            
+
             SQLServerHelper helper = new SQLServerHelper();
 
             string sql = null;
@@ -335,7 +335,7 @@ namespace DatosInscripcionMinSalud
                 sql = sql.Replace("@contrasena", "contrasena");
                 sql = sql.Replace("@valorContrasena", "valorContrasena");
             }
-            
+
 
             SqlCommand comandoUpdate = new SqlCommand(sql);
             SqlParameter parametrodigitoVerificacion = new SqlParameter("digitoVerificacion", SqlDbType.VarChar);
@@ -385,7 +385,7 @@ namespace DatosInscripcionMinSalud
             SqlParameter parametroPathConstitucionGrupo = new SqlParameter("pathConstitucionGrupo", SqlDbType.VarChar);
             parametroPathConstitucionGrupo.Value = pathConstitucionGrupo;
             comandoUpdate.Parameters.Add(parametroPathConstitucionGrupo);
-          
+
             SqlParameter parametroEmail = new SqlParameter("email", SqlDbType.VarChar);
             parametroEmail.Value = email;
             comandoUpdate.Parameters.Add(parametroEmail);
@@ -426,7 +426,7 @@ namespace DatosInscripcionMinSalud
 
                 SqlParameter parametroContrasenaValor = new SqlParameter("valorContrasena", SqlDbType.VarChar);
                 parametroContrasenaValor.Value = valorContrasena;
-                comandoUpdate.Parameters.Add(parametroContrasenaValor);      
+                comandoUpdate.Parameters.Add(parametroContrasenaValor);
             }
 
             SqlParameter parametroIdPreguntaSecreta = new SqlParameter("idpreguntasecreta", SqlDbType.Int);
@@ -435,7 +435,7 @@ namespace DatosInscripcionMinSalud
 
             SqlParameter parametroRespuestaPregunta = new SqlParameter("respuestapregunta", SqlDbType.VarChar);
             parametroRespuestaPregunta.Value = respuestaPregunta;
-            comandoUpdate.Parameters.Add(parametroRespuestaPregunta);           
+            comandoUpdate.Parameters.Add(parametroRespuestaPregunta);
 
             SqlParameter parametroIdMunicipio = new SqlParameter("idmunicipio", SqlDbType.Int);
             parametroIdMunicipio.Value = idMunicipio;
@@ -447,12 +447,12 @@ namespace DatosInscripcionMinSalud
 
             SqlParameter parametroAutorizoEmail = new SqlParameter("AutorizoEmail", SqlDbType.Bit);
             parametroAutorizoEmail.Value = autorizoEmail;
-            comandoUpdate.Parameters.Add(parametroAutorizoEmail);                     
+            comandoUpdate.Parameters.Add(parametroAutorizoEmail);
 
             helper.EjecutarQuerySinDevolver(comandoUpdate);
 
-        }       
-  
+        }
+
         public DataTable CargarListaBD(TipoLista tipoLista, string parametro = null)
         {
             string sql = "";
@@ -470,10 +470,10 @@ namespace DatosInscripcionMinSalud
                     break;
                 case TipoLista.Municipio:
                     sql = "SELECT id, nombre FROM Municipio WHERE IdDepartamento = " + parametro + " ORDER BY nombre";
-                    break;                
+                    break;
                 case TipoLista.Pregunta:
                     sql = "SELECT Id, TextoPregunta FROM PreguntaSecreta ORDER BY TextoPregunta";
-                    break;                
+                    break;
                 case TipoLista.TipoDocumento:
                     sql = "SELECT Id, Nombre FROM TipoIdentificacion ORDER BY Nombre";
                     break;
@@ -495,7 +495,7 @@ namespace DatosInscripcionMinSalud
                     break;
                 case TipoLista.tipoUsuarioViejo:
                     sql = "SELECT Id, Nombre FROM TipoUsuario WHERE ES_NUEVO = 0 ORDER BY Nombre";
-                    break;     
+                    break;
             }
 
             SQLServerHelper helper = new SQLServerHelper();
@@ -528,12 +528,12 @@ namespace DatosInscripcionMinSalud
             {
                 return null;
             }
-        }      
+        }
 
         public int ObtenerMayorRango()
         {
             string sql = "SELECT ISNULL(MAX(NUMERO),1) FROM VW_RESUMEN_TIPO";
-            
+
 
             SQLServerHelper helper = new SQLServerHelper();
 
@@ -547,7 +547,7 @@ namespace DatosInscripcionMinSalud
             {
                 return 1;
             }
-        }        
+        }
     }
 
     public enum TipoLista
@@ -555,8 +555,8 @@ namespace DatosInscripcionMinSalud
         ComoEntero = 0,
         Departamento = 1,
         EstadoCivil = 2,
-        Municipio = 3,        
-        Pregunta = 4,        
+        Municipio = 3,
+        Pregunta = 4,
         TipoDocumento = 5,
         TipoDocumentoJuridico = 6,
         TipoDocumentoNatural = 7,

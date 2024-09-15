@@ -75,6 +75,15 @@
         .btn {
             flex-shrink: 0;
         }
+
+        /*.error-validacion {
+            color: red;
+            display: block;
+        }
+
+        .validation-message {
+            display: none;*/ /* Ocultar mensajes de validación hasta que sean necesarios */
+        /*}*/
     </style>
 
     <script src="../../js/ExclusionesFormulario.js"></script>
@@ -186,7 +195,7 @@
                     </div>
                 </div>
 
-                <div id="panelConflictos" class="row hidden">
+                <div id="panelConflictos1" class="row hidden ">
 
                     <h3>Describa el conflicto de intereses teniendo en cuenta los siguientes aspectos: Tipos de conflictos:</h3>
 
@@ -194,7 +203,7 @@
 
                         <div class="row">
                             <div class="col d-flex align-items-center">
-                                <input class="form-check-input indicacion-checkbox" type="checkbox" id="conflictoFinanciero">
+                                <input class="form-check-input conflicto-checkbox" type="checkbox" id="conflictoFinanciero">
                                 <label class="form-check-label" for="conflictoFinanciero">
                                     Financiero: Cuando el individuo tiene participación en una empresa, organización o equivalente que se relaciona
                                         directamente (socio, accionista, propietario, empleado) o indirectamente (proveedor, asesor, consultor) con las
@@ -205,7 +214,7 @@
 
                         <div class="row">
                             <div class="col d-flex align-items-center">
-                                <input class="form-check-input indicacion-checkbox" type="checkbox" id="conflictoIntelectual">
+                                <input class="form-check-input conflicto-checkbox" type="checkbox" id="conflictoIntelectual">
                                 <label class="form-check-label" for="conflictoIntelectual">
                                     Intelectual: Cuando se tiene un interés intelectual, académico o científico en un tema en particular. La
                                         declaración de este tipo de interés es indispensable para salvaguardar la calidad y objetividad del trabajo
@@ -216,7 +225,7 @@
 
                         <div class="row">
                             <div class="col d-flex align-items-center">
-                                <input class="form-check-input indicacion-checkbox" type="checkbox" id="conflictoPertenencia">
+                                <input class="form-check-input conflicto-checkbox" type="checkbox" id="conflictoPertenencia">
                                 <label class="form-check-label" for="conflictoPertenencia">
                                     Pertenencia: Derechos de propiedad intelectual o industrial que estén directamente relacionados con las
                                         temáticas o actividades a abordar.
@@ -226,7 +235,7 @@
 
                         <div class="row">
                             <div class="col d-flex align-items-center">
-                                <input class="form-check-input indicacion-checkbox" type="checkbox" id="conflictoFamiliar">
+                                <input class="form-check-input conflicto-checkbox" type="checkbox" id="conflictoFamiliar">
                                 <label class="form-check-label" for="conflictoFamiliar">
                                     Familiar: Cuando alguno de los familiares, hasta el tercer grado de consanguinidad y segundo de afinidad o
                                         primero civil, están relacionados de manera directa o indirecta en los aspectos financiero o intelectual, con las
@@ -237,7 +246,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div id="panelConflictos2" class="row hidden">
                     <h3>Declaración:</h3>
                     <p>
                         He leído y comprendo el objetivo de la declaración de conflicto de intereses.
@@ -247,85 +256,86 @@
 
                     <div class="form-group">
                         <h3>Describa su conflicto de interés</h3>
-                        <textarea class="form-control" id="conflictoInteres" rows="4" placeholder="Describa aquí su conflicto de interés..."></textarea>
+                        <textarea class="form-control" id="conflictoInteresStr" rows="4" placeholder="Describa aquí su conflicto de interés..."></textarea>
                     </div>
 
                 </div>
 
                 <div class="row">
-                    <div class="error-validacion">
-                        <p>Debe seleccionar por lo menos una indicación.</p>
-                        <p>Debe revisar todos los criterios.</p>
-                        <p>Debe seleccionar si presenta conflicto de interés.</p>
+                    <div class="error-validacion" >
+                        <p id="errorIndicacion" class="validation-message">Debe seleccionar por lo menos una indicación.</p>
+                        <p id="errorCriterio" class="validation-message">Debe revisar todos los criterios.</p>
+                        <%--<p id="errorConflicto" class="validation-message">Debe seleccionar si presenta conflicto de interés. </p>--%>
                     </div>
                     <div class="form-group text-right">
-                        <button type="submit" class="btn btn-success">Finalizar y Postular</button>
+                        <button  class="btn btn-success" id="btnFinalizar" disabled>Finalizar y Postular</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Modal para cargar archivos -->
-<div class="modal fade" id="modalCargarArchivos" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalLabel">Cargar Archivos</h5>
-                <button type="button" class="btn-close align-items-rigth" data-bs-dismiss="modal" aria-label="Close">X</button>
-            </div>
-            <div class="modal-body">
-                <!-- Formulario para cargar archivos -->
-                <form id="formCargarArchivos">
-                    <!-- Título: Revisión de -->
-                    <div class="mb-3">
-                        <label for="tituloRevision" class="form-label">Revisión del criterio</label>
-                        <h4 id="CriterioNombre"></h4>
+        <div class="modal fade" id="modalCargarArchivos" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel"></h5>
+                        <button id="btn-close-modal-criterios" type="button" class="btn-close align-items-rigth" data-bs-dismiss="modal" aria-label="Close">X</button>
                     </div>
+                    <div class="modal-body">
+                        <!-- Formulario para cargar archivos -->
+                        <form id="formCargarArchivos">
+                            <!-- Título: Revisión de -->
+                            <div class="mb-3">
+                                <label for="tituloRevision" class="form-label">Revisión del criterio</label>
+                                <h4 id="CriterioNombre"></h4>
+                            </div>
 
-                    <!-- Justificación solicitud revisión -->
-                    <div class="mb-3">
-                        <label for="justificacionRevision" class="form-label">Justificación solicitud revisión:</label>
-                        <textarea class="form-control" id="justificacionRevision" rows="3" placeholder="Escribe la justificación" required></textarea>
+                            <!-- Justificación solicitud revisión -->
+                            <div class="mb-3">
+                                <label for="justificacionRevision" class="form-label">Justificación solicitud revisión:</label>
+                                <textarea class="form-control" id="justificacionRevision" rows="3" placeholder="Escribe la justificación" required></textarea>
+                            </div>
+
+                            <!-- Cargar archivo -->
+                            <div class="mb-3">
+                                <label for="archivoCargar" class="form-label">Cargar archivo:</label>
+                                <input type="file" class="form-control" id="archivoCargar" required>
+                            </div>
+
+                            <!-- Descripción del archivo -->
+                            <div class="mb-3">
+                                <label for="descripcionArchivo" class="form-label">Descripción del archivo:</label>
+                                <textarea class="form-control" id="descripcionArchivo" rows="2" placeholder="Describe el archivo" required></textarea>
+                            </div>
+
+                            <!-- Botón Anexar -->
+                            <button type="button" class="btn btn-secondary" id="btnAnexar">Anexar</button>
+
+                            <!-- Tabla de archivos anexados -->
+                            <div class="mt-4">
+                                <table class="table" id="tablaArchivosAnexados">
+                                    <thead>
+                                        <tr>
+                                            <th>Archivo</th>
+                                            <th>Justificación</th>
+                                            <th>Descripción</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Aquí se añadirán dinámicamente las filas de los archivos anexados -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Botón Finalizar y Postular -->
+                            <button type="button" class="btn btn-primary mt-3" id="btnGuardarCriterio" disabled="disabled">Guardar</button>
+                        </form>
                     </div>
-
-                    <!-- Cargar archivo -->
-                    <div class="mb-3">
-                        <label for="archivoCargar" class="form-label">Cargar archivo:</label>
-                        <input type="file" class="form-control" id="archivoCargar" required>
-                    </div>
-
-                    <!-- Descripción del archivo -->
-                    <div class="mb-3">
-                        <label for="descripcionArchivo" class="form-label">Descripción del archivo:</label>
-                        <textarea class="form-control" id="descripcionArchivo" rows="2" placeholder="Describe el archivo" required></textarea>
-                    </div>
-
-                    <!-- Botón Anexar -->
-                    <button type="button" class="btn btn-secondary" id="btnAnexar">Anexar</button>
-
-                    <!-- Tabla de archivos anexados -->
-                    <div class="mt-4">
-                        <table class="table" id="tablaArchivosAnexados">
-                            <thead>
-                                <tr>
-                                    <th>Archivo</th>
-                                    <th>Descripción</th>
-                                    <th>Acciones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Aquí se añadirán dinámicamente las filas de los archivos anexados -->
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- Botón Finalizar y Postular -->
-                    <button type="button" class="btn btn-primary mt-3" id="btnFinalizarPostular">Finalizar y Postular</button>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
 
 

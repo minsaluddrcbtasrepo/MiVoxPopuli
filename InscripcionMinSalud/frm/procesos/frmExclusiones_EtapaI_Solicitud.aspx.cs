@@ -2,6 +2,9 @@
 using NegocioInscripcionMinSalud.data;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Text.RegularExpressions;
+using System.Web;
 using System.Web.Services;
 
 namespace InscripcionMinSalud.frm.procesos
@@ -39,19 +42,11 @@ namespace InscripcionMinSalud.frm.procesos
                 {
                     var reg = obj.obtenerRegistroxCodigo(codR);
                     #region ajustamos visibilidad de los paneles para la nominacion
-                    var tiposJuridicos = new List<int?> { 1, 4, 5, 6, 7, 8, 9, 10, 12, 28, 29, 30, 31, 26, 11, 27, 13, 14, 15, 16, 17, 19, 20, 18, 21, 22, 23, 24, 25, 39 };
 
-                    if (tiposJuridicos.Contains(reg.COD_TIPO_JURIDICO))
-                    {
-                        pnlMensajeNoNominador.Visible = false;
-                        pnlFormulario.Visible = true;
+                    pnlMensajeNoNominador.Visible = false;
+                    pnlFormulario.Visible = true;
 
-                    }
-                    else
-                    {
-                        pnlMensajeNoNominador.Visible = true;
-                        pnlFormulario.Visible = false;
-                    }
+
                     #endregion
 
                 }
@@ -80,6 +75,117 @@ namespace InscripcionMinSalud.frm.procesos
             return TecnologiaExcluidaSQLHelper.GetListadoCriterioExcIusion(idTecnologia);
         }
 
+
+        [WebMethod]
+        public static string GuardarAnexo(string nombreArchivo, string archivoBytes)
+        {
+            try
+            {
+                // Ruta donde se guardarán los archivos
+                string rutaDirectorio = HttpContext.Current.Server.MapPath("~/files/tecnologiasExcluidas/anexosCriterios/");
+
+                if (!Directory.Exists(rutaDirectorio))
+                {
+                    Directory.CreateDirectory(rutaDirectorio);
+                }
+
+                // Generar un nombre único con la fecha y hora actuales
+                string fechaHora = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                nombreArchivo = CleanFileName(nombreArchivo);
+                string nombreUnicoArchivo = $"{Path.GetFileNameWithoutExtension(nombreArchivo)}_{fechaHora}{Path.GetExtension(nombreArchivo)}";
+
+                // Combinar la ruta del directorio con el nuevo nombre de archivo
+                string rutaArchivo = Path.Combine(rutaDirectorio, nombreUnicoArchivo);
+
+                // Convertir el string Base64 a un array de bytes
+                byte[] archivoBytesArray = Convert.FromBase64String(archivoBytes);
+
+                // Guardar el archivo en la ruta especificada
+                File.WriteAllBytes(rutaArchivo, archivoBytesArray);
+
+                return rutaArchivo;
+            }
+            catch (Exception ex)
+            {
+                return "Error al guardar el archivo: " + ex.Message;
+            }
+        }
+
+
+        [WebMethod]
+        public static Boolean GuardarDatos(PostulacionModel postulacionModel)
+        {
+            //generar la PostuacionTecnoIogiaExcIuida
+            //
+            try
+            {
+                var IdPostulacion = TecnologiaExcluidaSQLHelper.InsertPostuacionTecnoIogiaExcIuida(postulacionModel);
+                if (IdPostulacion > 0)
+                {
+                    foreach (var criterio in postulacionModel.Criterios)
+                    {
+                        var idCriterioPostulacion = TecnologiaExcluidaSQLHelper.InsertarCriterioExcIusionPostulacion(criterio.Id, IdPostulacion);
+
+                        if (idCriterioPostulacion > 0)
+                        {
+                            //guardar los anexos
+                            foreach (var anexo in criterio.Anexos)
+                            {
+                                var idAnexo = TecnologiaExcluidaSQLHelper.InsertarAnexoCriterioExcIusionPostulacion(idCriterioPostulacion, anexo.Nombre, anexo.Descripcion, anexo.RutaArchivo, anexo.Justificacion);
+                            }
+                        }
+                    }
+
+                    foreach (var indicadorId in postulacionModel.Indicadores)
+                    {
+                        var idIndicador = TecnologiaExcluidaSQLHelper.InsertarIndicadorPostulacion(IdPostulacion, Convert.ToInt32(indicadorId));
+                    }
+                }
+
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+        }
+
+
+        [WebMethod]
+        public static Boolean GuardarDatosTest(PostulacionModelTEst postulacionModel)
+        {
+            //
+
+
+            return true;
+
+        }
+
+
+
+
+
+
+        // Función para limpiar el nombre del archivo
+        public static string CleanFileName(string originalFileName)
+        {
+            if (string.IsNullOrEmpty(originalFileName))
+            {
+                return string.Empty;
+            }
+
+            // Obtener la extensión del archivo
+            string fileExtension = Path.GetExtension(originalFileName);
+            // Obtener el nombre del archivo sin la extensión
+            string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(originalFileName);
+
+            // Reemplazar caracteres no permitidos con un guion bajo
+            string cleanFileName = Regex.Replace(fileNameWithoutExtension, @"[<>:""/\\|?*]", "_");
+
+            // Concatenar el nombre limpio con la extensión original
+            return cleanFileName + fileExtension;
+        }
 
     }
 }
