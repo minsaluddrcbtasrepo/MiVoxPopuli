@@ -53,7 +53,7 @@
                             <li>
                                 <asp:HyperLink runat="server" ID="lnkAdopcion" NavigateUrl="../../frm/procesos/frmHomeAdopcion.aspx">Adopción y publicación</asp:HyperLink></li>
                             <li class="active">
-                                <asp:HyperLink runat="server" ID="lnkRevision" NavigateUrl="../../frm/procesos/RevisionExclusionesNoAplicacion.aspx">Revisión de exclusiónes por no aplicación de criterio(s) excluyente(s)</asp:HyperLink></li>
+                                <asp:HyperLink runat="server" ID="lnkRevision" NavigateUrl="../../frm/procesos/RevisionExclusionesNoAplicacion.aspx">Revisión de la decisión de una tecnología previamente excluida</asp:HyperLink></li>
                         </ul>
                     </div>
                 </div>
