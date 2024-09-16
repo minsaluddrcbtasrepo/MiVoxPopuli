@@ -27,29 +27,35 @@
                 <div class="col-lg-2 mtabs	">
                     <div class="menu-cont">
                         <ul>
-                            <li>
-                                <asp:HyperLink runat="server" ID="lnkIntroduccion" NavigateUrl="#">Introducción</asp:HyperLink></li>
+                            <%--<li>
+                                <asp:HyperLink runat="server" ID="lnkIntroduccion" NavigateUrl="#">Introducción</asp:HyperLink></li>--%>
 
                             <li class="active"><a id="lnkNominacion">Solicitud de revisión de la decisión de una tecnología previamente excluida:</a></li>
                             <li>
                                 <asp:HyperLink runat="server" ID="lnkAnalisis" NavigateUrl="#">Análisis técnico - científico</asp:HyperLink></li>
-                            <li>
-                                <asp:HyperLink runat="server" ID="lnkDesicion" NavigateUrl="#">Decisión y seguimiento</asp:HyperLink></li>
+                            <%--<li>
+                                <asp:HyperLink runat="server" ID="lnkDesicion" NavigateUrl="#">Decisión y seguimiento</asp:HyperLink></li>--%>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-10 amp-proces">
-                    <%-- <h3>Fase de nominación</h3>
-                    <div style="color: red; font-size: 20px;">Esta fase está activa desde el 1 de enero hasta el 31 de marzo de 2024.</div>--%>
+                    <h3>Solicitud de revisión de la decisión de una tecnología previamente excluida</h3>
+                    <div style="color: red; font-size: 20px;">Esta fase está activa desde el 1 de octubre hasta el 31 de diciembre de 2024.</div>
                     <br />
                     <p id="divAnuncioAnterior" runat="server" visible="false" style="text-align: justify;">
-                        <%--Los diferentes actores del Sistema General de Seguridad Social en Salud, a través de las
-                        sociedades cientificas o agremiaciones de profesionales de la Salud, pueden presentar la
-                        nominación de un procedimiento en salud para que sea actualizado (incluido, eliminado,
-                        reubicado, declarado obsoleto, desagregado o agrupado), dentro de la Clasificación Única
-                        de Procedimientos en Salud, diligenciando el formulario de Registro Unico de
-                        Procedimientos en Salud -RUPS- disponible en la presente página web, según Io establecido
-                        en los articulos 5, 6, 7 y 8 de la Resolución 3804 de 2016.--%>
+                        En forma directa o representativa todos los actores del SGSSS están habilitados para 
+                        solicitar la revisión de la decisión de la tecnología previamente excluida. Por lo tanto, el
+                        Ministerio de Salud y Protección Social, las Entidades Promotoras de Salud (EPS), las
+                        Instituciones Prestadoras de Servicios de Salud (IPS), las Entidades Territoriales, el Instituto
+                        de Evaluación Tecnológica en Salud (IETS), los profesionales y trabajadores de  la salud,
+                        los usuarios y los pacientes de los servicios de salud, las asociaciones de profesionales de
+                        la salud, las instituciones académicas y de investigación, la industria, las entidades de
+                        control y demás interesados, pueden participar en esta etapa. 
+                        <br />
+                        <br />
+                        En esta etapa se permite la participación de todos los actores de conformidad con los
+                        mecanismos de participación y las estrategias de convocatoria establecidos en la Circular
+                        032 de 2022 o la que la modifique o sustituya.
                     </p>
 
                     <br />
@@ -62,7 +68,8 @@
                     <div class="uitabs" style="border-style: ridge;">
                         <ul class="tabs row">
                             <asp:Panel runat="server">
-                                <li class='<%= clsAgremiacion %> col-md-4' data-tab="tab-1">Soy agremiación o asociación de profesionales de la salud</li>
+                                <li class='<%= clsAgremiacion %> col-md-4' data-tab="tab-1">
+                                    <img src="/img/web/clic31.png" style="width: 20%; background-color: #013144;" />Participe</li>
                                 <%-- <li class='<%= clsAgremiacion %>' data-tab="tab-1">Soy MSPS</li>
                                 <li class='<%= clsParticipe %>' data-tab="tab-1b">Soy otro actor</li>--%>
                                 <li class='<%= clsMetodologia %>  col-md-4' data-tab="tab-3">Metodología</li>
@@ -92,7 +99,7 @@
                                 </div>
                                 <asp:Panel runat="server" ID="pnlNoRegistrese">
                                     <asp:Panel runat="server" ID="pnlVigenciaNominacion">
-                                        <iframe runat="server" id="iframeNominar" style="width: 100%; min-height: 1500px; border-width: 0px;"></iframe>
+                                        <iframe runat="server" id="iframeNominar" style="width: 100%; min-height: 1500px; height: 2000px; border-width: 0px;"></iframe>
                                     </asp:Panel>
                                     <asp:Panel runat="server" ID="pnlNoVigenciaNominacion">
                                         <h3>El proceso de participación de la Etapa I “Solicitud” ha finalizado para esta vigencia</h3>
@@ -108,10 +115,7 @@
                         </asp:Panel>
                         <div id="tab-2" class='<%= clsTabResultados %>'>
 
-
-
                             <h3></h3>
-
 
                         </div>
                         <div id="tab-3" class='<%=clsTabMetodologia %>'>

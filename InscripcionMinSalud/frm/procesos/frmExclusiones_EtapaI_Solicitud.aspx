@@ -75,6 +75,15 @@
         .btn {
             flex-shrink: 0;
         }
+
+        /*.error-validacion {
+            color: red;
+            display: block;
+        }
+
+        .validation-message {
+            display: none;*/ /* Ocultar mensajes de validación hasta que sean necesarios */
+        /*}*/
     </style>
 
     <script src="../../js/ExclusionesFormulario.js"></script>
@@ -100,6 +109,7 @@
                 <h1>Listado de Tecnologías Excluidas</h1>
 
                 <div class="form-group">
+
                     <div class="d-flex align-items-center">
                         <input type="text" id="filtro-tecnologias" class="form-control me-2" placeholder="Buscar tecnología..." />
                     </div>
@@ -126,6 +136,11 @@
             <!-- Panel 2 -->
             <div id="panel2" class="hidden">
 
+                <button id="btn-back" class="btn btn-danger d-flex align-items-center">
+                    Regresar
+                   
+                </button>
+                <hr />
                 <h3>Tecnologia Seleccionada </h3>
                 <h3><strong id="TecnologiaSeleccionada"></strong></h3>
                 <div class="row">
@@ -167,66 +182,71 @@
                         Las actividades que pueden generar conflicto de intereses son aquellas en las que el juicio del profesional en salud o de un agremiado, agente o actor del sector salud puede estar afectado por un interés primario que incida en su actividad participativa.
 
                     </p>
+                    <h4>Tiene conflictos de Interes?</h4>
+                    <div class="row">
+                        <div class="col d-flex align-items-center">
+                            <input class="form-check-input" type="radio" id="conflictos-intereses-si" name="conflictos-intereses" value="si">
+                            <label class="form-check-label ms-2" for="conflictos-intereses-si">Sí</label>
+                        </div>
+                        <div class="col d-flex align-items-center">
+                            <input class="form-check-input" type="radio" id="conflictos-intereses-no" name="conflictos-intereses" value="no" checked>
+                            <label class="form-check-label ms-2" for="conflictos-intereses-no">No</label>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
+                <div id="panelConflictos1" class="row hidden ">
+
                     <h3>Describa el conflicto de intereses teniendo en cuenta los siguientes aspectos: Tipos de conflictos:</h3>
 
                     <div class="container-check">
+
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="conflictoFinanciero">
-                                    <label class="form-check-label" for="conflictoFinanciero">
-                                        Financiero: Cuando el individuo tiene participación en una empresa, organización o equivalente que se relaciona
+                            <div class="col d-flex align-items-center">
+                                <input class="form-check-input conflicto-checkbox" type="checkbox" id="conflictoFinanciero">
+                                <label class="form-check-label" for="conflictoFinanciero">
+                                    Financiero: Cuando el individuo tiene participación en una empresa, organización o equivalente que se relaciona
                                         directamente (socio, accionista, propietario, empleado) o indirectamente (proveedor, asesor, consultor) con las
                                         actividades para las cuales fue convocado a participar.
-                                    </label>
-                                </div>
+                                </label>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="conflictoIntelectual">
-                                    <label class="form-check-label" for="conflictoIntelectual">
-                                        Intelectual: Cuando se tiene un interés intelectual, académico o científico en un tema en particular. La
+                            <div class="col d-flex align-items-center">
+                                <input class="form-check-input conflicto-checkbox" type="checkbox" id="conflictoIntelectual">
+                                <label class="form-check-label" for="conflictoIntelectual">
+                                    Intelectual: Cuando se tiene un interés intelectual, académico o científico en un tema en particular. La
                                         declaración de este tipo de interés es indispensable para salvaguardar la calidad y objetividad del trabajo
                                         científico.
-                                    </label>
-                                </div>
+                                </label>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="conflictoPertenencia">
-                                    <label class="form-check-label" for="conflictoPertenencia">
-                                        Pertenencia: Derechos de propiedad intelectual o industrial que estén directamente relacionados con las
+                            <div class="col d-flex align-items-center">
+                                <input class="form-check-input conflicto-checkbox" type="checkbox" id="conflictoPertenencia">
+                                <label class="form-check-label" for="conflictoPertenencia">
+                                    Pertenencia: Derechos de propiedad intelectual o industrial que estén directamente relacionados con las
                                         temáticas o actividades a abordar.
-                                    </label>
-                                </div>
+                                </label>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="conflictoFamiliar">
-                                    <label class="form-check-label" for="conflictoFamiliar">
-                                        Familiar: Cuando alguno de los familiares, hasta el tercer grado de consanguinidad y segundo de afinidad o
+                            <div class="col d-flex align-items-center">
+                                <input class="form-check-input conflicto-checkbox" type="checkbox" id="conflictoFamiliar">
+                                <label class="form-check-label" for="conflictoFamiliar">
+                                    Familiar: Cuando alguno de los familiares, hasta el tercer grado de consanguinidad y segundo de afinidad o
                                         primero civil, están relacionados de manera directa o indirecta en los aspectos financiero o intelectual, con las
                                         actividades y temáticas a desarrollar.
-                                    </label>
-                                </div>
+                                </label>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="row">
+                <div id="panelConflictos2" class="row hidden">
                     <h3>Declaración:</h3>
                     <p>
                         He leído y comprendo el objetivo de la declaración de conflicto de intereses.
@@ -236,45 +256,40 @@
 
                     <div class="form-group">
                         <h3>Describa su conflicto de interés</h3>
-                        <textarea class="form-control" id="conflictoInteres" rows="4" placeholder="Describa aquí su conflicto de interés..."></textarea>
+                        <textarea class="form-control" id="conflictoInteresStr" rows="4" placeholder="Describa aquí su conflicto de interés..."></textarea>
                     </div>
 
                 </div>
 
                 <div class="row">
-                    <div class="error-validacion">
-                        <p>Debe seleccionar por lo menos una indicación.</p>
-                        <p>Debe revisar todos los criterios.</p>
-                        <p>Debe seleccionar si presenta conflicto de interés.</p>
+                    <div class="error-validacion" >
+                        <p id="errorIndicacion" class="validation-message">Debe seleccionar por lo menos una indicación.</p>
+                        <p id="errorCriterio" class="validation-message">Debe revisar todos los criterios.</p>
+                        <p id="errorConflicto" class="validation-message">Debe seleccionar si presenta conflicto de interés. </p>
                     </div>
                     <div class="form-group text-right">
-                        <button type="submit" class="btn btn-success">Finalizar y Postular</button>
+                        <button  class="btn btn-success" id="btnFinalizar" disabled>Finalizar y Postular</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Modal para cargar archivos -->
-        <div class="modal fade" id="modalCargarArchivos" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalCargarArchivos" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalLabel">Cargar Archivos</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" id="modalLabel"></h5>
+                        <button id="btn-close-modal-criterios" type="button" class="btn-close align-items-rigth" data-bs-dismiss="modal" aria-label="Close">X</button>
                     </div>
                     <div class="modal-body">
                         <!-- Formulario para cargar archivos -->
                         <form id="formCargarArchivos">
                             <!-- Título: Revisión de -->
                             <div class="mb-3">
-                                <label for="tituloRevision" class="form-label">Revisión del criterio </label>                                
+                                <label for="tituloRevision" class="form-label">Revisión del criterio</label>
                                 <h4 id="CriterioNombre"></h4>
                             </div>
-
-                           <%-- <!-- Descripción del criterio -->
-                            <div class="mb-3">
-                                <label for="descripcionCriterio" class="form-label">Descripción del criterio:</label>                                
-                            </div>--%>
 
                             <!-- Justificación solicitud revisión -->
                             <div class="mb-3">
@@ -303,6 +318,7 @@
                                     <thead>
                                         <tr>
                                             <th>Archivo</th>
+                                            <th>Justificación</th>
                                             <th>Descripción</th>
                                             <th>Acciones</th>
                                         </tr>
@@ -314,7 +330,7 @@
                             </div>
 
                             <!-- Botón Finalizar y Postular -->
-                            <button type="button" class="btn btn-primary mt-3" id="btnFinalizarPostular">Finalizar y Postular</button>
+                            <button type="button" class="btn btn-primary mt-3" id="btnGuardarCriterio" disabled="disabled">Guardar</button>
                         </form>
                     </div>
                 </div>

@@ -42,20 +42,23 @@ CREATE TABLE PostuacionTecnoIogiaExcIuida (
 );
 
 -- Tabla CriterioExcIusionPostulacion
+drop table CriterioExcIusionPostulacion
 CREATE TABLE CriterioExcIusionPostulacion (
     Id INT PRIMARY KEY IDENTITY(1,1),
 	IdCriterioExcIusion INT FOREIGN KEY REFERENCES CriterioExcIusion(Id),
-    IdPostulacionTecnoIogiaExcluida INT FOREIGN KEY REFERENCES PostuacionTecnoIogiaExcIuida(Id),
-    Justificacion NVARCHAR(MAX) NOT NULL
+    IdPostulacionTecnoIogiaExcluida INT FOREIGN KEY REFERENCES PostuacionTecnoIogiaExcIuida(Id)
+    
 );
 
 -- Tabla AnexosCriterioExclusionPostulacion
+--drop table AnexosCriterioExclusionPostulacion
 CREATE TABLE AnexosCriterioExclusionPostulacion (
     Id INT PRIMARY KEY IDENTITY(1,1),
     IdCriterioExclusionPostulacion INT FOREIGN KEY REFERENCES CriterioExcIusionPostulacion(Id),
     Nombre NVARCHAR(255) NOT NULL,
     DescripcionArchivo NVARCHAR(MAX),
-    Path NVARCHAR(500) NOT NULL
+    Path NVARCHAR(500) NOT NULL,
+	Justificacion NVARCHAR(MAX) NOT NULL
 );
 
 -- Tabla IndicacionExclusion

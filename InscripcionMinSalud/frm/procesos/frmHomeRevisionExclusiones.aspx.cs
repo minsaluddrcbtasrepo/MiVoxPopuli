@@ -62,9 +62,9 @@ namespace InscripcionMinSalud.frm.procesos
                 var procesoEntity = service.obtenerProceso(int.Parse(Request.QueryString["cod"]));
                 lblNombreProceso.Text = procesoEntity.NOMBRE_PROCESO;
 
-                lnkIntroduccion.NavigateUrl = lnkIntroduccion.NavigateUrl + "?cod=" + Request.QueryString["cod"] + "&v=" + Request.QueryString["v"] + "&r=" + Request.QueryString["r"] + "";
+                //lnkIntroduccion.NavigateUrl = lnkIntroduccion.NavigateUrl + "?cod=" + Request.QueryString["cod"] + "&v=" + Request.QueryString["v"] + "&r=" + Request.QueryString["r"] + "";
                 lnkAnalisis.NavigateUrl = lnkAnalisis.NavigateUrl + "?cod=" + Request.QueryString["cod"] + "&v=" + Request.QueryString["v"] + "&r=" + Request.QueryString["r"] + "";
-                lnkDesicion.NavigateUrl = lnkDesicion.NavigateUrl + "?cod=" + Request.QueryString["cod"] + "&v=" + Request.QueryString["v"] + "&r=" + Request.QueryString["r"] + "";
+                //lnkDesicion.NavigateUrl = lnkDesicion.NavigateUrl + "?cod=" + Request.QueryString["cod"] + "&v=" + Request.QueryString["v"] + "&r=" + Request.QueryString["r"] + "";
 
                 iframeNominar.Src = "frmExclusiones_EtapaI_Solicitud.aspx?codProceso=" + procesoEntity.COD_PROCESO + "&v=" + Request.QueryString["v"];
 
