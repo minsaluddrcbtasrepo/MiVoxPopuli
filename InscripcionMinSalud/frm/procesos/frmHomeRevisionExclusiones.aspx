@@ -15,7 +15,7 @@
                 <div class="titular">
                     <h2 class="sub">
                         <asp:Label runat="server" ID="lblNombreProceso"></asp:Label></h2>
-                    <p class="desc-title">Es el proceso que se lleva a cabo para actualizar el listado de los procedimientos que se realizan en el país.</p>
+                    <p class="desc-title" style="text-align: justify;">Es el procedimiento por medio del cual se evalúan los posibles cambios en las condiciones o caracterísitcas de la tecnología, que ocurren con posterioridad al momento en el que fue excluida de la financiación con recursos públicos asignados a la salud.</p>
                 </div>
             </div>
         </div>
@@ -40,17 +40,10 @@
                 </div>
                 <div class="col-lg-10 amp-proces">
                     <h3>Solicitud de revisión de la decisión de una tecnología previamente excluida</h3>
-                    <div style="color: red; font-size: 20px;">Esta fase está activa desde el 1 de octubre hasta el 31 de diciembre de 2024.</div>
+                    <div style="color: red; font-size: 20px;">Esta fase está activa desde el 15 de octubre hasta el 15 de diciembre de 2024.</div>
                     <br />
                     <p id="divAnuncioAnterior" runat="server" visible="false" style="text-align: justify;">
-                        En forma directa o representativa todos los actores del SGSSS están habilitados para 
-                        solicitar la revisión de la decisión de la tecnología previamente excluida. Por lo tanto, el
-                        Ministerio de Salud y Protección Social, las Entidades Promotoras de Salud (EPS), las
-                        Instituciones Prestadoras de Servicios de Salud (IPS), las Entidades Territoriales, el Instituto
-                        de Evaluación Tecnológica en Salud (IETS), los profesionales y trabajadores de  la salud,
-                        los usuarios y los pacientes de los servicios de salud, las asociaciones de profesionales de
-                        la salud, las instituciones académicas y de investigación, la industria, las entidades de
-                        control y demás interesados, pueden participar en esta etapa. 
+                        En forma directa o representativa todos los actores del SGSSS están habilitados para solicitar la revisión de la decisión de la tecnología previamente excluida con el cumplimiento de los requisitos técnicos y científicos establecidos para tal fin en el documento de la Metodología. Por lo tanto, el Ministerio de Salud y Protección Social, las Entidades Promotoras de Salud (EPS), las Instituciones Prestadoras de Servicios de Salud (IPS), las Entidades Territoriales, el Instituto de Evaluación Tecnológica en Salud (IETS), los profesionales y trabajadores de la salud, los usuarios y los pacientes de los servicios de salud, las asociaciones de profesionales de la salud, las instituciones académicas y de investigación, la industria, las entidades de control y demás interesados, pueden participar en esta etapa.
                         <br />
                         <br />
                         En esta etapa se permite la participación de todos los actores de conformidad con los

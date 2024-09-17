@@ -141,7 +141,7 @@
                    
                 </button>
                 <hr />
-                <h3>Tecnologia Seleccionada </h3>
+                <h3>Tecnología Seleccionada </h3>
                 <h3><strong id="TecnologiaSeleccionada"></strong></h3>
                 <div class="row">
                     <h3>Indicaciones</h3>

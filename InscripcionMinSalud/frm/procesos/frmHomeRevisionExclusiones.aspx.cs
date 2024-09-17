@@ -25,6 +25,7 @@ namespace InscripcionMinSalud.frm.procesos
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Response.ContentEncoding = System.Text.Encoding.UTF8;
             if (!IsPostBack)
             {
                 if (Request.QueryString["cod"] == null)

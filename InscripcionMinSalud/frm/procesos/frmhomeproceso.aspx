@@ -52,8 +52,8 @@
                                 <asp:HyperLink runat="server" ID="lnkConsultas" NavigateUrl="../../frm/procesos/frmHomeProcesoConsultas.aspx">Consulta pacientes</asp:HyperLink></li>
                             <li>
                                 <asp:HyperLink runat="server" ID="lnkAdopcion" NavigateUrl="../../frm/procesos/frmHomeAdopcion.aspx">Adopción y publicación</asp:HyperLink></li>
-                            <li>
-                                <asp:HyperLink runat="server" ID="lnkRevision" NavigateUrl="../../frm/procesos/RevisionExclusionesNoAplicacion.aspx">Revisión de la decisión de una tecnología previamente excluida</asp:HyperLink></li>
+                           <%-- <li>
+                                <asp:HyperLink runat="server" ID="lnkRevision" NavigateUrl="../../frm/procesos/RevisionExclusionesNoAplicacion.aspx">Revisión de la decisión de una tecnología previamente excluida</asp:HyperLink></li>--%>
                         </ul>
                     </div>
                 </div>

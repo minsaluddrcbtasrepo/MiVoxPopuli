@@ -347,7 +347,7 @@ h2.sub {
     font-weight: bold;
     position: relative;
     z-index: 222;
-    text-transform: capitalize;
+    
     text-align: center;
 }
 
