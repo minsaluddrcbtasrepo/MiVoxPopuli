@@ -14,15 +14,21 @@ namespace DatosInscripcionMinSalud
     public class TecnologiaExcluidaSQLHelper
     {
 
-        public static List<TecnologiaExcluidaDto> GetListadoTecnoIogiaExCluida()
+        public static List<TecnologiaExcluidaDto> GetListadoTecnoIogiaExCluidaParaUsuario(int UsuarioRegistrado)
         {
             SQLServerHelper helper = new SQLServerHelper();
 
-            string sqlConsulta = @"SELECT te.id ,te.Nombre as tecnologia,tv.AnhoExclusion as vigencia,0 as postulado 
-                                    FROM TecnoIogiaExCluida te inner join TecnoIogiaExCluidaVigencia tv on te.Id=tv.IdTecnoIogiaExcluida
-                                    ORDER BY tv.AnhoExclusion ,te.Nombre ";
+            string sqlConsulta = @"SELECT        te.Id, te.Nombre AS tecnologia, tv.AnhoExclusion AS vigencia, 0 AS postulado
+                                    FROM            EXCLUSIONES.TecnoIogiaExCluida AS te INNER JOIN
+                                                             EXCLUSIONES.TecnoIogiaExCluidaVigencia AS tv ON te.Id = tv.IdTecnoIogiaExcluida
+						 
+                                    where te.id not in ( select IdTecnoIogiaExcluida from EXCLUSIONES.PostuacionTecnoIogiaExcIuida where idUsuario=@idUsuario)
+                                    ORDER BY vigencia, tecnologia
+ ";
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("@idUsuario", SqlDbType.Int) { Value = UsuarioRegistrado });
 
-            DataTable resultado = helper.EjecutarQueryDevolver(sqlConsulta);
+            DataTable resultado = helper.EjecutarQueryDevolver(sqlConsulta, parametros);
 
             var resultadoList = resultado.ToList<TecnologiaExcluidaDto>();
 
@@ -34,7 +40,7 @@ namespace DatosInscripcionMinSalud
 
             string sqlConsulta = @"
                                     select id,Descripcion as Nombre
-                                    from IndicacionExclusion
+                                    from EXCLUSIONES.IndicacionExclusion
                                     where IdTecnoIogiaExcluida=@idTecnologia ";
             List<SqlParameter> parametros = new List<SqlParameter>();
 
@@ -53,8 +59,8 @@ namespace DatosInscripcionMinSalud
 
             string sqlConsulta = @"
                                     SELECT ce.id,c.Nombre
-                                    FROM TecnoIogiaExCluida te inner join CriterioExcIusion ce on te.Id=ce.IdTecnoIogiaExcluida
-                                    inner join Criterio c on c.Id=ce.IdCriterio
+                                    FROM EXCLUSIONES.TecnoIogiaExCluida te inner join EXCLUSIONES.CriterioExcIusion ce on te.Id=ce.IdTecnoIogiaExcluida
+                                    inner join EXCLUSIONES.Criterio c on c.Id=ce.IdCriterio
                                     where ce.IdTecnoIogiaExcluida=@idTecnologia ";
             List<SqlParameter> parametros = new List<SqlParameter>();
 
@@ -76,10 +82,11 @@ namespace DatosInscripcionMinSalud
 
             // Crear la consulta SQL con parámetros
             string sqlConsulta = @"
-                    INSERT INTO PostuacionTecnoIogiaExcIuida (
+                    INSERT INTO EXCLUSIONES.PostuacionTecnoIogiaExcIuida (
                         IdTecnoIogiaExcluida,
                         FechaExcluida,
                         IdEstado,
+                        IdUsuario,
                         TieneConflictoInteres,
                         EsFinanciero,
                         EsFamiliar,
@@ -91,6 +98,7 @@ namespace DatosInscripcionMinSalud
                         @IdTecnoIogiaExcluida,
                         @FechaExcluida,
                         @IdEstado,
+                        @IdUsuario,
                         @TieneConflictoInteres,
                         @EsFinanciero,
                         @EsFamiliar,
@@ -105,6 +113,7 @@ namespace DatosInscripcionMinSalud
                     new SqlParameter("@IdTecnoIogiaExcluida", p.IdTecnologia),
                     new SqlParameter("@FechaExcluida", DateTime.Now),
                     new SqlParameter("@IdEstado", true ),
+                    new SqlParameter("@IdUsuario", p.IdUsuario ),
                     new SqlParameter("@TieneConflictoInteres", p.ConflictoInteres),
                     new SqlParameter("@EsFinanciero", p.ConflictoInteresModel.ConflictoFinanciero),
                     new SqlParameter("@EsFamiliar", p.ConflictoInteresModel.ConflictoFamiliar),
@@ -121,7 +130,7 @@ namespace DatosInscripcionMinSalud
         public static int InsertarCriterioExcIusionPostulacion(int idCriterioExcIusion, int idPostulacionTecnoIogiaExcluida)
         {
             SQLServerHelper helper = new SQLServerHelper();
-            string sqlInsert = "INSERT INTO CriterioExcIusionPostulacion (IdCriterioExcIusion, IdPostulacionTecnoIogiaExcluida) " +
+            string sqlInsert = "INSERT INTO EXCLUSIONES.CriterioExcIusionPostulacion (IdCriterioExcIusion, IdPostulacionTecnoIogiaExcluida) " +
                                "VALUES (@IdCriterioExcIusion, @IdPostulacionTecnoIogiaExcluida)";
 
             List<SqlParameter> parametros = new List<SqlParameter>
@@ -138,7 +147,7 @@ namespace DatosInscripcionMinSalud
             SQLServerHelper helper = new SQLServerHelper();
             // Definir la consulta SQL de inserción
             string sqlInsert = @"
-                    INSERT INTO AnexosCriterioExclusionPostulacion
+                    INSERT INTO EXCLUSIONES.AnexosCriterioExclusionPostulacion
                     (IdCriterioExclusionPostulacion, Nombre, DescripcionArchivo, Path, Justificacion)
                     VALUES
                     (@IdCriterioExclusionPostulacion, @Nombre, @DescripcionArchivo, @Path, @Justificacion);                    ";
@@ -167,7 +176,7 @@ namespace DatosInscripcionMinSalud
 
             // Definir la consulta SQL de inserción
             string sqlInsert = @"
-        INSERT INTO IndicacionExclusionPostulacion
+        INSERT INTO EXCLUSIONES.IndicacionExclusionPostulacion
         (IdPostulacionTecnologiaExcluida, IdIndicacionExclusion)
         VALUES
         (@IdPostulacionTecnologiaExcluida, @IdIndicacionExclusion);
@@ -214,6 +223,7 @@ namespace DatosInscripcionMinSalud
 
     public class PostulacionModel
     {
+        public int IdUsuario { get; set; }
         public bool ConflictoInteres { get; set; }
         public ConflictoInteresModel ConflictoInteresModel { get; set; }
         public int Vigencia { get; set; }

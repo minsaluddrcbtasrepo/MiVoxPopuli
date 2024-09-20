@@ -1,4 +1,5 @@
 ﻿using DatosInscripcionMinSalud;
+using DevExpress.XtraRichEdit.Model;
 using NegocioInscripcionMinSalud.data;
 using System;
 using System.Collections.Generic;
@@ -60,7 +61,13 @@ namespace InscripcionMinSalud.frm.procesos
         [WebMethod]
         public static List<TecnologiaExcluidaDto> GetTecnologiasExcluidas()
         {
-            return TecnologiaExcluidaSQLHelper.GetListadoTecnoIogiaExCluida();
+            var UsuarioRegistrado = HttpContext.Current.Session["SS_COD_REGISTRO"];
+
+            if (UsuarioRegistrado == null)
+            {
+                throw new Exception("No se encontró el código de registro en la sesión.");
+            }
+            return TecnologiaExcluidaSQLHelper.GetListadoTecnoIogiaExCluidaParaUsuario(Convert.ToInt32(UsuarioRegistrado));
         }
 
         [WebMethod]
@@ -119,6 +126,15 @@ namespace InscripcionMinSalud.frm.procesos
             //
             try
             {
+
+                var UsuarioRegistrado = HttpContext.Current.Session["SS_COD_REGISTRO"];
+
+                if (UsuarioRegistrado == null)
+                {
+                    throw new Exception("No se encontró el código de registro en la sesión.");
+                }
+                postulacionModel.IdUsuario = Convert.ToInt32(UsuarioRegistrado);
+
                 var IdPostulacion = TecnologiaExcluidaSQLHelper.InsertPostuacionTecnoIogiaExcIuida(postulacionModel);
                 if (IdPostulacion > 0)
                 {

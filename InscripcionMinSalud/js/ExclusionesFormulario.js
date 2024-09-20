@@ -164,6 +164,7 @@
         archivoInput.value = '';
         document.getElementById('descripcionArchivo').value = '';
         document.getElementById('justificacionRevision').value = '';
+        limpiarArchivo();
 
         if (borrarTabla) {
             const tabla = document.getElementById('tablaArchivosAnexados').getElementsByTagName('tbody')[0];
@@ -246,6 +247,14 @@
         return checkbox.is(':checked');
 
     }
+    $('#archivoCargar').on('change', function () {
+        actualizarNombreArchivo();
+    });
+
+    $('#clearIcon').on('click', function () {
+        limpiarArchivo();
+    });
+
 
     $('#conflictoInteresStr').on('change', function () {
         var valor = $('#conflictoInteresStr').val();
@@ -260,6 +269,34 @@
         var checked = $(this).is(':checked');
         postulacionModel.conflictoInteresModel[id] = checked;
     });
+
+
+
+    // Función para actualizar el nombre del archivo seleccionado
+    function actualizarNombreArchivo() {
+        var input = document.getElementById('archivoCargar');
+        var nombreArchivo = document.getElementById('nombreArchivo');
+        var clearIcon = document.getElementById('clearIcon');
+
+        if (input.files.length > 0) {
+            nombreArchivo.textContent = input.files[0].name;
+            clearIcon.style.display = 'inline'; // Mostrar el ícono de clear
+        } else {
+            nombreArchivo.textContent = "Ningún archivo seleccionado";
+            clearIcon.style.display = 'none'; // Ocultar el ícono de clear si no hay archivo
+        }
+    }
+
+    // Función para limpiar el archivo seleccionado
+    function limpiarArchivo() {
+        var input = document.getElementById('archivoCargar');
+        var nombreArchivo = document.getElementById('nombreArchivo');
+        var clearIcon = document.getElementById('clearIcon');
+
+        input.value = ""; // Limpiar el archivo seleccionado
+        nombreArchivo.textContent = "Ningún archivo seleccionado";
+        clearIcon.style.display = 'none'; // Ocultar el ícono de clear
+    }
 
 
 

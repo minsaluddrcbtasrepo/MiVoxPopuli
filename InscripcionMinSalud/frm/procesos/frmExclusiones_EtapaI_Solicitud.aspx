@@ -86,7 +86,7 @@
         /*}*/
     </style>
 
-    <script src="../../js/ExclusionesFormulario.js"></script>
+    
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -262,13 +262,13 @@
                 </div>
 
                 <div class="row">
-                    <div class="error-validacion" >
+                    <div class="error-validacion">
                         <p id="errorIndicacion" class="validation-message">Debe seleccionar por lo menos una indicación.</p>
                         <p id="errorCriterio" class="validation-message">Debe revisar todos los criterios.</p>
                         <p id="errorConflicto" class="validation-message">Debe seleccionar si presenta conflicto de interés. </p>
                     </div>
                     <div class="form-group text-right">
-                        <button  class="btn btn-success" id="btnFinalizar" disabled>Finalizar y Postular</button>
+                        <button class="btn btn-success" id="btnFinalizar" disabled>Finalizar y Postular</button>
                     </div>
                 </div>
             </div>
@@ -299,9 +299,16 @@
 
                             <!-- Cargar archivo -->
                             <div class="mb-3">
-                                <label for="archivoCargar" class="form-label">Cargar archivo:</label>
-                                <input type="file" class="form-control" id="archivoCargar" required>
+                                <label for="archivoCargar" class="form-label">Seleccionar archivo:</label>
+                                <div class="custom-file-input">
+                                    <input type="file" id="archivoCargar" class="form-control-file" style="display: none;" >
+                                    <button type="button" class="btn btn-primary" onclick="document.getElementById('archivoCargar').click();">Seleccionar archivo</button>
+                                    <span id="nombreArchivo">Ningún archivo seleccionado</span>
+                                    <span id="clearIcon" style="display: none; cursor: pointer;">❌</span>
+
+                                </div>
                             </div>
+
 
                             <!-- Descripción del archivo -->
                             <div class="mb-3">
@@ -337,7 +344,7 @@
             </div>
         </div>
 
-
+       <script src="../../js/ExclusionesFormulario.js"></script>
 
 
     </asp:Panel>
