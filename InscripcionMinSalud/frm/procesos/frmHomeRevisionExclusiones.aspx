@@ -114,6 +114,30 @@
                         <div id="tab-3" class='<%=clsTabMetodologia %>'>
 
                             <div id="tab3Existe">
+                                <asp:Repeater runat="server" ID="rptMetodlogia" DataSourceID="SqlDataSourceArchivosMetodologia">
+                                    <HeaderTemplate>
+
+                                        <ul class="docsarchivos">
+                                    </HeaderTemplate>
+                                    <ItemTemplate>
+
+                                        <li>
+                                            <a target="_blank" href='<%# Eval("URL") %>'><%# Eval("TEXTO") %>  </a>
+                                        </li>
+                                    </ItemTemplate>
+
+                                    <FooterTemplate>
+                                        </ul>
+                                    </FooterTemplate>
+                                </asp:Repeater>
+                                <asp:SqlDataSource ID="SqlDataSourceArchivosMetodologia" runat="server" ConnectionString="<%$ ConnectionStrings:TRANSPLANTESConnectionString %>" SelectCommand="SELECT [URL], [TEXTO] FROM [ARCHIVOXPROCESO] WHERE (([VIGENCIA] = @VIGENCIA) AND ([SECCION] = @SECCION) AND ([SUBSECCION] = @SUBSECCION) AND ([COD_PROCESO] = @COD_PROCESO))">
+                                    <SelectParameters>
+                                        <asp:QueryStringParameter Name="VIGENCIA" QueryStringField="v" Type="Int32" />
+                                        <asp:Parameter DefaultValue="EXCLUSIONES" Name="SECCION" Type="String" />
+                                        <asp:Parameter DefaultValue="METODOLOGIA" Name="SUBSECCION" Type="String" />
+                                        <asp:QueryStringParameter Name="COD_PROCESO" QueryStringField="cod" Type="Int32" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
                             </div>
 
                         </div>
