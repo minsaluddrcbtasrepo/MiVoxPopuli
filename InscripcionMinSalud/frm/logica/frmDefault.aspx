@@ -193,15 +193,20 @@
                     <button type="button" class="close" data-dismiss="modal">x</button>
                     <h4 class="modal-title">AVISO INFORMATIVO</h4>
                 </div>
-                <div class="modal-body row">
+                <div class="modal-body row" style="padding: 20px; line-height: 1.6;">
                     <p>
-                        Se informa que, desde el 1 de enero de 2024 hasta el 31 de marzo de 2024, se encuentra habilitada la plataforma para presentar solicitudes de actualización de procedimientos en salud dentro de la Clasificación Única de Procedimientos en Salud.
-
-                        Los actores del sistema pueden presentar nominaciones de procedimientos para ser actualizados (incluso, eliminados, reubicados, declarados obsoletos, desagregados o agrupados) a través de las sociedades científicas o agremiaciones de profesionales de la salud.
-
-                        Para ello, deben diligenciar el formulario de Registro Único de Procedimientos en Salud (RUPS), disponible en esta página web, según lo establecido en los artículos 5, 6, 7 y 8 de la Resolución 3804 de 2016.
+                        Se informa que, a partir del <strong>15 de octubre hasta el 15 de diciembre de 2024</strong>, durante 60 días calendario, estará disponible la opción para que cualquier actor del sistema de salud presente sus solicitudes de revisión de la decisión de exclusión de la financiación con recursos públicos asignados a la salud de una tecnología o servicio de salud conforme a lo establecido en la <em>“Metodología para revisión de una tecnología en salud previamente excluida”</em>, publicada en el siguiente enlace:
+                    </p>
+                    <p>
+                        📄 <a href="https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/VP/RBC/metodologia-revision-tecnologia-salud-previamente-excluida.pdf" target="_blank" style="color: #007bff; text-decoration: underline;">Ver Metodología
+                        </a>
+                    </p>
+                    <hr>
+                    <p style="font-style: italic;">
+                        <strong>Nota:</strong> Se recuerda que una solicitud de revisión de una decisión es una tecnología en estudio. La decisión de revertir su exclusión se declara con la expedición de un acto administrativo. Actualmente, las tecnologías excluidas corresponden a los criterios de exclusión establecidos en el artículo 15 de la Ley Estatutaria en Salud (1751 de 2015) y se encuentran contenidas en la Resolución 641 de 2024.
                     </p>
                 </div>
+
             </div>
         </div>
     </div>
