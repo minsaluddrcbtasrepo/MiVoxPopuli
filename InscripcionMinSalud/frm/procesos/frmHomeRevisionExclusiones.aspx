@@ -15,7 +15,7 @@
                 <div class="titular">
                     <h2 class="sub">
                         <asp:Label runat="server" ID="lblNombreProceso"></asp:Label></h2>
-                    <p class="desc-title" style="text-align: justify;">Es el procedimiento por medio del cual se evalúan los posibles cambios en las condiciones o caracterísitcas de la tecnología, que ocurren con posterioridad al momento en el que fue excluida de la financiación con recursos públicos asignados a la salud.</p>
+                    <p class="desc-title" style="text-align: justify;">Es el procedimiento por medio del cual se evalúan los posibles cambios en las condiciones o caracterísitcas de la tecnología o servicio, que ocurren con posterioridad al momento en el que fue excluida de la financiación con recursos públicos asignados a la salud.</p>
                 </div>
             </div>
         </div>

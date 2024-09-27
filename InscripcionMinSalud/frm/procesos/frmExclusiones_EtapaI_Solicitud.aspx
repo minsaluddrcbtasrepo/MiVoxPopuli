@@ -111,7 +111,7 @@
                 <div class="form-group">
 
                     <div class="d-flex align-items-center">
-                        <input type="text" id="filtro-tecnologias" class="form-control me-2" placeholder="Buscar tecnología..." />
+                        <input type="text" id="filtro-tecnologias" class="form-control me-2" placeholder="Buscar tecnología...🔎" />
                     </div>
                 </div>
 
