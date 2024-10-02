@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/frm/master/site2019.Master" AutoEventWireup="true" CodeBehind="frmObjetarHuerfanas.aspx.cs" Inherits="InscripcionMinSalud.frm.procesos.frmObjetarHuerfanas" %>
+
 <%@ Register Assembly="DevExpress.Web.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -125,7 +126,7 @@
             text-align: center;
         }
 
-          input#btnCancelar {
+        input#btnCancelar {
             background: #30798d;
             background: -moz-linear-gradient(top, #30798d 0%, #00abc8 100%);
             background: -webkit-linear-gradient(top, #30798d 0%,#00abc8 100%);
@@ -791,8 +792,8 @@
 
 
         })
-        
-         function Ajustarcheck() {
+
+        function Ajustarcheck() {
             //si esta chekeado acepto terminos muestra el boton
             $('#formulario').hide();
             var chkEsIncluir = $('#chkEsIncluir').prop('checked');
@@ -821,7 +822,7 @@
                 $('#modificacionEspecialidad').hide();
                 $('#lblJustificacion').text("Descripción y justificación de la nominación ");
 
-            } else if (chkEsExcluir==true) {
+            } else if (chkEsExcluir == true) {
                 $('#formulario').show();
                 $('#lblNombreTecnologia').text("Nombre de la enfermedad huérfana a excluir. ");
                 $('#Cie10').show();
@@ -849,7 +850,7 @@
                 $('#modificacionEspecialidad').hide();
                 $('#lblJustificacion').text("Descripción y justificación de la modificación");
 
-            }else if (chkCodigo == true) {
+            } else if (chkCodigo == true) {
                 $('#formulario').show();
                 $('#lblNombreTecnologia').text("Nombre de la enfermedad huérfana cuyo código se propone modificar o incluir ");
                 $('#nuevoNombre').hide();
@@ -862,7 +863,7 @@
                 $('#modificacionEspecialidad').hide();
                 $('#lblJustificacion').text("Descripción y justificación de la modificación/Inclusion");
 
-            }else if (chkPruebaDiagnostica == true) {
+            } else if (chkPruebaDiagnostica == true) {
                 $('#formulario').show();
                 $('#lblNombreTecnologia').text("Nombre de la enfermedad huérfana en la que la prueba diagnostica confirmatoria se propone modificar");
                 $('#nuevoNombre').hide();
@@ -876,7 +877,7 @@
                 $('#modificacionEspecialidad').hide();
                 $('#lblJustificacion').text("Descripción y justificación de la modificacion de la prueba confirmatoria");
 
-            }else if (chkDiciplina == true) {
+            } else if (chkDiciplina == true) {
                 $('#formulario').show();
                 $('#lblNombreTecnologia').text("Nombre de la enfermedad huérfana en la que se modificarán las disciplinas o las  especialidades");
                 $('#nuevoNombre').hide();
@@ -889,8 +890,8 @@
                 $('#modificacionPrueba').hide();
                 $('#modificacionEspecialidad').show();
                 $('#lblJustificacion').text("Descripción y justificación del cambio/inclusion de especialidades");
-                
-            }else {
+
+            } else {
                 $('#formulario').hide();
             }
 
@@ -963,7 +964,7 @@
 
                             <asp:TextBox runat="server" Text="" ReadOnly="true" type="text" name="name" ID="txtNombreNominador" MaxLength="100" CssClass="form-control" />
 
-                             <label for="txtNombreTecnologia" clientidmode="Static" runat="server" id="Label28">Email </label>
+                            <label for="txtNombreTecnologia" clientidmode="Static" runat="server" id="Label28">Email </label>
 
                             <asp:TextBox runat="server" Text="" ReadOnly="true" type="text" name="name" ID="txtEmailNominador" MaxLength="100" CssClass="form-control" />
 
@@ -1009,7 +1010,7 @@
                                 <label>Modificación de la Prueba Diagnóstica Confirmatoria de un </label>
                                 <label>diagnóstico/enfermedad del listado actual</label>
                             </div>
-             
+
 
                             <div class="checklistn">
                                 <asp:RadioButton runat="server" GroupName="grupoUno" ClientIDMode="Static" onchange="Ajustarcheck();" ID="chkDiciplina" />
@@ -1017,33 +1018,33 @@
                                 <label>Modificación en las disciplinas o especialidades que intervienen en el diagnóstico </label>
                                 <label>y liderazgo del manejo integral de una enfermedad.</label>
                             </div>
-                            
+
                         </div>
                         <br />
                     </fieldset>
                     <fieldset>
-                      
+
                         <%--Nombre Nominacion--%>
-                        <label  clientidmode="Static" runat="server" id="lblNombreTecnologia"> </label>
+                        <label clientidmode="Static" runat="server" id="lblNombreTecnologia"></label>
                         <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtNombreTecnologia" MaxLength="100" CssClass="form-control" />
                         <br />
-                        
-                           <%--CIE-10 # 1--%>
+
+                        <%--CIE-10 # 1--%>
                         <div id="Cie10">
-                           <label  clientidmode="Static" runat="server" id="lblCie10"></label>
+                            <label clientidmode="Static" runat="server" id="lblCie10"></label>
                             <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtCie10" MaxLength="500" CssClass="form-control" ClientIDMode="Static" />
                         </div>
-                          
+
                         <div id="nuevoNombre">
-                            <label  clientidmode="Static" runat="server" id="lblNuevoNombre">Nuevo nombre de la enfermedad huérfana a modificar</label>
+                            <label clientidmode="Static" runat="server" id="lblNuevoNombre">Nuevo nombre de la enfermedad huérfana a modificar</label>
                             <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtNuevoNombre" MaxLength="100" CssClass="form-control" />
-                        
-                            <label  clientidmode="Static" runat="server" id="Label7">Código CIE-10 (Si aplica)</label>
+
+                            <label clientidmode="Static" runat="server" id="Label7">Código CIE-10 (Si aplica)</label>
                             <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtCie10NuevoNombre" MaxLength="500" CssClass="form-control" ClientIDMode="Static" />
-                  
+
                         </div>
 
-                            
+
                         <br />
                         <div id="TipoConfirmacion">
                             <label for="cmbTipoConfirmacion" clientidmode="Static" runat="server" id="lblTipoConfirmacion">Tipo de confirmación diagnóstica de la enfermedad huérfana</label>
@@ -1064,26 +1065,26 @@
                                 <asp:ListItem Text="OMIM" Value="OMIM "></asp:ListItem>
                                 <asp:ListItem Text="ORPHA" Value="ORPHA"></asp:ListItem>
                             </asp:DropDownList>
-                               <label  clientidmode="Static" runat="server" id="Label12">Nuevo Código Propuesto</label>
+                            <label clientidmode="Static" runat="server" id="Label12">Nuevo Código Propuesto</label>
                             <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtNuevoCodigo" MaxLength="500" CssClass="form-control" ClientIDMode="Static" />
-                  
+
                         </div>
 
                         <div id="modificacionPrueba">
-                            
-                            <label  clientidmode="Static" runat="server" id="lblConfirmatoriaActual">Prueba diagnóstica confirmatoria actual </label>
+
+                            <label clientidmode="Static" runat="server" id="lblConfirmatoriaActual">Prueba diagnóstica confirmatoria actual </label>
                             <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtConfirmatoriaActual" MaxLength="500" CssClass="form-control" ClientIDMode="Static" />
-                                              
-                            <label  clientidmode="Static" runat="server" id="lblCupsConfirmatoriaActual">CUPS de prueba diagnóstica confirmatoria actual </label>
+
+                            <label clientidmode="Static" runat="server" id="lblCupsConfirmatoriaActual">CUPS de prueba diagnóstica confirmatoria actual </label>
                             <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtCupsConfirmatoriaActual" MaxLength="500" CssClass="form-control" ClientIDMode="Static" />
-                              
-                            <label  clientidmode="Static" runat="server" id="lblConfirmatoriaPropuesta">Prueba diagnóstica propuesta</label>
+
+                            <label clientidmode="Static" runat="server" id="lblConfirmatoriaPropuesta">Prueba diagnóstica propuesta</label>
                             <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtConformatoriaPropuesta" MaxLength="500" CssClass="form-control" ClientIDMode="Static" />
 
-                             <label  clientidmode="Static" runat="server" id="lblCupsConfirmatoriaPropuesta">CUPS de prueba diagnóstica propuesta</label>
+                            <label clientidmode="Static" runat="server" id="lblCupsConfirmatoriaPropuesta">CUPS de prueba diagnóstica propuesta</label>
                             <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtCupsConformatoriaPropuesta" MaxLength="500" CssClass="form-control" ClientIDMode="Static" />
 
-                             <label clientidmode="Static" runat="server" id="Label20">CUPS de prueba diagnóstica alterna</label>
+                            <label clientidmode="Static" runat="server" id="Label20">CUPS de prueba diagnóstica alterna</label>
                             <asp:Image Width="20px" runat="server" ImageUrl="~/img/web/help.gif" ID="Image18"
                                 title="Escoja el código CUPS (Clasificación Única de Procedimientos en Salud -CUPS) de la prueba diagnóstica alterna, si aplica." /><label>Ayuda</label>
                             <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtCUPSPruebaAlterna" MaxLength="500" CssClass="form-control" ClientIDMode="Static" ReadOnly="true" />
@@ -1092,30 +1093,30 @@
                         </div>
 
                         <div id="modificacionEspecialidad">
-                            
-                            <label  clientidmode="Static" runat="server" id="Label15">Especialidades actuales</label>
+
+                            <label clientidmode="Static" runat="server" id="Label15">Especialidades actuales</label>
                             <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtEspecialidadesActuales" MaxLength="500" CssClass="form-control" ClientIDMode="Static" />
-                  
-                            <label  clientidmode="Static" runat="server" id="Label16">Especialidades propuestas</label>
+
+                            <label clientidmode="Static" runat="server" id="Label16">Especialidades propuestas</label>
                             <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtEspecialidadesPropuestas" MaxLength="500" CssClass="form-control" ClientIDMode="Static" />
 
                         </div>
 
-                       
-                    <%--Pruebas confirmatorias--%>
-                    <div id="Confirmatoria">
-                        <legend id="legConfirmatoria">Información de prueba diagnóstica confirmatoria propuesta para la enfermedad </legend>
-                        <label for="txtConfirmatoria1" clientidmode="Static" runat="server" id="lblConfirmatoria">Nombre prueba diagnóstica confirmatoria de laboratorio (Si aplica)</label>
-                        <asp:TextBox runat="server" CssClass="form-control" ID="txtConfirmatoria1"></asp:TextBox>
-                        <label for="txtCups1" clientidmode="Static" runat="server" id="lblCupsConfirmatoria">CUPS prueba diagnóstica confirmatoria (Si aplica)</label>
-                        <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtCups1" MaxLength="500" CssClass="form-control" ClientIDMode="Static" />
-                    </div>
 
-                      <%--Especialidades--%>
+                        <%--Pruebas confirmatorias--%>
+                        <div id="Confirmatoria">
+                            <legend id="legConfirmatoria">Información de prueba diagnóstica confirmatoria propuesta para la enfermedad </legend>
+                            <label for="txtConfirmatoria1" clientidmode="Static" runat="server" id="lblConfirmatoria">Nombre prueba diagnóstica confirmatoria de laboratorio (Si aplica)</label>
+                            <asp:TextBox runat="server" CssClass="form-control" ID="txtConfirmatoria1"></asp:TextBox>
+                            <label for="txtCups1" clientidmode="Static" runat="server" id="lblCupsConfirmatoria">CUPS prueba diagnóstica confirmatoria (Si aplica)</label>
+                            <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtCups1" MaxLength="500" CssClass="form-control" ClientIDMode="Static" />
+                        </div>
+
+                        <%--Especialidades--%>
                         <br />
 
                         <div id="Especialidad">
-                             <legend id="legEspecialidad">Especialidades propuestas para el análisis diagnóstico  </legend>
+                            <legend id="legEspecialidad">Especialidades propuestas para el análisis diagnóstico  </legend>
 
                             <p id="pEspecialidad">Ingrese la especialidad o especialidades que deberán participar en el análisis para el diagnóstico de la enfermedad huérfana</p>
 
@@ -1130,197 +1131,161 @@
                             <label for="txtEspecialidad3" clientidmode="Static" runat="server" id="lblEspecialidad3">Especialidad 3</label>
                             <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtEspecialidad3" MaxLength="500" CssClass="form-control" ClientIDMode="Static" />
 
-                       </div>
+                        </div>
 
 
-                    <%--Justificacion--%>
-                    <label for="txtDescripJustifaca" clientidmode="Static" runat="server" id="Label14">Descripción y justificación </label>
-                    <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtDescriptJustifica" TextMode="MultiLine" Height="200px"  CssClass="form-control" ClientIDMode="Static" />
+                        <%--Justificacion--%>
+                        <label for="txtDescripJustifaca" clientidmode="Static" runat="server" id="Label14">Descripción y justificación </label>
+                        <asp:TextBox runat="server" Text="" type="text" name="name" ID="txtDescriptJustifica" TextMode="MultiLine" Height="200px" CssClass="form-control" ClientIDMode="Static" />
 
-                        </fieldset>
-                
-                    
-                        <legend>Información adicional</legend>
-                        <label for="chkConflictoInteres" clientidmode="Static" runat="server" id="Label24">Adjunta evidencia  </label>
-                        <asp:RadioButton GroupName="evidencia" onchange="Ajustarcheck();" ID="chkAdjuntaEvidencia" runat="server"
+                    </fieldset>
+
+
+                    <legend>Información adicional</legend>
+                    <label for="chkConflictoInteres" clientidmode="Static" runat="server" id="Label24">Adjunta evidencia  </label>
+                    <asp:RadioButton GroupName="evidencia" onchange="Ajustarcheck();" ID="chkAdjuntaEvidencia" runat="server"
+                        ClientIDMode="Static" Text="SI" />
+                    <asp:RadioButton GroupName="evidencia" onchange="Ajustarcheck();" ID="chkNoAdjuntaEvidencia" runat="server"
+                        ClientIDMode="Static" Text="NO" />
+
+                    <div id="divAdjuntaEvidencia" style="display: none;">
+                        <label for="txtEvidencia" clientidmode="Static" runat="server" id="Label13">Usando el <a href="https://www.uahurtado.cl/pdf/Cita_y_Referencia_Bibliogrfica_gua_basada_en_las_normas_APA.pdf#page=20" target="_blank">formato APA</a> relacione y anexe las referencias de evidencia científica que soportan la nominación y realice un breve resumen de la referencia. </label>
+                        <label></label>
+                        <asp:TextBox runat="server" CssClass="form-control" ID="txtEvidencia" TextMode="MultiLine" Width="800px" Height="80px"></asp:TextBox>
+
+                        <label for="divDocumentoNatural2" clientidmode="Static" runat="server" id="Label10">Documentos adjuntos a esta nominación  </label>
+                        <div runat="server" id="urlEvidencia"></div>
+
+                        <asp:Panel runat="server" ID="pnlValidacionEvidencia">
+                            <label for="cmbGrupoEvidencia" clientidmode="Static" runat="server" id="Label39">validación evidencia </label>
+                            <asp:DropDownList Style="border-color: #DB0050 !important; border-style: solid; border-width: 1px;" runat="server" AppendDataBoundItems="true" CssClass="form-control" Enabled="false" ID="cmbGrupoEvidencia" DataSourceID="SqlDataSourceEvidencia" DataTextField="DESCRIPCION" DataValueField="COD_PARAMETRO_VALIDACION">
+                                <asp:ListItem Text="Seleccione" Value="-1"></asp:ListItem>
+
+                            </asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSourceEvidencia" runat="server" ConnectionString="<%$ ConnectionStrings:TRANSPLANTESConnectionString %>" SelectCommand="SELECT [COD_PARAMETRO_VALIDACION], [DESCRIPCION] FROM [PARAMETRO_VALIDACION] WHERE ([COD_GRUPO_PARAMETRO_VALIDACION] = @COD_GRUPO_PARAMETRO_VALIDACION) ORDER BY [DESCRIPCION]">
+                                <SelectParameters>
+                                    <asp:Parameter DefaultValue="8" Name="COD_GRUPO_PARAMETRO_VALIDACION" Type="Int32" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+
+                        </asp:Panel>
+                    </div>
+
+                    <br>
+                    <label for="chkConflictoInteres" clientidmode="Static" runat="server" id="Label25">Declaración de posibles conflictos de intereses </label>
+                    <div>
+                        <asp:RadioButton GroupName="conflicto" ID="chkConflictoInteres" runat="server"
                             ClientIDMode="Static" Text="SI" />
-                        <asp:RadioButton GroupName="evidencia" onchange="Ajustarcheck();" ID="chkNoAdjuntaEvidencia" runat="server"
+                        <asp:RadioButton GroupName="conflicto" ID="chkNoConflictoInteres" runat="server"
                             ClientIDMode="Static" Text="NO" />
+                    </div>
+                    <br />
+                    <%--<div id="divConflicto" >--%>
+                    <label for="txtConflicto" clientidmode="Static" runat="server" id="Label3">Objetivo:</label>
+                    <p>La presente declaración tiene por objeto garantizar en el ejercicio trasparente de la participación ciudadana, la imparcialidad de los participantes con derecho a voto en el proceso actual, de modo que se conozca el posible o posibles conflictos de intereses y su relación de causalidad frente a las opiniones o recomendaciones que incidirán en la toma de decisiones relacionadas con las políticas en salud.</p>
+                    <p>Las actividades que pueden generar conflicto de intereses son aquellas en las que el juicio del profesional en salud o la de un agremiado, agente o actor del sector salud puede estar afectado por un interés primario, que incida en su actividad participativa.</p>
+                    <label for="txtConflicto" clientidmode="Static" runat="server" id="Label1">Describa el conflicto de intereses teniendo en cuenta los siguientes aspectos:</label>
+                    <label for="txtConflicto" clientidmode="Static" runat="server" id="Label4">Tipos de conflictos:</label>
+                    <ul>
+                        <ol><strong>Financiero:</strong> Cuando el individuo tiene participación en una empresa, organización o equivalente que se relaciona directamente (socio, accionista, propietario, empleado) o indirectamente (proveedor, asesor, consultor) con las actividades para las cuales fue convocado a participar.</ol>
+                        <ol><strong>Intelectual:</strong> Cuando se tiene un interés intelectual, académico o científico en un tema en particular. La declaración de este tipo de interés es indispensable para salvaguardar la calidad y objetividad del trabajo científico.</ol>
+                        <ol><strong>Pertenencia:</strong> Derechos de propiedad intelectual o industrial que estén directamente relacionados con las temáticas o actividades a abordar.</ol>
+                        <ol><strong>Familiar:</strong>  Cuando alguno de los familiares, hasta el tercer grado de consanguinidad y segundo de afinidad o primero civil, están relacionados de manera directa o indirecta en los aspectos financiero o intelectual, con las actividades y temáticas a desarrollar</ol>
+                    </ul>
+                    <label for="txtConflicto" clientidmode="Static" runat="server" id="Label6">Declaración:</label>
+                    <p>He leído y comprendo el objetivo de la declaración de conflicto de intereses</p>
+                    <p>Por lo tanto, en forma espontánea y libre de todo apremio doy fe acerca de los posibles intereses que podrían afectar mis actuaciones en el proceso al que he sido convocado a participar.</p>
+                    <p>Esta declaración, también hace referencia a los vínculos y posibles intereses de mis parientes consanguíneos, afines o civiles, durante los últimos dos (2) años.</p>
+                    <label for="txtConflicto" clientidmode="Static" runat="server" id="Label8">A continuación, describo los conflictos de intereses que poseo:</label>
+                    <ul>
 
-                        <div id="divAdjuntaEvidencia" style="display: none;">
-                            <label for="txtEvidencia" clientidmode="Static" runat="server" id="Label13">Usando el <a href="https://www.uahurtado.cl/pdf/Cita_y_Referencia_Bibliogrfica_gua_basada_en_las_normas_APA.pdf#page=20" target="_blank">formato APA</a> relacione y anexe las referencias de evidencia científica que soportan la nominación y realice un breve resumen de la referencia. </label>
-                            <label></label>
-                            <asp:TextBox runat="server" CssClass="form-control" ID="txtEvidencia" TextMode="MultiLine" Width="800px" Height="80px"></asp:TextBox>
+                        <asp:TextBox runat="server" CssClass="form-control" ID="txtInteresEconomico" TextMode="MultiLine" Width="700px" Height="80px" Visible="false"></asp:TextBox>
 
-                            <label for="divDocumentoNatural2" clientidmode="Static" runat="server" id="Label10" >Documentos adjuntos a esta nominación  </label>
-                            <div runat="server" id="urlEvidencia"></div>
+                        <ol>
+                            <strong>Descripción del conflicto de  Interés</strong>
+                            <asp:TextBox runat="server" CssClass="form-control" ID="txtConflicto" TextMode="MultiLine" Width="700px" Height="80px"></asp:TextBox>
+                        </ol>
 
-                            <%--                            <div id="pnlArchivoJuridico1">
+                    </ul>
 
-                                                            <label for="divDocumentoNatural2" clientidmode="Static" runat="server" id="lbltituloArchivoJuridico1" Visible="false">Adjunte Documento de evidencia  </label>
-                                                            <asp:Button runat="server" ID="btnArchivo" Text="Subir Archivo" OnClick="btnArchivo_Click" Visible="false" />
+                    <fieldset runat="server" id="Fieldset3" class="form-group">
+                        <h2 style="color: brown;">Resultado de la validación</h2>
+                        <h3 runat="server" id="lblConceptoValidacion" style="color: #266373 !important;">Concepto general de la validación: </h3>
 
-                                                            <asp:UpdatePanel runat="server" ID="pnlGrillaArchivos" UpdateMode="Conditional">
-                                                                <ContentTemplate>
+                        <hr style="width: 800px; height: 2px; border-width: 0; color: gray; background-color: gray;" />
+                        <h4>Existe completitud, correspondencia y coherencia de la nominación: Coherencia entre la categoría de la nominación y la propuesta presentada, asi como, la correspondencia del código CIE con el diagnóstico/enfermedad nominada y la categoría de la etiología de la enfermedad</h4>
+                        <h3 runat="server" id="lblConceptoPlenitud" style="color: #266373 !important;"></h3>
 
-                                                                    <asp:DataList Width="600px" runat="server" ID="grdArchivos">
-                                                                        <ItemTemplate>
-                                                                            <div class="form-control">
+                        <hr style="width: 800px; height: 2px; border-width: 0; color: gray; background-color: gray;" />
+                        <h4>La nominación ya está incluida en la Resolución vigente.</h4>
+                        <h3 runat="server" id="lblConceptoIncluida" style="color: #266373 !important;"></h3>
 
-                                                                                <asp:HyperLink runat="server" Text='<%# "Archivo cargado:"+Eval("descripcion") %>'
-                                                                                    Target="_blank" NavigateUrl='<%# "~"+Eval("url").ToString().Substring(Eval("url").ToString().IndexOf("\\files\\DocumentosHuerfanas")) %>'></asp:HyperLink>
+                        <hr style="width: 800px; height: 2px; border-width: 0; color: gray; background-color: gray;" />
+                        <h4>La prueba diagnóstica sugerida corresponde con la nominación, así como el Código Único de Prestación de Servicios (CUPS).</h4>
+                        <h3 runat="server" id="lblConceptoCUPS" style="color: #266373 !important;"></h3>
 
-                                                                                <asp:ImageButton
-                                                                                    Visible="<%# btnArchivo.Visible %>"
-                                                                                    Width="10px" runat="server" ID="btnelimnarARchivo" ImageUrl="~/img/web/delete.png" OnClick="btnelimnarARchivo_Click" ValidationGroup='<%# Eval("url") %>' />
-                                                                            </div>
-                                              
-                                                                        </ItemTemplate>
+                        <hr style="width: 800px; height: 2px; border-width: 0; color: gray; background-color: gray;" />
+                        <h4>Al menos una especialidad está registrada y correponde con la nominación propuesta.</h4>
+                        <h3 runat="server" id="lblConceptoEspecialidad" style="color: #266373 !important;"></h3>
 
-                                                                    </asp:DataList>
+                        <hr style="width: 800px; height: 2px; border-width: 0; color: gray; background-color: gray;" />
+                        <h4>Los documentos y enlaces aportados realmente contienen la evidencia correspondiente con la EHR nominada.</h4>
+                        <h3 runat="server" id="lblConceptoEvidencia" style="color: #266373 !important;"></h3>
 
-                                                                </ContentTemplate>
-                                                            </asp:UpdatePanel>
-                                                        </div>--%>
+                    </fieldset>
 
-                            <asp:Panel runat="server" ID="pnlValidacionEvidencia">
-                                <label for="cmbGrupoEvidencia" clientidmode="Static" runat="server" id="Label39">validación evidencia </label>
-                                <asp:DropDownList Style="border-color: #DB0050 !important; border-style: solid; border-width: 1px;" runat="server" AppendDataBoundItems="true" CssClass="form-control" Enabled="false" ID="cmbGrupoEvidencia" DataSourceID="SqlDataSourceEvidencia" DataTextField="DESCRIPCION" DataValueField="COD_PARAMETRO_VALIDACION">
-                                    <asp:ListItem Text="Seleccione" Value="-1"></asp:ListItem>
+                    <hr style="width: 800px; height: 2px; border-width: 0; color: gray; background-color: gray;" />
+                    <h3 style="color: #266373 !important;">Amplie la información para justificar la validación de la nominación rechazada:</h3>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="txtObservacionesGenerales" TextMode="MultiLine" Width="800px" Height="80px"></asp:TextBox>
 
-                                </asp:DropDownList>
-                                <asp:SqlDataSource ID="SqlDataSourceEvidencia" runat="server" ConnectionString="<%$ ConnectionStrings:TRANSPLANTESConnectionString %>" SelectCommand="SELECT [COD_PARAMETRO_VALIDACION], [DESCRIPCION] FROM [PARAMETRO_VALIDACION] WHERE ([COD_GRUPO_PARAMETRO_VALIDACION] = @COD_GRUPO_PARAMETRO_VALIDACION) ORDER BY [DESCRIPCION]">
-                                    <SelectParameters>
-                                        <asp:Parameter DefaultValue="8" Name="COD_GRUPO_PARAMETRO_VALIDACION" Type="Int32" />
-                                    </SelectParameters>
-                                </asp:SqlDataSource>
+                    <label for="divDocumentoNatural2" clientidmode="Static" runat="server" id="lblAdjunteDocumento">En caso de tener información adicional que respalde su objeción, adjúntela</label>
+                    <asp:Button runat="server" ID="Button1" Text="Subir Archivo" OnClick="btnArchivo_Click" />
 
-                            </asp:Panel>
-                        </div>
+                    <asp:UpdatePanel runat="server" ID="pnlGrillaArchivos2" UpdateMode="Conditional">
+                        <ContentTemplate>
 
-                        <br>
-                        <label for="chkConflictoInteres" clientidmode="Static" runat="server" id="Label25">Declaración de posibles conflictos de intereses </label>
-                        <div>
-                            <asp:RadioButton GroupName="conflicto"  ID="chkConflictoInteres" runat="server"
-                                ClientIDMode="Static" Text="SI" />
-                            <asp:RadioButton GroupName="conflicto"  ID="chkNoConflictoInteres" runat="server"
-                                ClientIDMode="Static" Text="NO" />
-                        </div>
-                        <br />
-                        <%--<div id="divConflicto" >--%>
-                             <label for="txtConflicto" clientidmode="Static" runat="server" id="Label3">Objetivo:</label>
-                             <p>La presente declaración tiene por objeto garantizar en el ejercicio trasparente de la participación ciudadana, la imparcialidad de los participantes con derecho a voto en el proceso actual, de modo que se conozca el posible o posibles conflictos de intereses y su relación de causalidad frente a las opiniones o recomendaciones que incidirán en la toma de decisiones relacionadas con las políticas en salud.</p>
-                            <p>Las actividades que pueden generar conflicto de intereses son aquellas en las que el juicio del profesional en salud o la de un agremiado, agente o actor del sector salud puede estar afectado por un interés primario, que incida en su actividad participativa.</p>
-                            <label for="txtConflicto" clientidmode="Static" runat="server" id="Label1">Describa el conflicto de intereses teniendo en cuenta los siguientes aspectos:</label>
-                            <label for="txtConflicto" clientidmode="Static" runat="server" id="Label4">Tipos de conflictos:</label>
-                            <ul>
-                                <ol><strong>Financiero:</strong> Cuando el individuo tiene participación en una empresa, organización o equivalente que se relaciona directamente (socio, accionista, propietario, empleado) o indirectamente (proveedor, asesor, consultor) con las actividades para las cuales fue convocado a participar.</ol>
-                                <ol><strong>Intelectual:</strong> Cuando se tiene un interés intelectual, académico o científico en un tema en particular. La declaración de este tipo de interés es indispensable para salvaguardar la calidad y objetividad del trabajo científico.</ol>
-                                <ol><strong>Pertenencia:</strong> Derechos de propiedad intelectual o industrial que estén directamente relacionados con las temáticas o actividades a abordar.</ol>
-                                <ol><strong>Familiar:</strong>  Cuando alguno de los familiares, hasta el tercer grado de consanguinidad y segundo de afinidad o primero civil, están relacionados de manera directa o indirecta en los aspectos financiero o intelectual, con las actividades y temáticas a desarrollar</ol>
-                            </ul>
-                            <label for="txtConflicto" clientidmode="Static" runat="server" id="Label6">Declaración:</label>
-                            <p>He leído y comprendo el objetivo de la declaración de conflicto de intereses</p>
-                            <p>Por lo tanto, en forma espontánea y libre de todo apremio doy fe acerca de los posibles intereses que podrían afectar mis actuaciones en el proceso al que he sido convocado a participar.</p>
-                            <p>Esta declaración, también hace referencia a los vínculos y posibles intereses de mis parientes consanguíneos, afines o civiles, durante los últimos dos (2) años.</p>
-                            <label for="txtConflicto" clientidmode="Static" runat="server" id="Label8">A continuación, describo los conflictos de intereses que poseo:</label>
-                            <ul>
-                              
-                                <asp:TextBox runat="server" CssClass="form-control" ID="txtInteresEconomico" TextMode="MultiLine" Width="700px" Height="80px" Visible="false"></asp:TextBox>
-                                
-                                <ol><strong>Descripción del conflicto de  Interés</strong>
-                                    <asp:TextBox runat="server" CssClass="form-control" ID="txtConflicto" TextMode="MultiLine" Width="700px" Height="80px"></asp:TextBox>
-                                </ol>
-                              
-                            </ul>
+                            <asp:DataList Width="600px" runat="server" ID="grdArchivos2">
+                                <ItemTemplate>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <asp:ImageButton
+                                                Visible="<%# Button1.Visible %>"
+                                                Width="40px" runat="server" ID="btnelimnarARchivo" ImageUrl="~/img/web/delete.png" OnClick="btnelimnarARchivo_Click" ValidationGroup='<%# Eval("url") %>' Text="Eliminar archivo" />
+                                        </div>
+                                        <div class="col-md-9">
+                                            <asp:HyperLink runat="server" Text='<%# "Archivo cargado:"+Eval("descripcion") %>'
+                                                Target="_blank" NavigateUrl='<%# "~"+Eval("url").ToString().Substring(Eval("url").ToString().IndexOf("\\files\\DocumentosHuerfanas")) %>'></asp:HyperLink>
+                                            </col>
+                                        
+                                        </div>
+                                </ItemTemplate>
 
-                         
+                            </asp:DataList>
 
-                       <%-- <label for="txtObservacionesGenerales" clientidmode="Static" runat="server" id="Label26">Observaciones Generales de la objeción </label>
-                        <asp:TextBox runat="server"  CssClass="form-control" ID="txtObservacionesGenerales" TextMode="MultiLine" Width="800px" Height="80px"></asp:TextBox>--%>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
 
 
 
-                                <%--    <div id="pnlArchivoJuridico1">
+                    <div class="form-group">
+                        <asp:Label ID="LblValidacionCampos" runat="server" ForeColor="#E4335C" Font-Size="14pt" />
+                    </div>
 
-                                                            <label for="divDocumentoNatural2" clientidmode="Static" runat="server" id="lbltituloArchivoJuridico1" Visible="false">Adjunte Documento de evidencia  </label>
-                                                            <asp:Button runat="server" ID="btnArchivo" Text="Subir Archivo" OnClick="btnArchivo_Click" Visible="false" />
+                    <div class="form-group">
 
-                                                            <asp:UpdatePanel runat="server" ID="pnlGrillaArchivos" UpdateMode="Conditional">
-                                                                <ContentTemplate>
+                        <asp:Button runat="server"
+                            ClientIDMode="Static" OnClick="btnGuardar_Click" type="submit" ID="btnGuardar" Text="Objetar" CssClass="callpart" />
 
-                                                                    <asp:DataList Width="600px" runat="server" ID="grdArchivos">
-                                                                        <ItemTemplate>
-                                                                            <div class="form-control">
+                        <asp:Button runat="server"
+                            ClientIDMode="Static" OnClick="btnCancelar_Click" type="submit" ID="btnCancelar" Text="Cancelar" CssClass="callpart" />
 
-                                                                                <asp:HyperLink runat="server" Text='<%# "Archivo cargado:"+Eval("descripcion") %>'
-                                                                                    Target="_blank" NavigateUrl='<%# "~"+Eval("url").ToString().Substring(Eval("url").ToString().IndexOf("\\files\\DocumentosHuerfanas")) %>'></asp:HyperLink>
-
-                                                                                <asp:ImageButton
-                                                                                    Visible="<%# btnArchivo.Visible %>"
-                                                                                    Width="10px" runat="server" ID="btnelimnarARchivo" ImageUrl="~/img/web/delete.png" OnClick="btnelimnarARchivo_Click" ValidationGroup='<%# Eval("url") %>' />
-                                                                            </div>
-                                              
-                                                                        </ItemTemplate>
-
-                                                                    </asp:DataList>
-
-                                                                </ContentTemplate>
-                                                            </asp:UpdatePanel>
-                                                        </div>--%>
-
-
-
-
-                                <label for="txtConflicto"  ClientIDMode="Static" runat="server" id="Label9">Observaciones generales que objetan esta nominación</label>
-                                <asp:TextBox runat="server"  CssClass="form-control" id="txtObservacionesGenerales" TextMode="MultiLine" Width="800px" Height="80px"></asp:TextBox>
-
-                               <label for="divDocumentoNatural2" ClientIDMode="Static" runat="server" id="lblAdjunteDocumento">En caso de tener información adicional que respalde su objeción, adjúntela</label>
-                                          <asp:Button runat="server" ID="Button1" text="Subir Archivo" OnClick="btnArchivo_Click" />
-                                    
-                               <asp:UpdatePanel runat="server" ID="pnlGrillaArchivos2" UpdateMode="Conditional">
-                                   <ContentTemplate>
-
-                                       <asp:DataList Width="600px" runat="server" ID="grdArchivos2" >
-                                           <ItemTemplate>
-                                                  <div class="form-control">
-                                                        <asp:HyperLink runat="server" Text='<%# "Archivo cargado:"+Eval("descripcion") %>'
-                                                          target="_blank"  NavigateUrl='<%# "~"+Eval("url").ToString().Substring(Eval("url").ToString().IndexOf("\\files\\DocumentosHuerfanas")) %>'
-                                                            ></asp:HyperLink>
-
-                                                      <asp:ImageButton 
-                                                          Visible=<%# Button1.Visible %>
-                                                          Width="10px" runat="server" ID="btnelimnarARchivo" ImageUrl="~/img/web/delete.png" OnClick="btnelimnarARchivo_Click" ValidationGroup='<%# Eval("url") %>'  />
-                                                            </div>
-                                              
-                                           </ItemTemplate>
-
-                                       </asp:DataList>
-                               
-                                   </ContentTemplate>
-                               </asp:UpdatePanel>
-                                       
-
-            
-                               <div class="form-group">
-                                    <asp:Label ID="LblValidacionCampos" runat="server" ForeColor="#E4335C" Font-Size="14pt" />
-                                </div>
-
-                                <div class="form-group">
-                                      
-                                    <asp:Button runat="server" 
-                                        ClientIDMode="Static" OnClick="btnGuardar_Click" type="submit" ID="btnGuardar" Text="Guardar" CssClass="callpart"    />
-                                    
-                                    <asp:Button runat="server" 
-                                        ClientIDMode="Static" OnClick="btnCancelar_Click" type="submit" ID="btnCancelar" Text="Cancelar" CssClass="callpart"    />
-                                
-                                </div>
-                            </div>              
+                    </div>
+                </div>
 
             </div>
         </div>
     </div>
-  
+
 
 
 

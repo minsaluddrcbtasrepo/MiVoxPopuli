@@ -63,12 +63,17 @@
                     <p style="text-align: justify;">
                         El proceso de inclusión y actualización del listado oficial de enfermedades huérfanas/raras, consta de tres fases: proceso de nominaciones, análisis técnico científico y decisión mediante un panel de expertos; dicho proceso culmina con la expedición de un acto administrativo (Resolución). 
                     </p>
-                    <h3>Primera fase.</h3>
+                    <br />
+                    <p style="text-align: justify; color: red; font-size: 20px; font-weight: bold">
+                        El periodo establecido para las nominaciones es de 1 de marzo de 2024 al 31 mayo de 2024.
+                    </p>
+                    <h3>Primera fase. (Terminada)</h3>
 
+                    <!--
                     <p style="text-align: justify;">
                         Durante la primera fase se podrá nominar:
                     </p>
-                
+
                     <br />
 
                     <ul style="text-align: justify;">
@@ -84,25 +89,43 @@
                         En esta fase cualquier ciudadano puede participar nominando servicios y tecnologías para ser excluidas de la financiación con recursos públicos destinados a la salud. 
                     </p>
                     <br />
-                    <p runat="server" id="lblDescHuerfanasNomi" visible="true" style="text-align: justify;font-weight: bold;">
+                    <p runat="server" id="lblDescHuerfanasNomi" visible="true" style="text-align: justify; font-weight: bold;">
                         Es importante aclarar, que el recibir una nominación a través de esta plataforma no implica una aceptación automática sino solo el inicio del proceso. 
                     </p>
-                     <h3>Segunda fase.</h3>
+                    -->
+                    <h3>Segunda fase.</h3>
 
                     <p style="text-align: justify;">
                         Durante la segunda fase se surte el Análisis Técnico Científico, las nominaciones al listado vigente pasan a un proceso de revisión mediante un panel de expertos clínicos conformado por especialistas y subespecialistas, para su análisis y discusión.
                     </p>
+                    <br />
+                    <p style="text-align: justify;">
+                                Se termino la validación inicial de las nominaciones, se abre la etapa de <b>OBJECIONES</b>, tenga en cuenta los siguientes puntos para realizar su objeción:                                  
+                            </p>
+                            <br />
+                            <ul class="text_terms" style="padding-left: 40px; text-align: left;">
+                                <li>Solo se permite objetar las solicitudes que han sido rechazadas</li>
+                                <li>Las objeciones deben ser realizadas por el actor que realizó la nominación, para realizar el proceso debe ingresar con su usuario y contraseña</li>
+                                <li>Oprima el botón "Objetar", se visualizara la información de la nominación</li>
+                                <li>Dirijase a la parte inferior del formulario, ingrese las observaciones y evidencia de su objeción</li>
+                            </ul>
 
                     <h3>Tercera fase.</h3>
 
                     <p style="text-align: justify;">
                         Durante la tercera fase se lleva a cabo la Decisión concluyente de las nominaciones presentadas; en continuidad del trámite el Ministerio de Salud y Protección Social publicará en acto administrativo las inclusiones, exclusiones y modificaciones establecidas para la siguiente vigencia. .
                     </p>
+                    <br />
+                    <p style="text-align: justify;">
+                        Correo de apoyo ehuerfanas@minsalud.gov.co
+                    </p>
                     <hr>
                     <div class="uitabs">
-                        <ul class="tabs" style="width:100%">
-                            <li class='<%= clsParticipe %>' data-tab="tab-0" style="width:33.33%"><img src="/img/web/clic31.png" style="width:20%; background-color: #013144;"  /> Yo Participo</li>
-                            <li class='<%= clsResultados %>' data-tab="tab-2" style="width:33.33%">Nominaciones Aceptadas</li>
+                        <ul class="tabs" style="width: 100%">
+                            <li class='<%= clsParticipe %>' data-tab="tab-0" style="width: 33.33%">
+                                <img src="../../img/web/clic31.png" style="width: 20%; background-color: #013144;" />
+                                Yo Participo</li>
+                            <li class='<%= clsResultados %>' data-tab="tab-2" style="width: 33.33%">Nominaciones Aceptadas</li>
                             <li id="liMetodologia" class="tab-link" data-tab="tab-3">Instructivo</li>
                             <li id="liTecnologias" class="tab-link" data-tab="tab-4">Tecnologías a evaluar</li>
                         </ul>
@@ -152,6 +175,8 @@
 
 
                             <h3>Listado Registro de Nominaciones Enfermedades Huérfanas/Raras – 2024</h3>
+                            
+                            <br />
                             <div class="panel panel-default">
                                 <asp:Repeater runat="server" ID="rptResultados" DataSourceID="SqlDataSource1" OnItemDataBound="rptResultados_ItemDataBound">
                                     <HeaderTemplate>
@@ -162,6 +187,7 @@
                                                     <th>Nominación</th>
                                                     <th>Fecha</th>
                                                     <th>Estado</th>
+                                                    <th>Concepto validación</th>
                                                     <th>Opciones</th>
                                                 </tr>
                                             </thead>
@@ -175,15 +201,24 @@
                                                 <td><%# Eval("NOMBRE_TECNOLOGIA") %></td>
                                                 <td><%# Eval("FECHA_NOMINACION") %></td>
                                                 <td><%# Eval("NOMBRE_ESTADO_NOMINACION") %></td>
+                                                <td><%# Eval("CONCEPTO_VALIDACION") %></td>
                                                 <td>
                                                     <a href='<%# "../informes/frmReportViewerHuerfanas.aspx?cod="+Eval("COD_NOMINACION_HUERFANAS") + "&rpt=" +Eval("TIPO_REPORTE") %> ' target="_blank" id="lnkPDF">Descargar PDF</a>
 
 
                                                     <asp:Button runat="server"
-                                                        CommandArgument='<%# Eval("COD_NOMINACION_HUERFANAS") %>' Text="Objetar" ID="btnObjetarHuerfanas" OnClick="btnObjetar_Click2" Visible='<%# CalcularVisibleObjecion(Eval("COD_ESTADO_NOMINACION"))%>' />
+                                                        CommandArgument='<%# Eval("COD_NOMINACION_HUERFANAS") %>' Text="Objetar" ID="btnObjetarHuerfanas" OnClick="btnObjetar_Click2" Visible='<%# CalcularVisibleObjecion(Eval("COD_ESTADO_NOMINACION"),  Eval("CONCEPTO_VALIDACION"),  Eval("COD_REGISTRO"), Eval("OBJECION")) == 1%>' />
 
+                                                    <br />
+                                                    <div style="width: 120px;">
+                                                        <asp:Label Style="background-color: red; color: white; font-weight: bold; font-size: smaller;" runat="server" Text="Objeción habilitada" ID="lblMensaje" Visible='<%# CalcularVisibleObjecion(Eval("COD_ESTADO_NOMINACION"),  Eval("CONCEPTO_VALIDACION"), Eval("COD_REGISTRO"), Eval("OBJECION")) == 2%>' />
+                                                    </div>
+                                                     <br />
+                                                    <div style="width: 120px;">
+                                                        <asp:Label Style="background-color: green; color: white; font-weight: bold; font-size: smaller;" runat="server" Text="Objeción realizada" ID="Label2" Visible='<%# CalcularVisibleObjecion(Eval("COD_ESTADO_NOMINACION"),  Eval("CONCEPTO_VALIDACION"), Eval("COD_REGISTRO"), Eval("OBJECION")) == 3%>' />
+                                                    </div>
                                                     <asp:Panel runat="server" ID="pnlObjecionesHuerfanas" Visible="true">
-                                                        <a data-toggle="modal" data-target='<%# "#myModalobjeciones"+Eval("COD_NOMINACION_HUERFANAS")  %>' href="#">Objeciones a esta nominación</a>
+                                                        <a data-toggle="modal" data-target='<%# "#myModalobjeciones"+Eval("COD_NOMINACION_HUERFANAS")  %>' href="#">Revise las objeciones a esta nominación</a>
                                                     </asp:Panel>
                                                     <div class="modal fade" id='<%# "myModalobjeciones"+Eval("COD_NOMINACION_HUERFANAS")  %>' role="dialog" style="display: none;">
                                                         <div class="modal-dialog">
@@ -213,7 +248,7 @@
                                                                                 <asp:TemplateField HeaderText="Opciones">
 
                                                                                     <ItemTemplate>
-                                                                                        <a href='<%# "../informes/frmReportViewerHuerfanas.aspx?cod="+Eval("COD_OBJECION_HUERFANA")+"&rpt=2" %>' target="_blank" id="lnkPDF">Descargar PDF</a>
+                                                                                        <a href='<%# "../informes/frmReportViewerHuerfanas.aspx?cod="+Eval("COD_NOMINACION_HUERFANA")+"&rpt=-1" %>' target="_blank" id="lnkPDF">Descargar PDF</a>
                                                                                     </ItemTemplate>
                                                                                 </asp:TemplateField>
                                                                             </Columns>
@@ -323,7 +358,9 @@
 								WHEN (ES_CODIGO = 1) THEN 4
 								WHEN (ES_PRUEBA = 1) THEN 5
 								WHEN (ES_DICIPLINA = 1) THEN 6
-								ELSE 1 END AS TIPO_REPORTE
+								ELSE 1 END AS TIPO_REPORTE,
+                                CONCEPTO_VALIDACION, NOMINACION_HUERFANA.COD_REGISTRO,
+                                (SELECT COUNT(*) FROM OBJECION_HUERFANA WHERE OBJECION_HUERFANA.COD_NOMINACION_HUERFANA = NOMINACION_HUERFANA.COD_NOMINACION_HUERFANAS) AS OBJECION
                                   FROM ESTADO_NOMINACION 
                                 INNER JOIN NOMINACION_HUERFANA ON ESTADO_NOMINACION.COD_ESTADO_NOMINACION = NOMINACION_HUERFANA.COD_ESTADO_NOMINACION
                                  INNER JOIN PROCESO ON NOMINACION_HUERFANA.COD_PROCESO = PROCESO.COD_PROCESO

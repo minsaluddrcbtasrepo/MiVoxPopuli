@@ -62,7 +62,7 @@
                         <ul class="tabs row">
                             <asp:Panel runat="server">
                                 <li class='<%= clsAgremiacion %> col-md-4' data-tab="tab-1">
-                                    <img src="/img/web/clic31.png" style="width: 20%; background-color: #013144;" />Participe</li>
+                                    <img src="../../img/web/clic31.png" style="width: 20%; background-color: #013144;" />Participe</li>
                                 <%-- <li class='<%= clsAgremiacion %>' data-tab="tab-1">Soy MSPS</li>
                                 <li class='<%= clsParticipe %>' data-tab="tab-1b">Soy otro actor</li>--%>
                                 <li class='<%= clsMetodologia %>  col-md-4' data-tab="tab-3">Metodología</li>
@@ -92,7 +92,7 @@
                                 </div>
                                 <asp:Panel runat="server" ID="pnlNoRegistrese">
                                     <asp:Panel runat="server" ID="pnlVigenciaNominacion">
-                                        <iframe runat="server" id="iframeNominar" style="width: 100%; min-height: 1500px; height: 2000px; border-width: 0px;"></iframe>
+                                        <iframe runat="server" id="iframeNominar" style="width: 100%; min-height: 1200px; height: 1200px; border-width: 0px;"></iframe>
                                     </asp:Panel>
                                     <asp:Panel runat="server" ID="pnlNoVigenciaNominacion">
                                         <h3>El proceso de participación de la Etapa I “Solicitud” ha finalizado para esta vigencia</h3>

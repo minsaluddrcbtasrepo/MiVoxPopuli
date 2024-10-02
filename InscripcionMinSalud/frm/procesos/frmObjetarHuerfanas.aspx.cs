@@ -132,6 +132,80 @@ namespace InscripcionMinSalud.frm.procesos
                     var reg = obj.obtenerRegistroxCodigo(registro.COD_REGISTRO);
                     List<ARCHIVOXNOMINACION_HUERFANA> arch = obj.obtenerARCHIVOXNOMINACION_HUERFANA(registro.COD_NOMINACION_HUERFANAS);
 
+                    //Datos de la validacion
+
+                    lblConceptoValidacion.InnerText = "Concepto general de la validación:";
+                    lblConceptoPlenitud.InnerText = "NO APLICA";
+                    lblConceptoIncluida.InnerText = "NO APLICA";
+                    lblConceptoCUPS.InnerText = "NO APLICA";
+                    lblConceptoEspecialidad.InnerText = "NO APLICA";
+                    lblConceptoEvidencia.InnerText = "NO APLICA";
+
+                    if (registro.OBSERVACIONES_VALIDACION != null)
+                    {
+                        lblConceptoValidacion.InnerText = "Concepto general de la validación:" + registro.OBSERVACIONES_VALIDACION.ToString();
+                    }
+                    if (registro.COMPLETITUD.HasValue)
+                    {
+                        if (registro.COMPLETITUD.Value)
+                        {
+                            lblConceptoPlenitud.InnerText = "SI";
+                        }
+                        else
+                        {
+                            lblConceptoPlenitud.InnerText = "NO";
+                        }
+
+                    }
+                    if (registro.INCLUIDA_RESOLUCION_ACTUAL.HasValue)
+                    {
+                        if (registro.INCLUIDA_RESOLUCION_ACTUAL.Value)
+                        {
+                            lblConceptoIncluida.InnerText = "SI";
+                        }
+                        else
+                        {
+                            lblConceptoIncluida.InnerText = "NO";
+                        }
+
+                    }
+                    if (registro.PRUEBA_DIAGNOSTICA_ACORDE.HasValue)
+                    {
+                        if (registro.PRUEBA_DIAGNOSTICA_ACORDE.Value)
+                        {
+                            lblConceptoCUPS.InnerText = "SI";
+                        }
+                        else
+                        {
+                            lblConceptoCUPS.InnerText = "NO";
+                        }
+
+                    }
+                    if (registro.ESPECIALIDAD_CORRESPONDE.HasValue)
+                    {
+                        if (registro.ESPECIALIDAD_CORRESPONDE.Value)
+                        {
+                            lblConceptoEspecialidad.InnerText = "SI";
+                        }
+                        else
+                        {
+                            lblConceptoEspecialidad.InnerText = "NO";
+                        }
+
+                    }
+                    if (registro.EVIDENCIA_ADECUADA.HasValue)
+                    {
+                        if (registro.EVIDENCIA_ADECUADA.Value)
+                        {
+                            lblConceptoEvidencia.InnerText = "SI";
+                        }
+                        else
+                        {
+                            lblConceptoEvidencia.InnerText = "NO";
+                        }
+
+                    }                    
+
                     pnlNominador.Visible = true;
                     /*
                     foreach (var k in arch.ARCHIVOXNOMINACION)
@@ -435,8 +509,6 @@ namespace InscripcionMinSalud.frm.procesos
             objecion.FECHA_OBJECION = DateTime.Now;
 
             int i = cls.GuardarObjecionHuerfanas(objecion);
-            
-            var obj = cls.obtenerNOMINACION_PROCESO(int.Parse(lblCodNominacionProceso.Text));
            
             //Guardamos los archivos de la objecion
             for (int k = 0; k < ArchivosCargados.Count; k++)
@@ -449,10 +521,10 @@ namespace InscripcionMinSalud.frm.procesos
             }
 
             Session["msgtitulo"] = "Gracias por completar su objeción";
-            Session["msgmsg"] = @"Muchas gracias por su participación en el proceso de nominaciones en el listado oficial de las enfermedades huérfanas del país . Queremos informarle que su objeción ha sido recibida.
+            Session["msgmsg"] = @"<h3>Muchas gracias por su participación en el proceso de nominaciones en el listado oficial de las enfermedades huérfanas del país . Queremos informarle que su objeción ha sido recibida.</h3>
                                 <br>
                                 <br>
-                                Le comunicaremos oportunamente cualquier tipo de novedad con respecto a su objeción.
+                                <h3>Le comunicaremos oportunamente cualquier tipo de novedad con respecto a su objeción.</h3>
                                 <br>
                                 <br>
                                     ";

@@ -35,14 +35,13 @@
                 <p class="desc-title">
                     <a href="#">Ver todos</a>
                 </p>
-            </div>
-            <asp:Label runat="server" ID="lblClase" Text="col-md-6" Visible="false"></asp:Label>
+            </div>            
 
             <div class="container-fluid stemas">
                 <div class="row">
                     <asp:Repeater runat="server" ID="grdProcesos" OnItemDataBound="grdProcesos_ItemDataBound" DataSourceID="SqlDataSourceProcesos">
                         <ItemTemplate>
-                            <div class='col-md-3 stema1'>
+                            <div class='<%# Eval("ClaseDIV") %>'>
                                 <div class="tema">
                                     <div class="tema-cont">
                                         <h3>
@@ -133,7 +132,7 @@
         </div>
         <asp:Panel runat="server" ID="pnlOnline" Visible="false"></asp:Panel>
         <asp:SqlDataSource ID="SqlDataSourceProcesos" runat="server" ConnectionString="<%$ConnectionStrings:TRANSPLANTESConnectionString %>"
-            SelectCommand="SELECT VIGENCIAS,URL_ACTIVO_PARTICIPAR, o.orderMenu as FILA, TOTAL, CASE WHEN ROW_NUMBER() OVER (ORDER BY FECHA_FIN_NOMINACION)= TOTAL THEN  CASE WHEN TOTAL %2 = 1 THEN 'col-md-3' END ELSE 'col-md-3' END CLASE, cast (case when GETDATE() < fecha_fin_nominacion then ACTIVO_PARTICIPAR else 0 end as bit)  ACTIVO_PARTICIPAR, ACTIVO_RESULTADOS,ES_RUPS,ES_UPC,ES_HUERFANA,ES_AAA, datediff(day,getdate(),dateadd(day,1,FECHA_FIN_NOMINACION)) DIAS, [COD_PROCESO], [NOMBRE_PROCESO], TEXTO_DIRIGIDO_A,OBSERVACIONES_PROCESO, cast ([FECHA_INICIO_NOMINACION] as char(12)) FECHA_INICIO_NOMINACION2, cast( [FECHA_FIN_NOMINACION] as char(12)) FECHA_FIN_NOMINACION2,FECHA_INICIO_NOMINACION, FECHA_FIN_NOMINACION, FORMAT(FECHA_INICIO_PRIMERA_VIGENCIA,' dd/MM/yyyy ' ) FECHA_INICIO_PRIMERA_VIGENCIA,FORMAT(FECHA_FIN_PRIMERA_VIGENCIA,' dd/MM/yyyy ' ) FECHA_FIN_PRIMERA_VIGENCIA, FORMAT(FECHA_INICIO_SEGUNDA_VIGENCIA,' dd/MM/yyyy ' ) FECHA_INICIO_SEGUNDA_VIGENCIA, FORMAT(FECHA_FIN_SEGUNDA_VIGENCIA,' dd/MM/yyyy ' ) FECHA_FIN_SEGUNDA_VIGENCIA FROM [PROCESO] JOIN (SELECT COUNT(*) TOTAL FROM PROCESO WHERE ACTIVO = 1) ST ON ST.TOTAL > 0
+            SelectCommand="SELECT VIGENCIAS,URL_ACTIVO_PARTICIPAR, o.orderMenu as FILA, TOTAL, 'col-md-' + cast(12/TOTAL as nvarchar)+ ' stema1' AS ClaseDIV, CASE WHEN ROW_NUMBER() OVER (ORDER BY FECHA_FIN_NOMINACION)= TOTAL THEN  CASE WHEN TOTAL %2 = 1 THEN 'col-md-3' END ELSE 'col-md-3' END CLASE, cast (case when GETDATE() < fecha_fin_nominacion then ACTIVO_PARTICIPAR else 0 end as bit)  ACTIVO_PARTICIPAR, ACTIVO_RESULTADOS,ES_RUPS,ES_UPC,ES_HUERFANA,ES_AAA, datediff(day,getdate(),dateadd(day,1,FECHA_FIN_NOMINACION)) DIAS, [COD_PROCESO], [NOMBRE_PROCESO], TEXTO_DIRIGIDO_A,OBSERVACIONES_PROCESO, cast ([FECHA_INICIO_NOMINACION] as char(12)) FECHA_INICIO_NOMINACION2, cast( [FECHA_FIN_NOMINACION] as char(12)) FECHA_FIN_NOMINACION2,FECHA_INICIO_NOMINACION, FECHA_FIN_NOMINACION, FORMAT(FECHA_INICIO_PRIMERA_VIGENCIA,' dd/MM/yyyy ' ) FECHA_INICIO_PRIMERA_VIGENCIA,FORMAT(FECHA_FIN_PRIMERA_VIGENCIA,' dd/MM/yyyy ' ) FECHA_FIN_PRIMERA_VIGENCIA, FORMAT(FECHA_INICIO_SEGUNDA_VIGENCIA,' dd/MM/yyyy ' ) FECHA_INICIO_SEGUNDA_VIGENCIA, FORMAT(FECHA_FIN_SEGUNDA_VIGENCIA,' dd/MM/yyyy ' ) FECHA_FIN_SEGUNDA_VIGENCIA FROM [PROCESO] JOIN (SELECT COUNT(*) TOTAL FROM PROCESO WHERE ACTIVO = 1) ST ON ST.TOTAL > 0
             inner join ordenTabProcesos o on PROCESO.COD_PROCESO=o.codProceso  where ACTIVO = 1 order by o.orderMenu "></asp:SqlDataSource>
     </section>
 

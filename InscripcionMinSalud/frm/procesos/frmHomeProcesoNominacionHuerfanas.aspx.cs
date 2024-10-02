@@ -90,6 +90,9 @@ namespace InscripcionMinSalud.frm.procesos
                         pnlRegistrese.Visible = false;
                         pnlNoRegistrese.Visible = true;
                     }
+
+                    pnlVigenciaNominacion.Visible = false;
+                    pnlNoVigenciaNominacion.Visible = true;
                 }
                 else
                 {
@@ -296,9 +299,36 @@ namespace InscripcionMinSalud.frm.procesos
             Response.Redirect("../procesos/frmObjetarHuerfanas.aspx?codN=" + b.CommandArgument + "&codProceso=" + Request.QueryString["cod"]);
         }
 
-        public bool CalcularVisibleObjecion(object codEstado)
+        public int CalcularVisibleObjecion(object codEstado, object resultado, object idUsuario, object objecion)
         {
-            return Convert.ToInt32(codEstado) >= 3;
+            int idUsuarioLogin = -1;
+            if (Session["SS_COD_REGISTRO"] != null)
+            {
+                idUsuarioLogin = Convert.ToInt32(Session["SS_COD_REGISTRO"]);
+            }
+
+            if (Convert.ToInt32(codEstado) >= 3 && resultado.ToString() == "Rechazada" && Convert.ToInt32(idUsuario) == idUsuarioLogin)
+            {
+                if (Convert.ToInt32(objecion) > 0)
+                {
+                    return 3;
+                }
+                else
+                {
+                    return 1;
+                }
+            }
+            else
+            {
+                if (Convert.ToInt32(objecion) > 0)
+                {
+                    return 3;
+                }
+                else
+                {
+                    return 2;
+                }                   
+            }            
         }
     }
 }
