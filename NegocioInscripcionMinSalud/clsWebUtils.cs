@@ -47,6 +47,27 @@ namespace NegocioInscripcionMinSalud
              puerto, autentificacion, usuario, pass, direccionDestino, null, direccionCopia);
         }
 
+
+        public bool enviarEmailPostulacionTecnologiasExcluidas(string asunto, string cuerpo, string direccionDestino)
+        {
+            System.Configuration.AppSettingsReader ar = new System.Configuration.AppSettingsReader();
+            string cuentaFrom = ar.GetValue("cuentaFrom", typeof(string)).ToString();
+            string nombreCuentaFrom = ar.GetValue("nombreCuentaFrom", typeof(string)).ToString();
+            string servidor = ar.GetValue("servidor", typeof(string)).ToString();
+            string puerto = ar.GetValue("puerto", typeof(string)).ToString();
+            string pass = ar.GetValue("pass", typeof(string)).ToString();
+
+            string usuario = ar.GetValue("usuario", typeof(string)).ToString();
+            bool ssl = (bool)ar.GetValue("ssl", typeof(bool));
+            bool autentificacion = (bool)ar.GetValue("autentificacion", typeof(bool));
+            string direccionCopia = ar.GetValue("CuentaCorreoPostulacionTecExcluida", typeof(string)).ToString();
+
+
+
+            return enviarEmail(asunto, cuerpo, cuentaFrom, nombreCuentaFrom, ssl, servidor,
+             puerto, autentificacion, usuario, pass, direccionDestino, null, direccionCopia);
+        }
+
         public bool enviarEmail(string asunto, string cuerpo, string direccionDestino, List<string> adjuntos)
         {
             System.Configuration.AppSettingsReader ar = new System.Configuration.AppSettingsReader();
@@ -179,7 +200,7 @@ namespace NegocioInscripcionMinSalud
                 {
                     objMailMessage.CC.Add(new MailAddress(direccionCopia));
                 }
-                
+
                 objMailMessage.Subject = asunto;
                 objSmtpClient.UseDefaultCredentials = false;
                 objSmtpClient.Credentials = objNetworkCredential;
@@ -216,7 +237,7 @@ namespace NegocioInscripcionMinSalud
                     }
                 }
                 catch (Exception e)
-                {                    
+                {
                     return false;
                 }
 
@@ -235,7 +256,7 @@ namespace NegocioInscripcionMinSalud
             }
 
         }
-       
+
 
 
         public bool enviarEmailHuerfanas(string asunto, string cuerpo, string cuentaFrom, string nombreCuentaFrom,
@@ -265,7 +286,7 @@ namespace NegocioInscripcionMinSalud
                 objMailMessage.To.Add(new MailAddress(direccionDestino));
                 ///objMailMessage.To.Add(new MailAddress("yprada@minsalud.gov.co"));
                 objMailMessage.CC.Add(new MailAddress("participacion@minsalud.gov.co"));
-               // objMailMessage.CC.Add(new MailAddress("pvera2303@gmail.com"));
+                // objMailMessage.CC.Add(new MailAddress("pvera2303@gmail.com"));
                 objMailMessage.Subject = asunto;
                 objSmtpClient.UseDefaultCredentials = false;
                 objSmtpClient.Credentials = objNetworkCredential;
@@ -322,6 +343,8 @@ namespace NegocioInscripcionMinSalud
 
 
         }
+
+
 
 
     }
