@@ -107,11 +107,11 @@
         <div class="container">
             <div id="panel1">
                 <h1>Listado de Tecnologías Excluidas</h1>
-
+				<h3>Para buscar una tecnología previemente excluida, digite el nombre (o una parte) de la tecnología y oprima le tecla ENTER.</h3>
                 <div class="form-group">
-
+					
                     <div class="d-flex align-items-center">
-                        <input type="text" id="filtro-tecnologias" class="form-control me-2" placeholder="Buscar tecnología..." />
+                        <input type="text" id="filtro-tecnologias" class="form-control me-2" placeholder="Buscar tecnología...🔎" />
                     </div>
                 </div>
 
@@ -134,17 +134,14 @@
                 <div id="pagination-container" class="d-flex justify-content-center mt-3"></div>
             </div>
             <!-- Panel 2 -->
-            <div id="panel2" class="hidden">
-
-                <button id="btn-back" class="btn btn-danger d-flex align-items-center">
-                    Regresar
-                   
-                </button>
-                <hr />
-                <h3>Tecnología Seleccionada </h3>
-                <h3><strong id="TecnologiaSeleccionada"></strong></h3>
+            <div id="panel2" class="hidden">				                
+				<div class="row">
+					<h3>Tecnología postulada para revisar la exclusión: </h3>
+					<h3><strong id="TecnologiaSeleccionada"></strong></h3>
+				</div>
                 <div class="row">
                     <h3>Indicaciones</h3>
+					<h4>Seleccione las indicaciones por las cuales considera que se debe volver a incluir la tecnología:</h4>
                     <div id="indicaciones-container">
                         <div id="indicaciones" class="container-check">
                             <!-- Aquí se inyectarán las opciones de checkbox con jQuery -->
@@ -155,6 +152,7 @@
 
                 <div class="row">
                     <h3>Criterios</h3>
+					<h4>Recuerde que debe revisar TODOS los criteríos de exclusión para enviar la revisión:</h4>
                     <table class="table table-striped" id="tabla-criterios">
                         <thead>
                             <tr>
@@ -271,6 +269,13 @@
                         <button class="btn btn-success" id="btnFinalizar" disabled>Finalizar y Postular</button>
                     </div>
                 </div>
+				<div class="row">
+					<button id="btn-back" class="btn btn-danger d-flex align-items-center">
+						Regresar al listado de las tecnologías previamente excluídas                   
+					</button>
+				</div>
+                <hr />
+				
             </div>
         </div>
 
@@ -293,13 +298,13 @@
 
                             <!-- Justificación solicitud revisión -->
                             <div class="mb-3">
-                                <label for="justificacionRevision" class="form-label">Justificación solicitud revisión:</label>
+                                <label for="justificacionRevision" class="form-label">1. Justificación solicitud revisión:</label>
                                 <textarea class="form-control" id="justificacionRevision" rows="3" placeholder="Escribe la justificación" required></textarea>
                             </div>
 
                             <!-- Cargar archivo -->
                             <div class="mb-3">
-                                <label for="archivoCargar" class="form-label">Seleccionar archivo:</label>
+                                <label for="archivoCargar" class="form-label">2. Cargue la evidencia, seleccionando el archivo:</label>
                                 <div class="custom-file-input">
                                     <input type="file" id="archivoCargar" class="form-control-file" style="display: none;" >
                                     <button type="button" class="btn btn-primary" onclick="document.getElementById('archivoCargar').click();">Seleccionar archivo</button>
@@ -312,12 +317,15 @@
 
                             <!-- Descripción del archivo -->
                             <div class="mb-3">
-                                <label for="descripcionArchivo" class="form-label">Descripción del archivo:</label>
-                                <textarea class="form-control" id="descripcionArchivo" rows="2" placeholder="Describe el archivo" required></textarea>
-                            </div>
-
-                            <!-- Botón Anexar -->
-                            <button type="button" class="btn btn-secondary" id="btnAnexar">Anexar</button>
+                                <label for="descripcionArchivo" class="form-label">3. Ingrese una descripción para el archivo y oprima el botón anexar:</label>
+								<textarea class="form-control" id="descripcionArchivo" rows="2" placeholder="Describe el archivo" required></textarea>								
+                            </div>      
+							<div class="mb-3" style="padding-top: 10px; padding-bottom: 10px">							
+								<div class="custom-file-input">
+									<!-- Botón Anexar -->
+									<button type="button" class="btn btn-primary" id="btnAnexar">Anexar</button>
+								</div>
+							</div>
 
                             <!-- Tabla de archivos anexados -->
                             <div class="mt-4">
@@ -337,7 +345,7 @@
                             </div>
 
                             <!-- Botón Finalizar y Postular -->
-                            <button type="button" class="btn btn-primary mt-3" id="btnGuardarCriterio" disabled="disabled">Guardar</button>
+                            <button type="button" class="btn btn-primary mt-3" id="btnGuardarCriterio" disabled="disabled">Guardar revisión criterio</button>
                         </form>
                     </div>
                 </div>

@@ -17,15 +17,7 @@ namespace InscripcionMinSalud.frm.logica
         {
             if (!IsPostBack)
             {
-                grdProcesos.DataBind();
-                if (grdProcesos.Items.Count == 1)
-                    lblClase.Text = "col-md-12";
-                if (grdProcesos.Items.Count == 2)
-                    lblClase.Text = "col-md-6";
-                if (grdProcesos.Items.Count == 3)
-                    lblClase.Text = "col-md-4";
-                if (grdProcesos.Items.Count == 4)
-                    lblClase.Text = "col-md-3";
+                grdProcesos.DataBind();                
 
             }
             if (Session["SS_COD_REGISTRO"] == null || Session["SS_COD_REGISTRO"].ToString().Trim() == string.Empty)
