@@ -14,7 +14,7 @@
     <RootNamespace>InscripcionMinSalud</RootNamespace>
     <AssemblyName>InscripcionMinSalud</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -464,6 +464,9 @@
     <Content Include="documentos\Formato 5 Criterios verificación calidad.pdf" />
     <Content Include="frm\master\site2019.Master" />
     <Content Include="images\Adobe Zii 2.2.1  for Adobe CC15 CC17.dmg" />
+    <EmbeddedResource Include="frm\informes\rptObjecionHuerfana1.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm\informes\rptNominacionHuerfana6.rdlc">
       <SubType>Designer</SubType>
     </EmbeddedResource>

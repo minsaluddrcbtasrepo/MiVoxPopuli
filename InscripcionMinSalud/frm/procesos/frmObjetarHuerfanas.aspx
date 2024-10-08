@@ -718,6 +718,29 @@
             } catch (err) { }
         }
 
+        function checkTextAreaMaxLength(textBox, e, length) {
+
+            var mLen = textBox["MaxLength"];
+            if (null == mLen)
+                mLen = length;
+
+            var maxLength = parseInt(mLen);
+            if (!checkSpecialKeys(e)) {
+                if (textBox.value.length > maxLength - 1) {
+                    if (window.event)//IE
+                        e.returnValue = false;
+                    else//Firefox
+                        e.preventDefault();
+                }
+            }
+        }
+        function checkSpecialKeys(e) {
+            if (e.keyCode != 8 && e.keyCode != 46 && e.keyCode != 37 && e.keyCode != 38 && e.keyCode != 39 && e.keyCode != 40)
+                return false;
+            else
+                return true;
+        }
+
     </script>
     <script type="text/javascript" language="javascript">
         $(function () {
@@ -1235,8 +1258,8 @@
                     </fieldset>
 
                     <hr style="width: 800px; height: 2px; border-width: 0; color: gray; background-color: gray;" />
-                    <h3 style="color: #266373 !important;">Amplie la información para justificar la validación de la nominación rechazada:</h3>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="txtObservacionesGenerales" TextMode="MultiLine" Width="800px" Height="80px"></asp:TextBox>
+                    <h3 style="color: #266373 !important;">Amplie la información para justificar la validación de la nominación rechazada (Máximo 2500 caracteres):</h3>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="txtObservacionesGenerales" TextMode="MultiLine" Width="800px" Height="80px"  onkeyDown="checkTextAreaMaxLength(this,event,'2500');"></asp:TextBox>
 
                     <label for="divDocumentoNatural2" clientidmode="Static" runat="server" id="lblAdjunteDocumento">En caso de tener información adicional que respalde su objeción, adjúntela</label>
                     <asp:Button runat="server" ID="Button1" Text="Subir Archivo" OnClick="btnArchivo_Click" />

@@ -38,6 +38,8 @@ namespace InscripcionMinSalud {
         
         private VW_NOMINCACION_HUERFANAS_6DataTable tableVW_NOMINCACION_HUERFANAS_6;
         
+        private VW_OBJECIONES_NOMINACION_HUERFANASDataTable tableVW_OBJECIONES_NOMINACION_HUERFANAS;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -86,6 +88,9 @@ namespace InscripcionMinSalud {
                 }
                 if ((ds.Tables["VW_NOMINCACION_HUERFANAS_6"] != null)) {
                     base.Tables.Add(new VW_NOMINCACION_HUERFANAS_6DataTable(ds.Tables["VW_NOMINCACION_HUERFANAS_6"]));
+                }
+                if ((ds.Tables["VW_OBJECIONES_NOMINACION_HUERFANAS"] != null)) {
+                    base.Tables.Add(new VW_OBJECIONES_NOMINACION_HUERFANASDataTable(ds.Tables["VW_OBJECIONES_NOMINACION_HUERFANAS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -177,6 +182,16 @@ namespace InscripcionMinSalud {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public VW_OBJECIONES_NOMINACION_HUERFANASDataTable VW_OBJECIONES_NOMINACION_HUERFANAS {
+            get {
+                return this.tableVW_OBJECIONES_NOMINACION_HUERFANAS;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -263,6 +278,9 @@ namespace InscripcionMinSalud {
                 if ((ds.Tables["VW_NOMINCACION_HUERFANAS_6"] != null)) {
                     base.Tables.Add(new VW_NOMINCACION_HUERFANAS_6DataTable(ds.Tables["VW_NOMINCACION_HUERFANAS_6"]));
                 }
+                if ((ds.Tables["VW_OBJECIONES_NOMINACION_HUERFANAS"] != null)) {
+                    base.Tables.Add(new VW_OBJECIONES_NOMINACION_HUERFANASDataTable(ds.Tables["VW_OBJECIONES_NOMINACION_HUERFANAS"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -338,6 +356,12 @@ namespace InscripcionMinSalud {
                     this.tableVW_NOMINCACION_HUERFANAS_6.InitVars();
                 }
             }
+            this.tableVW_OBJECIONES_NOMINACION_HUERFANAS = ((VW_OBJECIONES_NOMINACION_HUERFANASDataTable)(base.Tables["VW_OBJECIONES_NOMINACION_HUERFANAS"]));
+            if ((initTable == true)) {
+                if ((this.tableVW_OBJECIONES_NOMINACION_HUERFANAS != null)) {
+                    this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -362,6 +386,8 @@ namespace InscripcionMinSalud {
             base.Tables.Add(this.tableVW_NOMINCACION_HUERFANAS_5);
             this.tableVW_NOMINCACION_HUERFANAS_6 = new VW_NOMINCACION_HUERFANAS_6DataTable();
             base.Tables.Add(this.tableVW_NOMINCACION_HUERFANAS_6);
+            this.tableVW_OBJECIONES_NOMINACION_HUERFANAS = new VW_OBJECIONES_NOMINACION_HUERFANASDataTable();
+            base.Tables.Add(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -403,6 +429,12 @@ namespace InscripcionMinSalud {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeVW_NOMINCACION_HUERFANAS_6() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeVW_OBJECIONES_NOMINACION_HUERFANAS() {
             return false;
         }
         
@@ -481,6 +513,9 @@ namespace InscripcionMinSalud {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void VW_NOMINCACION_HUERFANAS_6RowChangeEventHandler(object sender, VW_NOMINCACION_HUERFANAS_6RowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void VW_OBJECIONES_NOMINACION_HUERFANASRowChangeEventHandler(object sender, VW_OBJECIONES_NOMINACION_HUERFANASRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -4365,6 +4400,787 @@ namespace InscripcionMinSalud {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class VW_OBJECIONES_NOMINACION_HUERFANASDataTable : global::System.Data.TypedTableBase<VW_OBJECIONES_NOMINACION_HUERFANASRow> {
+            
+            private global::System.Data.DataColumn columnTipoRegisto;
+            
+            private global::System.Data.DataColumn columnNOMINADOR;
+            
+            private global::System.Data.DataColumn columnDOCUMENTO;
+            
+            private global::System.Data.DataColumn columnCORREO;
+            
+            private global::System.Data.DataColumn columnCIE;
+            
+            private global::System.Data.DataColumn columnNOMBRECIE10;
+            
+            private global::System.Data.DataColumn columnTIPO_CONFIRMACION;
+            
+            private global::System.Data.DataColumn columnCUPS_CONFIRMATORIA_PROPUESTA;
+            
+            private global::System.Data.DataColumn columnCONFIRMATORIA_PROPUESTA;
+            
+            private global::System.Data.DataColumn columnESPECIALIDAD;
+            
+            private global::System.Data.DataColumn columnESPECIALIDAD2;
+            
+            private global::System.Data.DataColumn columnESPECIALIDAD3;
+            
+            private global::System.Data.DataColumn columnESPECIALIDAD4;
+            
+            private global::System.Data.DataColumn columnESPECIALIDAD5;
+            
+            private global::System.Data.DataColumn columnJUSTIFICACION;
+            
+            private global::System.Data.DataColumn columnADJUNTA_EVIDENCIA;
+            
+            private global::System.Data.DataColumn columnRUTA_EVIDENCIA;
+            
+            private global::System.Data.DataColumn columnOBSERVACIONES_EVIDENCIA;
+            
+            private global::System.Data.DataColumn columnFECHA_NOMINACION;
+            
+            private global::System.Data.DataColumn columnCOD_NOMINACION_HUERFANAS;
+            
+            private global::System.Data.DataColumn columnCONCEPTO_VALIDACION;
+            
+            private global::System.Data.DataColumn columnFECHA_VALIDACION;
+            
+            private global::System.Data.DataColumn columnOBSERVACIONES_VALIDACION;
+            
+            private global::System.Data.DataColumn columnCOMPLETITUD;
+            
+            private global::System.Data.DataColumn columnINCLUIDA_RESOLUCION_ACTUAL;
+            
+            private global::System.Data.DataColumn columnPRUEBA_DIAGNOSTICA_ACORDE;
+            
+            private global::System.Data.DataColumn columnESPECIALIDAD_CORRESPONDE;
+            
+            private global::System.Data.DataColumn columnEVIDENCIA_ADECUADA;
+            
+            private global::System.Data.DataColumn columnCOD_OBJECION_HUERFANA;
+            
+            private global::System.Data.DataColumn columnOBSERVACIONES_OBJECION;
+            
+            private global::System.Data.DataColumn columnFECHA_OBJECION;
+            
+            private global::System.Data.DataColumn columnDESCRIPCION_ARCHIVO_OBJECION;
+            
+            private global::System.Data.DataColumn columnURL_ARCHIVO_OBJECION;
+            
+            private global::System.Data.DataColumn columnTIPO;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_OBJECIONES_NOMINACION_HUERFANASDataTable() {
+                this.TableName = "VW_OBJECIONES_NOMINACION_HUERFANAS";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal VW_OBJECIONES_NOMINACION_HUERFANASDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected VW_OBJECIONES_NOMINACION_HUERFANASDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TipoRegistoColumn {
+                get {
+                    return this.columnTipoRegisto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NOMINADORColumn {
+                get {
+                    return this.columnNOMINADOR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DOCUMENTOColumn {
+                get {
+                    return this.columnDOCUMENTO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CORREOColumn {
+                get {
+                    return this.columnCORREO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CIEColumn {
+                get {
+                    return this.columnCIE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NOMBRECIE10Column {
+                get {
+                    return this.columnNOMBRECIE10;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TIPO_CONFIRMACIONColumn {
+                get {
+                    return this.columnTIPO_CONFIRMACION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CUPS_CONFIRMATORIA_PROPUESTAColumn {
+                get {
+                    return this.columnCUPS_CONFIRMATORIA_PROPUESTA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CONFIRMATORIA_PROPUESTAColumn {
+                get {
+                    return this.columnCONFIRMATORIA_PROPUESTA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ESPECIALIDADColumn {
+                get {
+                    return this.columnESPECIALIDAD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ESPECIALIDAD2Column {
+                get {
+                    return this.columnESPECIALIDAD2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ESPECIALIDAD3Column {
+                get {
+                    return this.columnESPECIALIDAD3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ESPECIALIDAD4Column {
+                get {
+                    return this.columnESPECIALIDAD4;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ESPECIALIDAD5Column {
+                get {
+                    return this.columnESPECIALIDAD5;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn JUSTIFICACIONColumn {
+                get {
+                    return this.columnJUSTIFICACION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ADJUNTA_EVIDENCIAColumn {
+                get {
+                    return this.columnADJUNTA_EVIDENCIA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn RUTA_EVIDENCIAColumn {
+                get {
+                    return this.columnRUTA_EVIDENCIA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn OBSERVACIONES_EVIDENCIAColumn {
+                get {
+                    return this.columnOBSERVACIONES_EVIDENCIA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FECHA_NOMINACIONColumn {
+                get {
+                    return this.columnFECHA_NOMINACION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn COD_NOMINACION_HUERFANASColumn {
+                get {
+                    return this.columnCOD_NOMINACION_HUERFANAS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CONCEPTO_VALIDACIONColumn {
+                get {
+                    return this.columnCONCEPTO_VALIDACION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FECHA_VALIDACIONColumn {
+                get {
+                    return this.columnFECHA_VALIDACION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn OBSERVACIONES_VALIDACIONColumn {
+                get {
+                    return this.columnOBSERVACIONES_VALIDACION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn COMPLETITUDColumn {
+                get {
+                    return this.columnCOMPLETITUD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn INCLUIDA_RESOLUCION_ACTUALColumn {
+                get {
+                    return this.columnINCLUIDA_RESOLUCION_ACTUAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PRUEBA_DIAGNOSTICA_ACORDEColumn {
+                get {
+                    return this.columnPRUEBA_DIAGNOSTICA_ACORDE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ESPECIALIDAD_CORRESPONDEColumn {
+                get {
+                    return this.columnESPECIALIDAD_CORRESPONDE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EVIDENCIA_ADECUADAColumn {
+                get {
+                    return this.columnEVIDENCIA_ADECUADA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn COD_OBJECION_HUERFANAColumn {
+                get {
+                    return this.columnCOD_OBJECION_HUERFANA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn OBSERVACIONES_OBJECIONColumn {
+                get {
+                    return this.columnOBSERVACIONES_OBJECION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FECHA_OBJECIONColumn {
+                get {
+                    return this.columnFECHA_OBJECION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DESCRIPCION_ARCHIVO_OBJECIONColumn {
+                get {
+                    return this.columnDESCRIPCION_ARCHIVO_OBJECION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn URL_ARCHIVO_OBJECIONColumn {
+                get {
+                    return this.columnURL_ARCHIVO_OBJECION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TIPOColumn {
+                get {
+                    return this.columnTIPO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_OBJECIONES_NOMINACION_HUERFANASRow this[int index] {
+                get {
+                    return ((VW_OBJECIONES_NOMINACION_HUERFANASRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event VW_OBJECIONES_NOMINACION_HUERFANASRowChangeEventHandler VW_OBJECIONES_NOMINACION_HUERFANASRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event VW_OBJECIONES_NOMINACION_HUERFANASRowChangeEventHandler VW_OBJECIONES_NOMINACION_HUERFANASRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event VW_OBJECIONES_NOMINACION_HUERFANASRowChangeEventHandler VW_OBJECIONES_NOMINACION_HUERFANASRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event VW_OBJECIONES_NOMINACION_HUERFANASRowChangeEventHandler VW_OBJECIONES_NOMINACION_HUERFANASRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddVW_OBJECIONES_NOMINACION_HUERFANASRow(VW_OBJECIONES_NOMINACION_HUERFANASRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_OBJECIONES_NOMINACION_HUERFANASRow AddVW_OBJECIONES_NOMINACION_HUERFANASRow(
+                        string TipoRegisto, 
+                        string NOMINADOR, 
+                        string DOCUMENTO, 
+                        string CORREO, 
+                        string CIE, 
+                        string NOMBRECIE10, 
+                        string TIPO_CONFIRMACION, 
+                        string CUPS_CONFIRMATORIA_PROPUESTA, 
+                        string CONFIRMATORIA_PROPUESTA, 
+                        string ESPECIALIDAD, 
+                        string ESPECIALIDAD2, 
+                        string ESPECIALIDAD3, 
+                        string ESPECIALIDAD4, 
+                        string ESPECIALIDAD5, 
+                        string JUSTIFICACION, 
+                        bool ADJUNTA_EVIDENCIA, 
+                        string RUTA_EVIDENCIA, 
+                        string OBSERVACIONES_EVIDENCIA, 
+                        System.DateTime FECHA_NOMINACION, 
+                        int COD_NOMINACION_HUERFANAS, 
+                        string CONCEPTO_VALIDACION, 
+                        System.DateTime FECHA_VALIDACION, 
+                        string OBSERVACIONES_VALIDACION, 
+                        string COMPLETITUD, 
+                        string INCLUIDA_RESOLUCION_ACTUAL, 
+                        string PRUEBA_DIAGNOSTICA_ACORDE, 
+                        string ESPECIALIDAD_CORRESPONDE, 
+                        string EVIDENCIA_ADECUADA, 
+                        int COD_OBJECION_HUERFANA, 
+                        string OBSERVACIONES_OBJECION, 
+                        System.DateTime FECHA_OBJECION, 
+                        string DESCRIPCION_ARCHIVO_OBJECION, 
+                        string URL_ARCHIVO_OBJECION, 
+                        string TIPO) {
+                VW_OBJECIONES_NOMINACION_HUERFANASRow rowVW_OBJECIONES_NOMINACION_HUERFANASRow = ((VW_OBJECIONES_NOMINACION_HUERFANASRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        TipoRegisto,
+                        NOMINADOR,
+                        DOCUMENTO,
+                        CORREO,
+                        CIE,
+                        NOMBRECIE10,
+                        TIPO_CONFIRMACION,
+                        CUPS_CONFIRMATORIA_PROPUESTA,
+                        CONFIRMATORIA_PROPUESTA,
+                        ESPECIALIDAD,
+                        ESPECIALIDAD2,
+                        ESPECIALIDAD3,
+                        ESPECIALIDAD4,
+                        ESPECIALIDAD5,
+                        JUSTIFICACION,
+                        ADJUNTA_EVIDENCIA,
+                        RUTA_EVIDENCIA,
+                        OBSERVACIONES_EVIDENCIA,
+                        FECHA_NOMINACION,
+                        COD_NOMINACION_HUERFANAS,
+                        CONCEPTO_VALIDACION,
+                        FECHA_VALIDACION,
+                        OBSERVACIONES_VALIDACION,
+                        COMPLETITUD,
+                        INCLUIDA_RESOLUCION_ACTUAL,
+                        PRUEBA_DIAGNOSTICA_ACORDE,
+                        ESPECIALIDAD_CORRESPONDE,
+                        EVIDENCIA_ADECUADA,
+                        COD_OBJECION_HUERFANA,
+                        OBSERVACIONES_OBJECION,
+                        FECHA_OBJECION,
+                        DESCRIPCION_ARCHIVO_OBJECION,
+                        URL_ARCHIVO_OBJECION,
+                        TIPO};
+                rowVW_OBJECIONES_NOMINACION_HUERFANASRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVW_OBJECIONES_NOMINACION_HUERFANASRow);
+                return rowVW_OBJECIONES_NOMINACION_HUERFANASRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                VW_OBJECIONES_NOMINACION_HUERFANASDataTable cln = ((VW_OBJECIONES_NOMINACION_HUERFANASDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new VW_OBJECIONES_NOMINACION_HUERFANASDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnTipoRegisto = base.Columns["TipoRegisto"];
+                this.columnNOMINADOR = base.Columns["NOMINADOR"];
+                this.columnDOCUMENTO = base.Columns["DOCUMENTO"];
+                this.columnCORREO = base.Columns["CORREO"];
+                this.columnCIE = base.Columns["CIE"];
+                this.columnNOMBRECIE10 = base.Columns["NOMBRECIE10"];
+                this.columnTIPO_CONFIRMACION = base.Columns["TIPO_CONFIRMACION"];
+                this.columnCUPS_CONFIRMATORIA_PROPUESTA = base.Columns["CUPS_CONFIRMATORIA_PROPUESTA"];
+                this.columnCONFIRMATORIA_PROPUESTA = base.Columns["CONFIRMATORIA_PROPUESTA"];
+                this.columnESPECIALIDAD = base.Columns["ESPECIALIDAD"];
+                this.columnESPECIALIDAD2 = base.Columns["ESPECIALIDAD2"];
+                this.columnESPECIALIDAD3 = base.Columns["ESPECIALIDAD3"];
+                this.columnESPECIALIDAD4 = base.Columns["ESPECIALIDAD4"];
+                this.columnESPECIALIDAD5 = base.Columns["ESPECIALIDAD5"];
+                this.columnJUSTIFICACION = base.Columns["JUSTIFICACION"];
+                this.columnADJUNTA_EVIDENCIA = base.Columns["ADJUNTA_EVIDENCIA"];
+                this.columnRUTA_EVIDENCIA = base.Columns["RUTA_EVIDENCIA"];
+                this.columnOBSERVACIONES_EVIDENCIA = base.Columns["OBSERVACIONES_EVIDENCIA"];
+                this.columnFECHA_NOMINACION = base.Columns["FECHA_NOMINACION"];
+                this.columnCOD_NOMINACION_HUERFANAS = base.Columns["COD_NOMINACION_HUERFANAS"];
+                this.columnCONCEPTO_VALIDACION = base.Columns["CONCEPTO_VALIDACION"];
+                this.columnFECHA_VALIDACION = base.Columns["FECHA_VALIDACION"];
+                this.columnOBSERVACIONES_VALIDACION = base.Columns["OBSERVACIONES_VALIDACION"];
+                this.columnCOMPLETITUD = base.Columns["COMPLETITUD"];
+                this.columnINCLUIDA_RESOLUCION_ACTUAL = base.Columns["INCLUIDA_RESOLUCION_ACTUAL"];
+                this.columnPRUEBA_DIAGNOSTICA_ACORDE = base.Columns["PRUEBA_DIAGNOSTICA_ACORDE"];
+                this.columnESPECIALIDAD_CORRESPONDE = base.Columns["ESPECIALIDAD_CORRESPONDE"];
+                this.columnEVIDENCIA_ADECUADA = base.Columns["EVIDENCIA_ADECUADA"];
+                this.columnCOD_OBJECION_HUERFANA = base.Columns["COD_OBJECION_HUERFANA"];
+                this.columnOBSERVACIONES_OBJECION = base.Columns["OBSERVACIONES_OBJECION"];
+                this.columnFECHA_OBJECION = base.Columns["FECHA_OBJECION"];
+                this.columnDESCRIPCION_ARCHIVO_OBJECION = base.Columns["DESCRIPCION_ARCHIVO_OBJECION"];
+                this.columnURL_ARCHIVO_OBJECION = base.Columns["URL_ARCHIVO_OBJECION"];
+                this.columnTIPO = base.Columns["TIPO"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnTipoRegisto = new global::System.Data.DataColumn("TipoRegisto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipoRegisto);
+                this.columnNOMINADOR = new global::System.Data.DataColumn("NOMINADOR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOMINADOR);
+                this.columnDOCUMENTO = new global::System.Data.DataColumn("DOCUMENTO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDOCUMENTO);
+                this.columnCORREO = new global::System.Data.DataColumn("CORREO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCORREO);
+                this.columnCIE = new global::System.Data.DataColumn("CIE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCIE);
+                this.columnNOMBRECIE10 = new global::System.Data.DataColumn("NOMBRECIE10", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOMBRECIE10);
+                this.columnTIPO_CONFIRMACION = new global::System.Data.DataColumn("TIPO_CONFIRMACION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIPO_CONFIRMACION);
+                this.columnCUPS_CONFIRMATORIA_PROPUESTA = new global::System.Data.DataColumn("CUPS_CONFIRMATORIA_PROPUESTA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCUPS_CONFIRMATORIA_PROPUESTA);
+                this.columnCONFIRMATORIA_PROPUESTA = new global::System.Data.DataColumn("CONFIRMATORIA_PROPUESTA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCONFIRMATORIA_PROPUESTA);
+                this.columnESPECIALIDAD = new global::System.Data.DataColumn("ESPECIALIDAD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnESPECIALIDAD);
+                this.columnESPECIALIDAD2 = new global::System.Data.DataColumn("ESPECIALIDAD2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnESPECIALIDAD2);
+                this.columnESPECIALIDAD3 = new global::System.Data.DataColumn("ESPECIALIDAD3", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnESPECIALIDAD3);
+                this.columnESPECIALIDAD4 = new global::System.Data.DataColumn("ESPECIALIDAD4", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnESPECIALIDAD4);
+                this.columnESPECIALIDAD5 = new global::System.Data.DataColumn("ESPECIALIDAD5", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnESPECIALIDAD5);
+                this.columnJUSTIFICACION = new global::System.Data.DataColumn("JUSTIFICACION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJUSTIFICACION);
+                this.columnADJUNTA_EVIDENCIA = new global::System.Data.DataColumn("ADJUNTA_EVIDENCIA", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnADJUNTA_EVIDENCIA);
+                this.columnRUTA_EVIDENCIA = new global::System.Data.DataColumn("RUTA_EVIDENCIA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRUTA_EVIDENCIA);
+                this.columnOBSERVACIONES_EVIDENCIA = new global::System.Data.DataColumn("OBSERVACIONES_EVIDENCIA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOBSERVACIONES_EVIDENCIA);
+                this.columnFECHA_NOMINACION = new global::System.Data.DataColumn("FECHA_NOMINACION", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFECHA_NOMINACION);
+                this.columnCOD_NOMINACION_HUERFANAS = new global::System.Data.DataColumn("COD_NOMINACION_HUERFANAS", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCOD_NOMINACION_HUERFANAS);
+                this.columnCONCEPTO_VALIDACION = new global::System.Data.DataColumn("CONCEPTO_VALIDACION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCONCEPTO_VALIDACION);
+                this.columnFECHA_VALIDACION = new global::System.Data.DataColumn("FECHA_VALIDACION", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFECHA_VALIDACION);
+                this.columnOBSERVACIONES_VALIDACION = new global::System.Data.DataColumn("OBSERVACIONES_VALIDACION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOBSERVACIONES_VALIDACION);
+                this.columnCOMPLETITUD = new global::System.Data.DataColumn("COMPLETITUD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCOMPLETITUD);
+                this.columnINCLUIDA_RESOLUCION_ACTUAL = new global::System.Data.DataColumn("INCLUIDA_RESOLUCION_ACTUAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnINCLUIDA_RESOLUCION_ACTUAL);
+                this.columnPRUEBA_DIAGNOSTICA_ACORDE = new global::System.Data.DataColumn("PRUEBA_DIAGNOSTICA_ACORDE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRUEBA_DIAGNOSTICA_ACORDE);
+                this.columnESPECIALIDAD_CORRESPONDE = new global::System.Data.DataColumn("ESPECIALIDAD_CORRESPONDE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnESPECIALIDAD_CORRESPONDE);
+                this.columnEVIDENCIA_ADECUADA = new global::System.Data.DataColumn("EVIDENCIA_ADECUADA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEVIDENCIA_ADECUADA);
+                this.columnCOD_OBJECION_HUERFANA = new global::System.Data.DataColumn("COD_OBJECION_HUERFANA", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCOD_OBJECION_HUERFANA);
+                this.columnOBSERVACIONES_OBJECION = new global::System.Data.DataColumn("OBSERVACIONES_OBJECION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOBSERVACIONES_OBJECION);
+                this.columnFECHA_OBJECION = new global::System.Data.DataColumn("FECHA_OBJECION", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFECHA_OBJECION);
+                this.columnDESCRIPCION_ARCHIVO_OBJECION = new global::System.Data.DataColumn("DESCRIPCION_ARCHIVO_OBJECION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDESCRIPCION_ARCHIVO_OBJECION);
+                this.columnURL_ARCHIVO_OBJECION = new global::System.Data.DataColumn("URL_ARCHIVO_OBJECION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnURL_ARCHIVO_OBJECION);
+                this.columnTIPO = new global::System.Data.DataColumn("TIPO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIPO);
+                this.columnTipoRegisto.MaxLength = 268;
+                this.columnNOMINADOR.AllowDBNull = false;
+                this.columnNOMINADOR.MaxLength = 300;
+                this.columnDOCUMENTO.AllowDBNull = false;
+                this.columnDOCUMENTO.MaxLength = 150;
+                this.columnCORREO.AllowDBNull = false;
+                this.columnCORREO.MaxLength = 500;
+                this.columnCIE.MaxLength = 500;
+                this.columnNOMBRECIE10.MaxLength = 500;
+                this.columnTIPO_CONFIRMACION.MaxLength = 500;
+                this.columnCUPS_CONFIRMATORIA_PROPUESTA.MaxLength = 500;
+                this.columnCONFIRMATORIA_PROPUESTA.MaxLength = 500;
+                this.columnESPECIALIDAD.MaxLength = 250;
+                this.columnESPECIALIDAD2.MaxLength = 250;
+                this.columnESPECIALIDAD3.MaxLength = 250;
+                this.columnESPECIALIDAD4.MaxLength = 250;
+                this.columnESPECIALIDAD5.MaxLength = 250;
+                this.columnJUSTIFICACION.MaxLength = 4000;
+                this.columnRUTA_EVIDENCIA.MaxLength = 2147483647;
+                this.columnOBSERVACIONES_EVIDENCIA.MaxLength = 2500;
+                this.columnCOD_NOMINACION_HUERFANAS.AllowDBNull = false;
+                this.columnCONCEPTO_VALIDACION.MaxLength = 20;
+                this.columnOBSERVACIONES_VALIDACION.MaxLength = 2000;
+                this.columnCOMPLETITUD.AllowDBNull = false;
+                this.columnCOMPLETITUD.MaxLength = 9;
+                this.columnINCLUIDA_RESOLUCION_ACTUAL.AllowDBNull = false;
+                this.columnINCLUIDA_RESOLUCION_ACTUAL.MaxLength = 9;
+                this.columnPRUEBA_DIAGNOSTICA_ACORDE.AllowDBNull = false;
+                this.columnPRUEBA_DIAGNOSTICA_ACORDE.MaxLength = 9;
+                this.columnESPECIALIDAD_CORRESPONDE.AllowDBNull = false;
+                this.columnESPECIALIDAD_CORRESPONDE.MaxLength = 9;
+                this.columnEVIDENCIA_ADECUADA.AllowDBNull = false;
+                this.columnEVIDENCIA_ADECUADA.MaxLength = 9;
+                this.columnCOD_OBJECION_HUERFANA.AllowDBNull = false;
+                this.columnOBSERVACIONES_OBJECION.MaxLength = 1073741823;
+                this.columnDESCRIPCION_ARCHIVO_OBJECION.MaxLength = 2500;
+                this.columnURL_ARCHIVO_OBJECION.MaxLength = 2500;
+                this.columnTIPO.MaxLength = 133;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_OBJECIONES_NOMINACION_HUERFANASRow NewVW_OBJECIONES_NOMINACION_HUERFANASRow() {
+                return ((VW_OBJECIONES_NOMINACION_HUERFANASRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new VW_OBJECIONES_NOMINACION_HUERFANASRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(VW_OBJECIONES_NOMINACION_HUERFANASRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.VW_OBJECIONES_NOMINACION_HUERFANASRowChanged != null)) {
+                    this.VW_OBJECIONES_NOMINACION_HUERFANASRowChanged(this, new VW_OBJECIONES_NOMINACION_HUERFANASRowChangeEvent(((VW_OBJECIONES_NOMINACION_HUERFANASRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.VW_OBJECIONES_NOMINACION_HUERFANASRowChanging != null)) {
+                    this.VW_OBJECIONES_NOMINACION_HUERFANASRowChanging(this, new VW_OBJECIONES_NOMINACION_HUERFANASRowChangeEvent(((VW_OBJECIONES_NOMINACION_HUERFANASRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.VW_OBJECIONES_NOMINACION_HUERFANASRowDeleted != null)) {
+                    this.VW_OBJECIONES_NOMINACION_HUERFANASRowDeleted(this, new VW_OBJECIONES_NOMINACION_HUERFANASRowChangeEvent(((VW_OBJECIONES_NOMINACION_HUERFANASRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.VW_OBJECIONES_NOMINACION_HUERFANASRowDeleting != null)) {
+                    this.VW_OBJECIONES_NOMINACION_HUERFANASRowDeleting(this, new VW_OBJECIONES_NOMINACION_HUERFANASRowChangeEvent(((VW_OBJECIONES_NOMINACION_HUERFANASRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveVW_OBJECIONES_NOMINACION_HUERFANASRow(VW_OBJECIONES_NOMINACION_HUERFANASRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Participacion2017DataSetHuerfanas ds = new Participacion2017DataSetHuerfanas();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "VW_OBJECIONES_NOMINACION_HUERFANASDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class tblNominacionHuerfanasRow : global::System.Data.DataRow {
@@ -8149,6 +8965,827 @@ namespace InscripcionMinSalud {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class VW_OBJECIONES_NOMINACION_HUERFANASRow : global::System.Data.DataRow {
+            
+            private VW_OBJECIONES_NOMINACION_HUERFANASDataTable tableVW_OBJECIONES_NOMINACION_HUERFANAS;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal VW_OBJECIONES_NOMINACION_HUERFANASRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableVW_OBJECIONES_NOMINACION_HUERFANAS = ((VW_OBJECIONES_NOMINACION_HUERFANASDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TipoRegisto {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.TipoRegistoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TipoRegisto\' de la tabla \'VW_OBJECIONES_NOMINACION_HUERFA" +
+                                "NAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.TipoRegistoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NOMINADOR {
+                get {
+                    return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.NOMINADORColumn]));
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.NOMINADORColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string DOCUMENTO {
+                get {
+                    return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.DOCUMENTOColumn]));
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.DOCUMENTOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string CORREO {
+                get {
+                    return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CORREOColumn]));
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CORREOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string CIE {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CIEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CIE\' de la tabla \'VW_OBJECIONES_NOMINACION_HUERFANAS\' es " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CIEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NOMBRECIE10 {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.NOMBRECIE10Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NOMBRECIE10\' de la tabla \'VW_OBJECIONES_NOMINACION_HUERFA" +
+                                "NAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.NOMBRECIE10Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TIPO_CONFIRMACION {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.TIPO_CONFIRMACIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TIPO_CONFIRMACION\' de la tabla \'VW_OBJECIONES_NOMINACION_" +
+                                "HUERFANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.TIPO_CONFIRMACIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string CUPS_CONFIRMATORIA_PROPUESTA {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CUPS_CONFIRMATORIA_PROPUESTAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CUPS_CONFIRMATORIA_PROPUESTA\' de la tabla \'VW_OBJECIONES_" +
+                                "NOMINACION_HUERFANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CUPS_CONFIRMATORIA_PROPUESTAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string CONFIRMATORIA_PROPUESTA {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CONFIRMATORIA_PROPUESTAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CONFIRMATORIA_PROPUESTA\' de la tabla \'VW_OBJECIONES_NOMIN" +
+                                "ACION_HUERFANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CONFIRMATORIA_PROPUESTAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ESPECIALIDAD {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDADColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ESPECIALIDAD\' de la tabla \'VW_OBJECIONES_NOMINACION_HUERF" +
+                                "ANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDADColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ESPECIALIDAD2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ESPECIALIDAD2\' de la tabla \'VW_OBJECIONES_NOMINACION_HUER" +
+                                "FANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ESPECIALIDAD3 {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ESPECIALIDAD3\' de la tabla \'VW_OBJECIONES_NOMINACION_HUER" +
+                                "FANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ESPECIALIDAD4 {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD4Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ESPECIALIDAD4\' de la tabla \'VW_OBJECIONES_NOMINACION_HUER" +
+                                "FANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD4Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ESPECIALIDAD5 {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD5Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ESPECIALIDAD5\' de la tabla \'VW_OBJECIONES_NOMINACION_HUER" +
+                                "FANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD5Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string JUSTIFICACION {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.JUSTIFICACIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'JUSTIFICACION\' de la tabla \'VW_OBJECIONES_NOMINACION_HUER" +
+                                "FANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.JUSTIFICACIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool ADJUNTA_EVIDENCIA {
+                get {
+                    try {
+                        return ((bool)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ADJUNTA_EVIDENCIAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ADJUNTA_EVIDENCIA\' de la tabla \'VW_OBJECIONES_NOMINACION_" +
+                                "HUERFANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ADJUNTA_EVIDENCIAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string RUTA_EVIDENCIA {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.RUTA_EVIDENCIAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'RUTA_EVIDENCIA\' de la tabla \'VW_OBJECIONES_NOMINACION_HUE" +
+                                "RFANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.RUTA_EVIDENCIAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string OBSERVACIONES_EVIDENCIA {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.OBSERVACIONES_EVIDENCIAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'OBSERVACIONES_EVIDENCIA\' de la tabla \'VW_OBJECIONES_NOMIN" +
+                                "ACION_HUERFANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.OBSERVACIONES_EVIDENCIAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime FECHA_NOMINACION {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.FECHA_NOMINACIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FECHA_NOMINACION\' de la tabla \'VW_OBJECIONES_NOMINACION_H" +
+                                "UERFANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.FECHA_NOMINACIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int COD_NOMINACION_HUERFANAS {
+                get {
+                    return ((int)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.COD_NOMINACION_HUERFANASColumn]));
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.COD_NOMINACION_HUERFANASColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string CONCEPTO_VALIDACION {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CONCEPTO_VALIDACIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CONCEPTO_VALIDACION\' de la tabla \'VW_OBJECIONES_NOMINACIO" +
+                                "N_HUERFANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CONCEPTO_VALIDACIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime FECHA_VALIDACION {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.FECHA_VALIDACIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FECHA_VALIDACION\' de la tabla \'VW_OBJECIONES_NOMINACION_H" +
+                                "UERFANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.FECHA_VALIDACIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string OBSERVACIONES_VALIDACION {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.OBSERVACIONES_VALIDACIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'OBSERVACIONES_VALIDACION\' de la tabla \'VW_OBJECIONES_NOMI" +
+                                "NACION_HUERFANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.OBSERVACIONES_VALIDACIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string COMPLETITUD {
+                get {
+                    return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.COMPLETITUDColumn]));
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.COMPLETITUDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string INCLUIDA_RESOLUCION_ACTUAL {
+                get {
+                    return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.INCLUIDA_RESOLUCION_ACTUALColumn]));
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.INCLUIDA_RESOLUCION_ACTUALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PRUEBA_DIAGNOSTICA_ACORDE {
+                get {
+                    return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.PRUEBA_DIAGNOSTICA_ACORDEColumn]));
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.PRUEBA_DIAGNOSTICA_ACORDEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ESPECIALIDAD_CORRESPONDE {
+                get {
+                    return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD_CORRESPONDEColumn]));
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD_CORRESPONDEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string EVIDENCIA_ADECUADA {
+                get {
+                    return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.EVIDENCIA_ADECUADAColumn]));
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.EVIDENCIA_ADECUADAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int COD_OBJECION_HUERFANA {
+                get {
+                    return ((int)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.COD_OBJECION_HUERFANAColumn]));
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.COD_OBJECION_HUERFANAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string OBSERVACIONES_OBJECION {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.OBSERVACIONES_OBJECIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'OBSERVACIONES_OBJECION\' de la tabla \'VW_OBJECIONES_NOMINA" +
+                                "CION_HUERFANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.OBSERVACIONES_OBJECIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime FECHA_OBJECION {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.FECHA_OBJECIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FECHA_OBJECION\' de la tabla \'VW_OBJECIONES_NOMINACION_HUE" +
+                                "RFANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.FECHA_OBJECIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string DESCRIPCION_ARCHIVO_OBJECION {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.DESCRIPCION_ARCHIVO_OBJECIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DESCRIPCION_ARCHIVO_OBJECION\' de la tabla \'VW_OBJECIONES_" +
+                                "NOMINACION_HUERFANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.DESCRIPCION_ARCHIVO_OBJECIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string URL_ARCHIVO_OBJECION {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.URL_ARCHIVO_OBJECIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'URL_ARCHIVO_OBJECION\' de la tabla \'VW_OBJECIONES_NOMINACI" +
+                                "ON_HUERFANAS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.URL_ARCHIVO_OBJECIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TIPO {
+                get {
+                    try {
+                        return ((string)(this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.TIPOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TIPO\' de la tabla \'VW_OBJECIONES_NOMINACION_HUERFANAS\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.TIPOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTipoRegistoNull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.TipoRegistoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTipoRegistoNull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.TipoRegistoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsCIENull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CIEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetCIENull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CIEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsNOMBRECIE10Null() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.NOMBRECIE10Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetNOMBRECIE10Null() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.NOMBRECIE10Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTIPO_CONFIRMACIONNull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.TIPO_CONFIRMACIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTIPO_CONFIRMACIONNull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.TIPO_CONFIRMACIONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsCUPS_CONFIRMATORIA_PROPUESTANull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CUPS_CONFIRMATORIA_PROPUESTAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetCUPS_CONFIRMATORIA_PROPUESTANull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CUPS_CONFIRMATORIA_PROPUESTAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsCONFIRMATORIA_PROPUESTANull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CONFIRMATORIA_PROPUESTAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetCONFIRMATORIA_PROPUESTANull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CONFIRMATORIA_PROPUESTAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsESPECIALIDADNull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDADColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetESPECIALIDADNull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDADColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsESPECIALIDAD2Null() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetESPECIALIDAD2Null() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsESPECIALIDAD3Null() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetESPECIALIDAD3Null() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsESPECIALIDAD4Null() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD4Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetESPECIALIDAD4Null() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD4Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsESPECIALIDAD5Null() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD5Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetESPECIALIDAD5Null() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ESPECIALIDAD5Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsJUSTIFICACIONNull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.JUSTIFICACIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetJUSTIFICACIONNull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.JUSTIFICACIONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsADJUNTA_EVIDENCIANull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ADJUNTA_EVIDENCIAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetADJUNTA_EVIDENCIANull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.ADJUNTA_EVIDENCIAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsRUTA_EVIDENCIANull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.RUTA_EVIDENCIAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetRUTA_EVIDENCIANull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.RUTA_EVIDENCIAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsOBSERVACIONES_EVIDENCIANull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.OBSERVACIONES_EVIDENCIAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetOBSERVACIONES_EVIDENCIANull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.OBSERVACIONES_EVIDENCIAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFECHA_NOMINACIONNull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.FECHA_NOMINACIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFECHA_NOMINACIONNull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.FECHA_NOMINACIONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsCONCEPTO_VALIDACIONNull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CONCEPTO_VALIDACIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetCONCEPTO_VALIDACIONNull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.CONCEPTO_VALIDACIONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFECHA_VALIDACIONNull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.FECHA_VALIDACIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFECHA_VALIDACIONNull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.FECHA_VALIDACIONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsOBSERVACIONES_VALIDACIONNull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.OBSERVACIONES_VALIDACIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetOBSERVACIONES_VALIDACIONNull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.OBSERVACIONES_VALIDACIONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsOBSERVACIONES_OBJECIONNull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.OBSERVACIONES_OBJECIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetOBSERVACIONES_OBJECIONNull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.OBSERVACIONES_OBJECIONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFECHA_OBJECIONNull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.FECHA_OBJECIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFECHA_OBJECIONNull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.FECHA_OBJECIONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDESCRIPCION_ARCHIVO_OBJECIONNull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.DESCRIPCION_ARCHIVO_OBJECIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDESCRIPCION_ARCHIVO_OBJECIONNull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.DESCRIPCION_ARCHIVO_OBJECIONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsURL_ARCHIVO_OBJECIONNull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.URL_ARCHIVO_OBJECIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetURL_ARCHIVO_OBJECIONNull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.URL_ARCHIVO_OBJECIONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTIPONull() {
+                return this.IsNull(this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.TIPOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTIPONull() {
+                this[this.tableVW_OBJECIONES_NOMINACION_HUERFANAS.TIPOColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -8372,6 +10009,40 @@ namespace InscripcionMinSalud {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public VW_NOMINCACION_HUERFANAS_6Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class VW_OBJECIONES_NOMINACION_HUERFANASRowChangeEvent : global::System.EventArgs {
+            
+            private VW_OBJECIONES_NOMINACION_HUERFANASRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_OBJECIONES_NOMINACION_HUERFANASRowChangeEvent(VW_OBJECIONES_NOMINACION_HUERFANASRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_OBJECIONES_NOMINACION_HUERFANASRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -9563,6 +11234,215 @@ WHERE COD_NOMINACION_HUERFANAS = @COD_NOMINACION_HUERFANAS ";
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(COD_NOMINACION_HUERFANAS));
             Participacion2017DataSetHuerfanas.VW_NOMINCACION_HUERFANAS_6DataTable dataTable = new Participacion2017DataSetHuerfanas.VW_NOMINCACION_HUERFANAS_6DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class VW_OBJECIONES_NOMINACION_HUERFANASTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public VW_OBJECIONES_NOMINACION_HUERFANASTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "VW_OBJECIONES_NOMINACION_HUERFANAS";
+            tableMapping.ColumnMappings.Add("TipoRegisto", "TipoRegisto");
+            tableMapping.ColumnMappings.Add("NOMINADOR", "NOMINADOR");
+            tableMapping.ColumnMappings.Add("DOCUMENTO", "DOCUMENTO");
+            tableMapping.ColumnMappings.Add("CORREO", "CORREO");
+            tableMapping.ColumnMappings.Add("CIE", "CIE");
+            tableMapping.ColumnMappings.Add("NOMBRECIE10", "NOMBRECIE10");
+            tableMapping.ColumnMappings.Add("TIPO_CONFIRMACION", "TIPO_CONFIRMACION");
+            tableMapping.ColumnMappings.Add("CUPS_CONFIRMATORIA_PROPUESTA", "CUPS_CONFIRMATORIA_PROPUESTA");
+            tableMapping.ColumnMappings.Add("CONFIRMATORIA_PROPUESTA", "CONFIRMATORIA_PROPUESTA");
+            tableMapping.ColumnMappings.Add("ESPECIALIDAD", "ESPECIALIDAD");
+            tableMapping.ColumnMappings.Add("ESPECIALIDAD2", "ESPECIALIDAD2");
+            tableMapping.ColumnMappings.Add("ESPECIALIDAD3", "ESPECIALIDAD3");
+            tableMapping.ColumnMappings.Add("ESPECIALIDAD4", "ESPECIALIDAD4");
+            tableMapping.ColumnMappings.Add("ESPECIALIDAD5", "ESPECIALIDAD5");
+            tableMapping.ColumnMappings.Add("JUSTIFICACION", "JUSTIFICACION");
+            tableMapping.ColumnMappings.Add("ADJUNTA_EVIDENCIA", "ADJUNTA_EVIDENCIA");
+            tableMapping.ColumnMappings.Add("RUTA_EVIDENCIA", "RUTA_EVIDENCIA");
+            tableMapping.ColumnMappings.Add("OBSERVACIONES_EVIDENCIA", "OBSERVACIONES_EVIDENCIA");
+            tableMapping.ColumnMappings.Add("FECHA_NOMINACION", "FECHA_NOMINACION");
+            tableMapping.ColumnMappings.Add("COD_NOMINACION_HUERFANAS", "COD_NOMINACION_HUERFANAS");
+            tableMapping.ColumnMappings.Add("CONCEPTO_VALIDACION", "CONCEPTO_VALIDACION");
+            tableMapping.ColumnMappings.Add("FECHA_VALIDACION", "FECHA_VALIDACION");
+            tableMapping.ColumnMappings.Add("OBSERVACIONES_VALIDACION", "OBSERVACIONES_VALIDACION");
+            tableMapping.ColumnMappings.Add("COMPLETITUD", "COMPLETITUD");
+            tableMapping.ColumnMappings.Add("INCLUIDA_RESOLUCION_ACTUAL", "INCLUIDA_RESOLUCION_ACTUAL");
+            tableMapping.ColumnMappings.Add("PRUEBA_DIAGNOSTICA_ACORDE", "PRUEBA_DIAGNOSTICA_ACORDE");
+            tableMapping.ColumnMappings.Add("ESPECIALIDAD_CORRESPONDE", "ESPECIALIDAD_CORRESPONDE");
+            tableMapping.ColumnMappings.Add("EVIDENCIA_ADECUADA", "EVIDENCIA_ADECUADA");
+            tableMapping.ColumnMappings.Add("COD_OBJECION_HUERFANA", "COD_OBJECION_HUERFANA");
+            tableMapping.ColumnMappings.Add("OBSERVACIONES_OBJECION", "OBSERVACIONES_OBJECION");
+            tableMapping.ColumnMappings.Add("FECHA_OBJECION", "FECHA_OBJECION");
+            tableMapping.ColumnMappings.Add("DESCRIPCION_ARCHIVO_OBJECION", "DESCRIPCION_ARCHIVO_OBJECION");
+            tableMapping.ColumnMappings.Add("URL_ARCHIVO_OBJECION", "URL_ARCHIVO_OBJECION");
+            tableMapping.ColumnMappings.Add("TIPO", "TIPO");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS02;Initial Catalog=participacion2017;Persist Secu" +
+                "rity Info=True;User ID=sa;Password=camping79;Application Name=EntityFramework";
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        TipoRegisto, NOMINADOR, DOCUMENTO, CORREO, CIE, NOMBRECIE10, TIPO_CONFIRMACION, CUPS_CONFIRMATORIA_PROPUESTA, CONFIRMATORIA_PROPUESTA, ESPECIALIDAD, ESPECIALIDAD2, ESPECIALIDAD3, 
+                         ESPECIALIDAD4, ESPECIALIDAD5, JUSTIFICACION, ADJUNTA_EVIDENCIA, RUTA_EVIDENCIA, OBSERVACIONES_EVIDENCIA, FECHA_NOMINACION, COD_NOMINACION_HUERFANAS, CONCEPTO_VALIDACION, 
+                         FECHA_VALIDACION, OBSERVACIONES_VALIDACION, COMPLETITUD, INCLUIDA_RESOLUCION_ACTUAL, PRUEBA_DIAGNOSTICA_ACORDE, ESPECIALIDAD_CORRESPONDE, EVIDENCIA_ADECUADA, 
+                         COD_OBJECION_HUERFANA, OBSERVACIONES_OBJECION, FECHA_OBJECION, DESCRIPCION_ARCHIVO_OBJECION, URL_ARCHIVO_OBJECION, TIPO
+FROM            VW_OBJECIONES_NOMINACION_HUERFANAS
+WHERE COD_OBJECION_HUERFANA = @COD_OBJECION_HUERFANA";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@COD_OBJECION_HUERFANA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "COD_OBJECION_HUERFANA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(Participacion2017DataSetHuerfanas.VW_OBJECIONES_NOMINACION_HUERFANASDataTable dataTable, int COD_OBJECION_HUERFANA) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(COD_OBJECION_HUERFANA));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual Participacion2017DataSetHuerfanas.VW_OBJECIONES_NOMINACION_HUERFANASDataTable GetData(int COD_OBJECION_HUERFANA) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(COD_OBJECION_HUERFANA));
+            Participacion2017DataSetHuerfanas.VW_OBJECIONES_NOMINACION_HUERFANASDataTable dataTable = new Participacion2017DataSetHuerfanas.VW_OBJECIONES_NOMINACION_HUERFANASDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
