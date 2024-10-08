@@ -270,6 +270,7 @@
     <Content Include="frm\seguridad\frmOlvidoContrasena.aspx" />
     <Content Include="frm\seguridad\frmrecuperarusuario.aspx" />
     <Content Include="frm\ws\ws.asmx" />
+    <Content Include="html\CorreoPostulacionTecExcluida.html" />
     <Content Include="html\CorreoHuerfanas.html" />
     <Content Include="html\multimedia-en-que-vamos-ptc.html" />
     <Content Include="images\100ppi\Asset 8%40100x.png" />

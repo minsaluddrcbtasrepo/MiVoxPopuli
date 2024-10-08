@@ -1,8 +1,10 @@
 ﻿using DatosInscripcionMinSalud;
 using DevExpress.XtraRichEdit.Model;
+using NegocioInscripcionMinSalud;
 using NegocioInscripcionMinSalud.data;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Web;
@@ -156,6 +158,32 @@ namespace InscripcionMinSalud.frm.procesos
                     {
                         var idIndicador = TecnologiaExcluidaSQLHelper.InsertarIndicadorPostulacion(IdPostulacion, Convert.ToInt32(indicadorId));
                     }
+                }
+
+                //todo: enviar correo electronico
+
+                if (ConfigurationManager.AppSettings["MensajePostulacionTecExcluida"] != null)
+                {
+                    try
+                    {
+                        System.IO.StreamReader archivo = new System.IO.StreamReader(ConfigurationManager.AppSettings["MensajePostulacionTecExcluida"]);
+                        string cuerpoMensaje = archivo.ReadToEnd();
+                        archivo.Close();
+
+                        HttpContext.Current.Session["msgtitulo"] = "Gracias por completar su postulacion";
+
+                        // Envío del correo electrónico
+                        clsWebUtils email = new clsWebUtils();
+                        string asunto = HttpContext.Current.Session["msgtitulo"].ToString();
+                        email.enviarEmailPostulacionTecnologiasExcluidas(asunto, cuerpoMensaje, HttpContext.Current.Session["SS_CORREO"].ToString());
+                        HttpContext.Current.Session["msgmsg"] = cuerpoMensaje.Replace("<h3>Cordial saludo:</h3>", "").Replace("Atentamente,", "");
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
                 }
 
                 return true;
