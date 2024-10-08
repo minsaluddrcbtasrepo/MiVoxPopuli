@@ -307,28 +307,35 @@ namespace InscripcionMinSalud.frm.procesos
                 idUsuarioLogin = Convert.ToInt32(Session["SS_COD_REGISTRO"]);
             }
 
-            if (Convert.ToInt32(codEstado) >= 3 && resultado.ToString() == "Rechazada" && Convert.ToInt32(idUsuario) == idUsuarioLogin)
+            if (resultado.ToString() == "Rechazada")
             {
-                if (Convert.ToInt32(objecion) > 0)
+                if (Convert.ToInt32(codEstado) >= 3 && Convert.ToInt32(idUsuario) == idUsuarioLogin)
                 {
-                    return 3;
+                    if (Convert.ToInt32(objecion) > 0)
+                    {
+                        return 3;
+                    }
+                    else
+                    {
+                        return 1;
+                    }
                 }
                 else
                 {
-                    return 1;
+                    if (Convert.ToInt32(objecion) > 0)
+                    {
+                        return 3;
+                    }
+                    else
+                    {
+                        return 2;
+                    }
                 }
             }
             else
             {
-                if (Convert.ToInt32(objecion) > 0)
-                {
-                    return 3;
-                }
-                else
-                {
-                    return 2;
-                }                   
-            }            
+                return 0;
+            }
         }
     }
 }

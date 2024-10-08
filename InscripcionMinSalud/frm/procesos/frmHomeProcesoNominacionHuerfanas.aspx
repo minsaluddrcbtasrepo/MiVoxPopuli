@@ -248,7 +248,7 @@
                                                                                 <asp:TemplateField HeaderText="Opciones">
 
                                                                                     <ItemTemplate>
-                                                                                        <a href='<%# "../informes/frmReportViewerHuerfanas.aspx?cod="+Eval("COD_NOMINACION_HUERFANA")+"&rpt=-1" %>' target="_blank" id="lnkPDF">Descargar PDF</a>
+                                                                                        <a href='<%# "../informes/frmReportViewerHuerfanas.aspx?cod="+Eval("COD_OBJECION_HUERFANA")+"&rpt=-1" %>' target="_blank" id="lnkPDF">Descargar PDF</a>
                                                                                     </ItemTemplate>
                                                                                 </asp:TemplateField>
                                                                             </Columns>

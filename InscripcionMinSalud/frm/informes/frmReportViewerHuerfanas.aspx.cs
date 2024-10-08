@@ -1,4 +1,5 @@
-﻿using Microsoft.Reporting.WebForms;
+﻿using DevExpress.Pdf.Native;
+using Microsoft.Reporting.WebForms;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -35,14 +36,12 @@ namespace InscripcionMinSalud.frm.informes
             {
                 conexionString = ConfigurationManager.ConnectionStrings["participacion2017ConnectionString"].ConnectionString;
             }
-            
 
+            string reporte = "";
+            ReportDataSource datasource1 = null;
             if (tipoReporte > 0 && codigoNominacion > 0)
             {
-                ds.EnforceConstraints = false;
-
-                string reporte = "";
-                ReportDataSource datasource1 = null;
+                ds.EnforceConstraints = false;               
 
                 switch (tipoReporte)
                 {
@@ -108,6 +107,37 @@ namespace InscripcionMinSalud.frm.informes
                     Response.Clear();
                     Response.ContentType = mimeType;
                     Response.AddHeader("content-disposition", "attachment; filename= reporteNominacionHuerfana" + ".pdf");
+                    Response.OutputStream.Write(bytes, 0, bytes.Length); // create the file  
+                    Response.Flush(); // send it to the client to download  
+                    Response.End();
+                }
+            }
+            else if (tipoReporte == -1 && codigoNominacion > 0)
+            {
+                Participacion2017DataSetHuerfanasTableAdapters.VW_OBJECIONES_NOMINACION_HUERFANASTableAdapter tbObjecion = new Participacion2017DataSetHuerfanasTableAdapters.VW_OBJECIONES_NOMINACION_HUERFANASTableAdapter();
+                tbObjecion.Connection.ConnectionString = conexionString;
+                tbObjecion.Fill(ds.VW_OBJECIONES_NOMINACION_HUERFANAS, codigoNominacion);
+                datasource1 = new ReportDataSource("DataSet2", ds.Tables["VW_OBJECIONES_NOMINACION_HUERFANAS"]);
+                reporte = "~/frm/informes/rptObjecionHuerfana1.rdlc";
+
+                if (reporte != "" && datasource1 != null)
+                {
+                    ReportViewer1.LocalReport.ReportPath = Server.MapPath(reporte);
+                    ReportViewer1.LocalReport.DataSources.Clear();
+                    ReportViewer1.LocalReport.DataSources.Add(datasource1);
+
+                    Warning[] warnings;
+                    string[] streamids;
+                    string mimeType;
+                    string encoding;
+                    string filenameExtension;
+                    byte[] bytes = ReportViewer1.LocalReport.Render("PDF", null, out mimeType, out encoding, out filenameExtension, out streamids, out warnings);
+                    ReportViewer1.ProcessingMode = ProcessingMode.Local;
+                    //generamos el pdf          
+                    Response.Buffer = true;
+                    Response.Clear();
+                    Response.ContentType = mimeType;
+                    Response.AddHeader("content-disposition", "attachment; filename= reporteObjecionHuerfana" + ".pdf");
                     Response.OutputStream.Write(bytes, 0, bytes.Length); // create the file  
                     Response.Flush(); // send it to the client to download  
                     Response.End();
