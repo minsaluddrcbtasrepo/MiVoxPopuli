@@ -334,15 +334,6 @@ INSERT INTO EXCLUSIONES.IndicacionExclusion(id,IdTecnoIogiaExcluida,Descripcion)
 INSERT INTO EXCLUSIONES.IndicacionExclusion(id,IdTecnoIogiaExcluida,Descripcion) VALUES (331,109,N'ENFERMEDAD PULMONAR OBSTRUCTIVA CRÓNICA COMO MONOTERAPIA');
 INSERT INTO EXCLUSIONES.IndicacionExclusion(id,IdTecnoIogiaExcluida,Descripcion) VALUES (332,110,N'TODAS LAS INDICACIONES');
 INSERT INTO EXCLUSIONES.IndicacionExclusion(id,IdTecnoIogiaExcluida,Descripcion) VALUES (333,111,N'AUTISMO EN LA NIÑEZ');
-INSERT INTO EXCLUSIONES.IndicacionExclusion(id,IdTecnoIogiaExcluida,Descripcion) VALUES (334,111,N'AUTISMO EN LA NIÑEZ');
-INSERT INTO EXCLUSIONES.IndicacionExclusion(id,IdTecnoIogiaExcluida,Descripcion) VALUES (335,111,N'AUTISMO EN LA NIÑEZ');
-INSERT INTO EXCLUSIONES.IndicacionExclusion(id,IdTecnoIogiaExcluida,Descripcion) VALUES (336,111,N'AUTISMO EN LA NIÑEZ');
-INSERT INTO EXCLUSIONES.IndicacionExclusion(id,IdTecnoIogiaExcluida,Descripcion) VALUES (337,111,N'AUTISMO EN LA NIÑEZ');
-INSERT INTO EXCLUSIONES.IndicacionExclusion(id,IdTecnoIogiaExcluida,Descripcion) VALUES (338,111,N'AUTISMO EN LA NIÑEZ');
-INSERT INTO EXCLUSIONES.IndicacionExclusion(id,IdTecnoIogiaExcluida,Descripcion) VALUES (339,111,N'AUTISMO EN LA NIÑEZ');
-INSERT INTO EXCLUSIONES.IndicacionExclusion(id,IdTecnoIogiaExcluida,Descripcion) VALUES (340,111,N'AUTISMO EN LA NIÑEZ');
-INSERT INTO EXCLUSIONES.IndicacionExclusion(id,IdTecnoIogiaExcluida,Descripcion) VALUES (341,111,N'AUTISMO EN LA NIÑEZ');
-INSERT INTO EXCLUSIONES.IndicacionExclusion(id,IdTecnoIogiaExcluida,Descripcion) VALUES (342,111,N'AUTISMO EN LA NIÑEZ');
 INSERT INTO EXCLUSIONES.IndicacionExclusion(id,IdTecnoIogiaExcluida,Descripcion) VALUES (343,112,N'TODAS LAS INDICACIONES');
 INSERT INTO EXCLUSIONES.IndicacionExclusion(id,IdTecnoIogiaExcluida,Descripcion) VALUES (344,113,N'TODAS');
 INSERT INTO EXCLUSIONES.IndicacionExclusion(id,IdTecnoIogiaExcluida,Descripcion) VALUES (345,114,N'TODAS');
