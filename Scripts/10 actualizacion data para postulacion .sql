@@ -1,16 +1,10 @@
 
-ALTER TABLE EXCLUSIONES.TecnoIogiaExCluida
-ADD DescripcionSeleccion NVARCHAR(MAX) NOT NULL 
-CONSTRAINT DF_TecnoIogiaExCluida_DescripcionSeleccion DEFAULT 'Seleccione las indicaciones por las cuales considera que se debe volver a incluir la tecnología:';
-
-
-
-update te set DescripcionSeleccion='Seleccione los CIE-10 relacionados a Dolor Neuropático de acuerdo a su solicitud de revisión de la decisión'
+update te set DescripcionSeleccion='Seleccione los CIE-10 relacionados a Dolor Neuropï¿½tico de acuerdo a su solicitud de revisiï¿½n de la decisiï¿½n'
 --select *
 from EXCLUSIONES.TecnoIogiaExCluida te
-where Nombre in ('ACETAMINOFEN + CODEINA ','ACETAMINOFEN + HIDROCODONA','BUPRENORFINA ')
+where Nombre in ('ACETAMINOFEN + CODEINAï¿½','ACETAMINOFEN + HIDROCODONA','BUPRENORFINAï¿½')
 
-select * from EXCLUSIONES.TecnoIogiaExCluida where Nombre in ('ACETAMINOFEN + CODEINA ','ACETAMINOFEN + HIDROCODONA','BUPRENORFINA ')
+select * from EXCLUSIONES.TecnoIogiaExCluida where Nombre in ('ACETAMINOFEN + CODEINAï¿½','ACETAMINOFEN + HIDROCODONA','BUPRENORFINAï¿½')
 
 
 --------------------------------
@@ -19,7 +13,7 @@ delete  EXCLUSIONES.IndicacionExclusion where id in (
 		select i.Id 
 		from EXCLUSIONES.IndicacionExclusion i
 		inner join EXCLUSIONES.TecnoIogiaExCluida te on te.Id=i.IdTecnoIogiaExcluida
-		where te.Nombre in ('ACETAMINOFEN + CODEINA ','ACETAMINOFEN + HIDROCODONA','BUPRENORFINA ')
+		where te.Nombre in ('ACETAMINOFEN + CODEINAï¿½','ACETAMINOFEN + HIDROCODONA','BUPRENORFINAï¿½')
 		and (Descripcion like '%Exclu_do en Dolor Neurop_tico%'
 		or Descripcion like '%Diagn_sticos CIE-10 relacionados%'
 		or Descripcion like '%Seleccionar Todo%'

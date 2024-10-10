@@ -4,7 +4,10 @@ go
 -- Tabla TecnoIogiaExCluida
 CREATE TABLE EXCLUSIONES.TecnoIogiaExCluida (
     Id INT PRIMARY KEY IDENTITY(1,1),
-    Nombre NVARCHAR(MAX) NOT NULL
+    Nombre NVARCHAR(MAX) NOT NULL,
+    DescripcionSeleccion NVARCHAR(MAX) NOT NULL 
+        CONSTRAINT DF_TecnoIogiaExCluida_DescripcionSeleccion 
+        DEFAULT 'Seleccione las indicaciones por las cuales considera que se debe volver a incluir la tecnología:'
 );
 
 -- Tabla TecnoIogiaExCluidaVigencia
