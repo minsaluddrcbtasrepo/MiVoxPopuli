@@ -38,9 +38,11 @@
         var vigencia = $(this).data('vigencia');
         var tecnologia = $(this).data('tecnologia');
         var idTecnologia = $(this).data('idtecnologia');
+        var descripcionSeleccion = $(this).data('descripcion-seleccion');
         $('#panel2').removeClass('hidden');
         $('#panel1').addClass('hidden');
         $('#TecnologiaSeleccionada').text(tecnologia);
+        $('#DescripcionSeleccion').text(descripcionSeleccion);
 
         postulacionModel = {
             conflictoInteres: false,
@@ -152,7 +154,7 @@
             limpiarFormularioRevision();
             btnGuardarCriterio.disabled = false;
 
-            
+
 
 
         } else {
@@ -238,7 +240,7 @@
 
             // Habilitar o deshabilitar el botón
             $('#btnFinalizar').prop('disabled', !allValid);
-        }, 100); 
+        }, 100);
     }
 
 
@@ -558,7 +560,7 @@
                                     <td>${tecnologia.Vigencia}</td>
                                     <td>
                                         ${!tecnologia.Postulado
-                    ? `<button class="btn btn-primary btn-accion" data-vigencia="${tecnologia.Vigencia}" data-idtecnologia="${tecnologia.Id}" data-tecnologia="${tecnologia.Tecnologia}">Postular</button>`
+                    ? `<button class="btn btn-primary btn-accion" data-vigencia="${tecnologia.Vigencia}" data-idtecnologia="${tecnologia.Id}" data-tecnologia="${tecnologia.Tecnologia}" data-descripcion-seleccion="${tecnologia.DescripcionSeleccion}">Postular</button>`
                     : `<label>Postulado</label>`
                 }
                                     </td>

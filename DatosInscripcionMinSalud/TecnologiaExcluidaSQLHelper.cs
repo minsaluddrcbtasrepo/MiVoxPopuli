@@ -18,7 +18,7 @@ namespace DatosInscripcionMinSalud
         {
             SQLServerHelper helper = new SQLServerHelper();
 
-            string sqlConsulta = @"SELECT        te.Id, te.Nombre AS tecnologia, tv.AnhoExclusion AS vigencia, 0 AS postulado
+            string sqlConsulta = @"SELECT        te.Id, te.Nombre AS tecnologia,te.DescripcionSeleccion, tv.AnhoExclusion AS vigencia, 0 AS postulado
                                     FROM            EXCLUSIONES.TecnoIogiaExCluida AS te INNER JOIN
                                                              EXCLUSIONES.TecnoIogiaExCluidaVigencia AS tv ON te.Id = tv.IdTecnoIogiaExcluida
 						 
@@ -199,6 +199,7 @@ namespace DatosInscripcionMinSalud
     {
         public int Id { get; set; }
         public string Tecnologia { get; set; }
+        public string DescripcionSeleccion { get; set; }
         public string Vigencia { get; set; }
         public Boolean Postulado { get; set; }
     }
