@@ -2,7 +2,7 @@ create schema EXCLUSIONES
 
 go
 -- Tabla TecnoIogiaExCluida
-CREATE TABLE EXCLUSIONES.TecnoIogiaExCluida (
+CREATE TABLE EXCLUSIONES.TecnoIogiaExcluida (
     Id INT PRIMARY KEY IDENTITY(1,1),
     Nombre NVARCHAR(MAX) NOT NULL,
     DescripcionSeleccion NVARCHAR(MAX) NOT NULL 
@@ -11,7 +11,7 @@ CREATE TABLE EXCLUSIONES.TecnoIogiaExCluida (
 );
 
 -- Tabla TecnoIogiaExCluidaVigencia
-CREATE TABLE EXCLUSIONES.TecnoIogiaExCluidaVigencia (
+CREATE TABLE EXCLUSIONES.TecnoIogiaExcluidaVigencia (
     Id INT PRIMARY KEY IDENTITY(1,1),
 	IdTecnoIogiaExcluida INT FOREIGN KEY REFERENCES EXCLUSIONES.TecnoIogiaExCluida(Id),   
     AnhoNominacion NVARCHAR(500) NOT NULL,
@@ -83,7 +83,8 @@ CREATE TABLE EXCLUSIONES.IndicacionExclusionPostulacion (
 
 
 
-SELECT * FROM EXCLUSIONES.TecnoIogiaExCluida;
+DELETE  EXCLUSIONES.TecnoIogiaExcluida;
+SELECT * FROM EXCLUSIONES.TecnoIogiaExcluida;
 SELECT * FROM EXCLUSIONES.IndicacionExclusion;
 SELECT * FROM EXCLUSIONES.Criterio;
 SELECT * FROM EXCLUSIONES.CriterioExcIusion;
